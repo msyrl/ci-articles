@@ -5,17 +5,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="shortcut icon" href="<?= base_url('assets/images/icon/logo.png') ?>" type="image/x-icon" />
+    <link rel="shortcut icon" href="<?= base_url('assets/images/icon/logo.png'); ?>" type="image/x-icon" />
     <link rel="stylesheet" href="<?= base_url('assets/vendor/uikit/css/uikit.min.css'); ?>" />
     <link rel="stylesheet" href="<?= base_url('assets/vendor/fontawesome/css/all.css'); ?>" />
     <link rel="stylesheet" href="<?= base_url('assets/css/font.css'); ?>" />
     <link rel="stylesheet" href="<?= base_url('assets/css/style.css'); ?>" />
-    <title>Innovative Financing Lab</title>
+    <title><?= $site_name . $meta_title; ?></title>
 </head>
 
 <body>
     <!-- Content Here -->
-
+    <?php $this->load->view($page); ?>
 
     <!-- Content Here -->
 
@@ -67,7 +67,12 @@
 
     <script src="<?= base_url('assets/vendor/uikit/js/uikit.min.js') ?>"></script>
     <script src="<?= base_url('assets/vendor/uikit/js/uikit-icons.min.js') ?>"></script>
-    <script src="<?= base_url('assets/js/script.js') ?>"></script>
+    <script src="<?= base_url('assets/vendor/jquery/jquery-3.3.1.min.js'); ?>"></script>
+    <!-- Extra Script -->
+    <?php if (isset($meta_script)) : ?>
+        <script src="<?= base_url($meta_script); ?>"></script>
+    <?php endif; ?>
+    <!-- Extra Script -->
 </body>
 
 </html>

@@ -3,6 +3,10 @@
   --secondary: black;
 }
 
+html, body {
+  height: 100%;
+}
+
 /* Initial HTML */
 * {
   margin: 0;
@@ -104,8 +108,9 @@ img {
 }
 
 /* Top Right Nav */
-.top-nav.overlay {
-  background-color: #fff;
+.top-nav.uk-background-secondary > .uk-navbar-left > p,
+.top-nav.uk-background-secondary > .uk-navbar-right > .uk-navbar-nav > li > a {
+  color: #fff;
 }
 
 .side-nav .head-content a:hover,
