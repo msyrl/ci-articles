@@ -315,34 +315,33 @@ uk-navbar>
     uk-slideshow="autoplay: true; autoplay-interval: 6000">
     <ul class="uk-slideshow-items" uk-height-viewport>
         <li>
-        <img src="<?= base_url('assets/images/header.jpg'); ?>" alt="" uk-cover />
-        <div class="uk-position-large uk-position-center-left uk-overlay-primary uk-padding">
+        <img src="<?= base_url('assets/images/showcase/slide1.png'); ?>" alt="" class="uk-position-center" />
+        <!-- <div class="uk-position-large uk-position-center-left uk-overlay-primary uk-padding">
             <h1 class="uk-margin-remove">INNOVATIVE FINANCING LAB</h1>
             <p class="uk-margin-remove">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque,
             necessitatibus?
             </p>
-        </div>
+        </div> -->
         </li>
         <li>
-        <img src="https://source.unsplash.com/random/1280x720" alt="" uk-cover />
+        <img src="<?= base_url('assets/images/showcase/slide2.png'); ?>" alt="" uk-cover />
         <div class="uk-position-large uk-position-bottom-left uk-overlay-primary uk-padding">
-            <h1 class="uk-margin-remove">INNOVATIVE FINANCING LAB</h1>
-            <p class="uk-margin-remove">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque,
-            necessitatibus?
-            </p>
+            <h1 class="uk-margin-remove">Blended financing for Microhydro powerplant for Jambi</h1>
+            <!-- <p class="uk-margin-remove">
+            Innovative Financing Lab
+            </p> -->
         </div>
         </li>
         <li>
-        <img src="https://source.unsplash.com/random/1281x720" alt="" uk-cover />
-        <div class="uk-position-large uk-position-center uk-overlay-primary uk-padding">
+        <img src="<?= base_url('assets/images/showcase/slide3.png'); ?>" alt="" class="uk-position-center" />
+        <!-- <div class="uk-position-large uk-position-center-right uk-overlay-primary uk-padding">
             <h1 class="uk-margin-remove">INNOVATIVE FINANCING LAB</h1>
             <p class="uk-margin-remove">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque,
             necessitatibus?
             </p>
-        </div>
+        </div> -->
         </li>
     </ul>
 
@@ -359,14 +358,20 @@ uk-navbar>
         </div>
         <div class="uk-margin-remove">
         <div class="uk-padding">
-            <h1>About</h1>
+            <h3>About the Innovative Financing Lab</h3>
             <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo
-            repellat dolore possimus cumque reprehenderit dolor nihil, omnis
-            facere excepturi beatae neque, aspernatur soluta eaque ea. Iste
-            id incidunt eaque, nihil voluptatum nobis vitae assumenda
-            recusandae earum, facere doloremque maiores modi obcaecati
-            laudantium totam ut asperiores nulla ab placeat. Quod, veniam!
+            UNDP Indonesia Country Office has established its Innovative Financing Lab which was inaugurated on 26
+            September 2018 in the presence of the Indonesian Minister of National Development Planning, Mr Bambang
+            Brodjonegoro, investors, entrepreneurs, representatives of national institution, religious organizations
+            and of the international community in Jakarta. Based in Jakarta but global in ambition to offer services
+            to partners, the Lab aims to innovate on means to unlock and leverage new finance to help close the SDGs
+            financing gap through designing and testing new innovative financing instruments, helping to enhance
+            investments for higher SDGs-returns, and contributing to a stronger enabling environment for
+            SDG-friendly finance. It is a collaborative space, involving the United Nations, business and civil
+            society. The offered services include mapping and analysing, co-designing and testing new financing
+            solutions and aligning existing investment with the SDGs, measuring progress and evaluating impact,
+            fostering social enterprises to deliver on SDGs, creating a platform for sharing of best practices, and
+            promoting a vibrant ecosystem for financing SDGs.
             </p>
         </div>
         </div>
@@ -374,22 +379,21 @@ uk-navbar>
     </div>
 </section>
 <!-- Blog -->
-<section id="blog" class="uk-padding-small"
-    uk-scrollspy="target: .uk-card, .more; cls:uk-animation-slide-left; delay: 350; repeat: true" uk-height-viewport>
+<section id="blog" class="uk-padding-small" uk-scrollspy="target: .uk-card, .more; cls:uk-animation-slide-left; delay: 350; repeat: true" uk-height-viewport>
     <h1 class="uk-heading-line uk-text-center">
     <span>Blog</span>
     </h1>
     <div class="uk-child-width-1-3@s" uk-grid>
     <div>
         <div class="uk-card uk-card-small uk-card-hover uk-card-default">
-        <div class="uk-card-media-top">
-            <img src="https://source.unsplash.com/random/420x240" alt="" class="uk-width-1-1 uk-height-small" />
+        <div class="uk-background-cover uk-height-small" data-src="<?= base_url('assets/images/blogs/blog1.jpeg'); ?>" uk-img>
+            <!-- <img src="images/blog1.jpeg" alt="" /> -->
         </div>
-        <div class="uk-card-body">
-            <h3 class="uk-card-title">Blog 1</h3>
+        <div class="uk-card-body uk-height-small">
+            <!-- <h3 class="uk-card-title">Blog 1</h3> -->
             <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt.
+            UNDP Indonesia and BEKRAF join forces to boost youth participation in social entrepreneurship and
+            startups
             </p>
         </div>
         <div class="uk-card-footer">
@@ -399,14 +403,13 @@ uk-navbar>
     </div>
     <div>
         <div class="uk-card uk-card-small uk-card-hover uk-card-default">
-        <div class="uk-card-media-top">
-            <img src="https://source.unsplash.com/random/421x240" alt="" class="uk-width-1-1 uk-height-small" />
+        <div class="uk-background-cover uk-height-small" data-src="<?= base_url('assets/images/blogs/blog2.jpeg'); ?>" uk-img>
+            <!-- <img src="images/blog2.jpeg" alt="" /> -->
         </div>
-        <div class="uk-card-body">
-            <h3 class="uk-card-title">Blog 2</h3>
+        <div class="uk-card-body uk-height-small">
+            <!-- <h3 class="uk-card-title">Blog 2</h3> -->
             <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt.
+            Fast-tracking SDGs in eastern Indonesia through youth entrepreneurship
             </p>
         </div>
         <div class="uk-card-footer">
@@ -416,65 +419,13 @@ uk-navbar>
     </div>
     <div>
         <div class="uk-card uk-card-small uk-card-hover uk-card-default">
-        <div class="uk-card-media-top">
-            <img src="https://source.unsplash.com/random/422x240" alt="" class="uk-width-1-1 uk-height-small" />
+        <div class="uk-background-cover uk-height-small" data-src="<?= base_url('assets/images/blogs/blog3.jpeg'); ?>" uk-img>
+            <!-- <img src="images/blog3.jpeg" alt="" /> -->
         </div>
-        <div class="uk-card-body">
-            <h3 class="uk-card-title">Blog 3</h3>
+        <div class="uk-card-body uk-height-small">
+            <!-- <h3 class="uk-card-title">Blog 3</h3> -->
             <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt.
-            </p>
-        </div>
-        <div class="uk-card-footer">
-            <a href="#" class="uk-button uk-button-text">Read more</a>
-        </div>
-        </div>
-    </div>
-    <div>
-        <div class="uk-card uk-card-small uk-card-hover uk-card-default">
-        <div class="uk-card-media-top">
-            <img src="https://source.unsplash.com/random/423x240" alt="" class="uk-width-1-1 uk-height-small" />
-        </div>
-        <div class="uk-card-body">
-            <h3 class="uk-card-title">Blog 4</h3>
-            <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt.
-            </p>
-        </div>
-        <div class="uk-card-footer">
-            <a href="#" class="uk-button uk-button-text">Read more</a>
-        </div>
-        </div>
-    </div>
-    <div>
-        <div class="uk-card uk-card-small uk-card-hover uk-card-default">
-        <div class="uk-card-media-top">
-            <img src="https://source.unsplash.com/random/424x240" alt="" class="uk-width-1-1 uk-height-small" />
-        </div>
-        <div class="uk-card-body">
-            <h3 class="uk-card-title">Blog 5</h3>
-            <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt.
-            </p>
-        </div>
-        <div class="uk-card-footer">
-            <a href="#" class="uk-button uk-button-text">Read more</a>
-        </div>
-        </div>
-    </div>
-    <div>
-        <div class="uk-card uk-card-small uk-card-hover uk-card-default">
-        <div class="uk-card-media-top">
-            <img src="https://source.unsplash.com/random/425x240" alt="" class="uk-width-1-1 uk-height-small" />
-        </div>
-        <div class="uk-card-body">
-            <h3 class="uk-card-title">Blog 6</h3>
-            <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt.
+            UNDP dan Badan Wakaf Indonesia bekerjasama untuk meluncurkan blockchain wakaf untuk SDGs
             </p>
         </div>
         <div class="uk-card-footer">
@@ -483,183 +434,158 @@ uk-navbar>
         </div>
     </div>
     </div>
-    <div class="more uk-flex uk-flex-center uk-padding-small">
+    <!-- <div class="more uk-flex uk-flex-center uk-padding-small">
     <a href="blog.html" class="uk-button uk-button-default">More Blog</a>
-    </div>
+    </div> -->
 </section>
 <!-- Publication -->
-<section id="publication" class="uk-padding-small">
-    <h1 class="uk-heading-line uk-text-center">
-    <span>Publication</span>
-    </h1>
-    <div class="uk-child-width-1-2@l" uk-grid>
-    <!-- Books -->
-    <div uk-scrollspy="target: .uk-card; cls:uk-animation-slide-left; delay: 350; repeat: true">
-        <div class="uk-card uk-card-small uk-card-hover uk-card-default uk-grid-collapse uk-margin" uk-grid>
-        <div class="uk-width-small uk-cover-container">
-            <img src="https://source.unsplash.com/random/200x200" alt="" uk-cover />
-        </div>
-        <div class="uk-width-expand">
-            <div class="uk-card-body">
-            <h3 class="uk-card-title">Book 1</h3>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Voluptatem, facere.
-            </p>
+    <section id="publication" class="uk-padding-small">
+      <h1 class="uk-heading-line uk-text-center">
+        <span>Publication</span>
+      </h1>
+      <div class="uk-child-width-1-2@l" uk-grid>
+        <!-- Books -->
+        <div uk-scrollspy="target: .uk-card; cls:uk-animation-slide-left; delay: 350; repeat: true">
+          <div class="uk-card uk-card-medium uk-card-hover uk-card-default uk-grid-collapse uk-margin" uk-grid>
+            <div class="uk-width-small uk-cover-container">
+              <img src="<?= base_url('assets/images/brochures/brochure1.png'); ?>" alt="" uk-cover />
             </div>
-            <div class="uk-card-footer">
-            <a href="#" class="uk-button uk-button-text">Read more</a>
+            <div class="uk-width-expand">
+              <div class="uk-card-body">
+                <!-- <h3 class="uk-card-title">Book 1</h3> -->
+                <p>
+                  Green Bond and Green Sukuk Initiative
+                </p>
+              </div>
+              <div class="uk-card-footer">
+                <a href="#" class="uk-button uk-button-text">Read more</a>
+              </div>
             </div>
-        </div>
-        </div>
-        <div class="uk-card uk-card-small uk-card-hover uk-card-default uk-grid-collapse uk-margin" uk-grid>
-        <div class="uk-width-small uk-cover-container">
-            <img src="https://source.unsplash.com/random/201x200" alt="" uk-cover />
-            <canvas width="" height=""></canvas>
-        </div>
-        <div class="uk-width-expand">
-            <div class="uk-card-body">
-            <h3 class="uk-card-title">Book 2</h3>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Porro, quas!
-            </p>
+          </div>
+          <div class="uk-card uk-card-medium uk-card-hover uk-card-default uk-grid-collapse uk-margin" uk-grid>
+            <div class="uk-width-small uk-cover-container">
+              <img src="<?= base_url('assets/images/books/book1.png'); ?>" alt="" uk-cover />
             </div>
-            <div class="uk-card-footer">
-            <a href="#" class="uk-button uk-button-text">Read more</a>
+            <div class="uk-width-expand">
+              <div class="uk-card-body">
+                <!-- <h3 class="uk-card-title">Book 2</h3> -->
+                <p>
+                  Innovative Financing Lab
+                </p>
+              </div>
+              <div class="uk-card-footer">
+                <a href="#" class="uk-button uk-button-text">Read more</a>
+              </div>
             </div>
-        </div>
-        </div>
-        <div class="uk-card uk-card-small uk-card-hover uk-card-default uk-grid-collapse uk-margin" uk-grid>
-        <div class="uk-width-small uk-cover-container">
-            <img src="https://source.unsplash.com/random/202x200" alt="" uk-cover />
-        </div>
-        <div class="uk-width-expand">
-            <div class="uk-card-body">
-            <h3 class="uk-card-title">Book 3</h3>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                do eiusmod tempor incididunt.
-            </p>
+          </div>
+          <div class="uk-card uk-card-medium uk-card-hover uk-card-default uk-grid-collapse uk-margin" uk-grid>
+            <div class="uk-width-small uk-cover-container">
+              <img src="<?= base_url('assets/images/books/book2.png'); ?>" uk-cover />
             </div>
-            <div class="uk-card-footer">
-            <a href="#" class="uk-button uk-button-text">Read more</a>
+            <div class=" uk-width-expand">
+              <div class="uk-card-body">
+                <!-- <h3 class="uk-card-title">Book 3</h3> -->
+                <p>
+                  Role of Zakat in Supporting Sustainble Development
+                </p>
+              </div>
+              <div class="uk-card-footer">
+                <a href="#" class="uk-button uk-button-text">Read more</a>
+              </div>
             </div>
-        </div>
-        </div>
-        <div class="uk-card uk-card-small uk-card-hover uk-card-default uk-grid-collapse uk-margin" uk-grid>
-        <div class="uk-width-small uk-cover-container">
-            <img src="https://source.unsplash.com/random/203x200" alt="" uk-cover />
-        </div>
-        <div class="uk-width-expand">
-            <div class="uk-card-body">
-            <h3 class="uk-card-title">Book 4</h3>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                do eiusmod tempor incididunt.
-            </p>
+          </div>
+          <div class="uk-card uk-card-medium uk-card-hover uk-card-default uk-grid-collapse uk-margin" uk-grid>
+            <div class="uk-width-small uk-cover-container">
+            <img src="<?= base_url('assets/images/books/book3.png'); ?>" uk-cover />
             </div>
-            <div class="uk-card-footer">
-            <a href="#" class="uk-button uk-button-text">Read more</a>
+            <div class="uk-width-expand">
+              <div class="uk-card-body">
+                <!-- <h3 class="uk-card-title">Book 4</h3> -->
+                <p>
+                  Social Impact Bond
+                </p>
+              </div>
+              <div class="uk-card-footer">
+                <a href="#" class="uk-button uk-button-text">Read more</a>
+              </div>
             </div>
+          </div>
         </div>
-        </div>
-        <div class="uk-card uk-card-small uk-card-hover uk-card-default uk-grid-collapse uk-margin" uk-grid>
-        <div class="uk-width-small uk-cover-container">
-            <img src="https://source.unsplash.com/random/204x200" alt="" uk-cover />
-        </div>
-        <div class="uk-width-expand">
-            <div class="uk-card-body">
-            <h3 class="uk-card-title">Book 5</h3>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                do eiusmod tempor incididunt.
-            </p>
+        <!-- Brochures -->
+        <div uk-scrollspy="target: .uk-card; cls:uk-animation-fade; delay: 350; repeat: true">
+          <div class="uk-card uk-card-medium uk-card-hover uk-card-default uk-grid-collapse uk-margin" uk-grid>
+            <div class="uk-width-small uk-cover-container">
+            <img src="<?= base_url('assets/images/books/book4.png'); ?>" uk-cover />
             </div>
-            <div class="uk-card-footer">
-            <a href="#" class="uk-button uk-button-text">Read more</a>
+            <div class="uk-width-expand">
+              <div class="uk-card-body">
+                <!-- <h3 class="uk-card-title">Brochure 1</h3> -->
+                <p>
+                  Women’s Entrepreneur and Access to Finance
+                </p>
+              </div>
+              <div class="uk-card-footer">
+                <a href="#" class="uk-button uk-button-text">Read more</a>
+              </div>
             </div>
-        </div>
-        </div>
-    </div>
-    <!-- Brochures -->
-    <div uk-scrollspy="target: .uk-card; cls:uk-animation-fade; delay: 350; repeat: true">
-        <div class="uk-card uk-card-small uk-card-hover uk-card-default uk-grid-collapse uk-margin" uk-grid>
-        <div class="uk-width-small uk-cover-container">
-            <img src="https://source.unsplash.com/random/210x200" alt="" uk-cover />
-        </div>
-        <div class="uk-width-expand">
-            <div class="uk-card-body">
-            <h3 class="uk-card-title">Brochure 1</h3>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Voluptatem, facere.
-            </p>
+          </div>
+          <div class="uk-card uk-card-medium uk-card-hover uk-card-default uk-grid-collapse uk-margin" uk-grid>
+            <div class="uk-width-small uk-cover-container">
+            <img src="<?= base_url('assets/images/brochures/brochure2.png'); ?>" uk-cover />
+              <canvas width="" height=""></canvas>
             </div>
-            <div class="uk-card-footer">
-            <a href="#" class="uk-button uk-button-text">Read more</a>
+            <div class="uk-width-expand">
+              <div class="uk-card-body">
+                <!-- <h3 class="uk-card-title">Brochure 2</h3> -->
+                <p>
+                  UNDP Services in Financing the SDGs
+                </p>
+              </div>
+              <div class="uk-card-footer">
+                <a href="#" class="uk-button uk-button-text">Read more</a>
+              </div>
             </div>
-        </div>
-        </div>
-        <div class="uk-card uk-card-small uk-card-hover uk-card-default uk-grid-collapse uk-margin" uk-grid>
-        <div class="uk-width-small uk-cover-container">
-            <img src="https://source.unsplash.com/random/211x200" alt="" uk-cover />
-            <canvas width="" height=""></canvas>
-        </div>
-        <div class="uk-width-expand">
-            <div class="uk-card-body">
-            <h3 class="uk-card-title">Brochure 2</h3>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Porro, quas!
-            </p>
+          </div>
+          <div class="uk-card uk-card-medium uk-card-hover uk-card-default uk-grid-collapse uk-margin" uk-grid>
+            <div class="uk-width-small uk-cover-container">
+            <img src="<?= base_url('assets/images/brochures/brochure3.png'); ?>" uk-cover />
             </div>
-            <div class="uk-card-footer">
-            <a href="#" class="uk-button uk-button-text">Read more</a>
+            <div class="uk-width-expand">
+              <div class="uk-card-body">
+                <!-- <h3 class="uk-card-title">Brochure 3</h3> -->
+                <p>
+                  MTRE3
+                </p>
+              </div>
+              <div class="uk-card-footer">
+                <a href="#" class="uk-button uk-button-text">Read more</a>
+              </div>
             </div>
+          </div>
+          <!-- <div class="uk-card uk-card-hover uk-card-default uk-position-relative uk-visible-toogle uk-light"
+            uk-slideshow="animation: push;">
+            <ul class="uk-slideshow-items">
+              <li>
+                <iframe class="uk-width-1-1 uk-height-1-1" src="https://www.youtube.com/embed/bZHgSJik9NM" width="560"
+                  height="315" frameborder="0" allowfullscreen uk-video></iframe>
+              </li>
+              <li>
+                <iframe class="uk-width-1-1 uk-height-1-1" src="https://www.youtube.com/embed/tgbNymZ7vqY" width="560"
+                  height="315" frameborder="0" allowfullscreen uk-video></iframe>
+              </li>
+            </ul>
+            <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous
+              uk-slideshow-item="previous"></a>
+            <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next
+              uk-slideshow-item="next"></a>
+          </div> -->
         </div>
-        </div>
-        <div class="uk-card uk-card-small uk-card-hover uk-card-default uk-grid-collapse uk-margin" uk-grid>
-        <div class="uk-width-small uk-cover-container">
-            <img src="https://source.unsplash.com/random/212x200" alt="" uk-cover />
-        </div>
-        <div class="uk-width-expand">
-            <div class="uk-card-body">
-            <h3 class="uk-card-title">Brochure 3</h3>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                do eiusmod tempor incididunt.
-            </p>
-            </div>
-            <div class="uk-card-footer">
-            <a href="#" class="uk-button uk-button-text">Read more</a>
-            </div>
-        </div>
-        </div>
-        <div class="uk-card uk-card-hover uk-card-default uk-position-relative uk-visible-toogle uk-light"
-        uk-slideshow="animation: push;">
-        <ul class="uk-slideshow-items">
-            <li>
-            <iframe class="uk-width-1-1 uk-height-1-1" src="https://www.youtube.com/embed/bZHgSJik9NM" width="560"
-                height="315" frameborder="0" allowfullscreen uk-video></iframe>
-            </li>
-            <li>
-            <iframe class="uk-width-1-1 uk-height-1-1" src="https://www.youtube.com/embed/tgbNymZ7vqY" width="560"
-                height="315" frameborder="0" allowfullscreen uk-video></iframe>
-            </li>
-        </ul>
-        <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous
-            uk-slideshow-item="previous"></a>
-        <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next
-            uk-slideshow-item="next"></a>
-        </div>
-    </div>
-    </div>
-    <div class="uk-flex uk-flex-center uk-padding-small"
-    uk-scrollspy="target: a; cls:uk-animation-slide-top; delay: 350; repeat: true">
-    <a href="publication.html" class="uk-button uk-button-default">More Publication</a>
-    </div>
-</section>
+      </div>
+      <!-- <div class="uk-flex uk-flex-center uk-padding-small"
+        uk-scrollspy="target: a; cls:uk-animation-slide-top; delay: 350; repeat: true">
+        <a href="publication.html" class="uk-button uk-button-default">More Publication</a>
+      </div> -->
+    </section>
 <!-- Connect -->
 <section id="connect" class="uk-padding uk-background-default">
     <h1 class="uk-heading-line uk-text-center uk-margin-large-bottom">
@@ -668,37 +594,37 @@ uk-navbar>
     <div class="uk-child-width-1-6 uk-flex-center uk-margin-remove"
     uk-scrollspy="target: div; cls:uk-animation-fade; delay: 200; repeat: true" uk-grid>
     <div>
-        <img src="<?= base_url('assets/images/connect1.png'); ?>" alt="" />
+        <img src="<?= base_url('assets/images/connects/connect1.png'); ?>" alt="" />
     </div>
     <div>
-        <img src="<?= base_url('assets/images/connect2.png'); ?>" alt="" />
+        <img src="<?= base_url('assets/images/connects/connect2.png'); ?>" alt="" />
     </div>
     <div>
-        <img src="<?= base_url('assets/images/connect3.png'); ?>" alt="" />
+        <img src="<?= base_url('assets/images/connects/connect3.png'); ?>" alt="" />
     </div>
     <div>
-        <img src="<?= base_url('assets/images/connect4.png'); ?>" alt="" />
+        <img src="<?= base_url('assets/images/connects/connect4.png'); ?>" alt="" />
     </div>
     <div>
-        <img src="<?= base_url('assets/images/connect5.png'); ?>" alt="" />
+        <img src="<?= base_url('assets/images/connects/connect5.png'); ?>" alt="" />
     </div>
     <div>
-        <img src="<?= base_url('assets/images/connect6.png'); ?>" alt="" />
+        <img src="<?= base_url('assets/images/connects/connect6.png'); ?>" alt="" />
     </div>
     <div>
-        <img src="<?= base_url('assets/images/connect7.png'); ?>" alt="" />
+        <img src="<?= base_url('assets/images/connects/connect7.png'); ?>" alt="" />
     </div>
     <div>
-        <img src="<?= base_url('assets/images/connect8.png'); ?>" alt="" />
+        <img src="<?= base_url('assets/images/connects/connect8.png'); ?>" alt="" />
     </div>
     <div>
-        <img src="<?= base_url('assets/images/connect9.png'); ?>" alt="" />
+        <img src="<?= base_url('assets/images/connects/connect9.png'); ?>" alt="" />
     </div>
     <div>
-        <img src="<?= base_url('assets/images/connect10.png'); ?>" alt="" />
+        <img src="<?= base_url('assets/images/connects/connect10.png'); ?>" alt="" />
     </div>
     <div>
-        <img src="<?= base_url('assets/images/connect11.png'); ?>" alt="" />
+        <img src="<?= base_url('assets/images/connects/connect11.png'); ?>" alt="" />
     </div>
     </div>
 </section>

@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Migration_create_connects extends CI_Migration
+class Migration_create_abouts extends CI_Migration
 {
     public function up()
     {
@@ -14,11 +14,10 @@ class Migration_create_connects extends CI_Migration
             ),
             'image' => array(
                 'type' => 'VARCHAR',
-                'constraint' => '100',
+                'constraint' => '128',
             ),
-            'name' => array(
-                'type' => 'VARCHAR',
-                'constraint' => '100',
+            'body' => array(
+                'type' => 'TEXT',
             ),
             'created_at' => array(
                 'type' => 'DATETIME'
@@ -33,20 +32,19 @@ class Migration_create_connects extends CI_Migration
             ),
             'updated_by' => array(
                 'type' => 'INT',
-                'constraint' => 11,
+                'constraint' => 1,
                 'unsigned' => TRUE,
-                'null' => TRUE,
             ),
         ));
 
         $this->dbforge->add_field('CONSTRAINT FOREIGN KEY (updated_by) REFERENCES users(id) ON DELETE RESTRICT ON UPDATE CASCADE');
         $this->dbforge->add_key('id', TRUE);
 
-        $this->dbforge->create_table('connects');
+        $this->dbforge->create_table('abouts');
     }
 
     public function down()
     {
-        $this->dbforge->drop_table('connects');
+        $this->dbforge->drop_table('abouts');
     }
 }

@@ -3,11 +3,11 @@
   --secondary: black;
 }
 
+/* Initial HTML */
 html, body {
   height: 100%;
 }
 
-/* Initial HTML */
 * {
   margin: 0;
   padding: 0;
@@ -26,6 +26,10 @@ ul {
 
 img {
   max-width: 100%;
+}
+
+textarea {
+  resize: vertical;
 }
 
 /* Sidenav */
@@ -90,8 +94,8 @@ img {
   color: var(--primary);
 }
 
-.side-nav .main-content ul li a:hover,
-.side-nav .main-content ul li.active a {
+.side-nav .main-content ul li > a:hover,
+.side-nav .main-content ul li.active > a {
   color: var(--secondary);
 }
 
@@ -116,7 +120,8 @@ img {
 .side-nav .head-content a:hover,
 .side-nav .main-content div > a,
 .top-nav > .uk-navbar-left > p,
-.top-nav > .uk-navbar-right > .uk-navbar-nav > li > a {
+.top-nav > .uk-navbar-right > .uk-navbar-nav > li > a,
+.side-nav .main-content .menu-list a:hover {
   color: var(--secondary);
 }
 

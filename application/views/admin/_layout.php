@@ -42,7 +42,7 @@
                     <ul class="uk-nav-default uk-nav-parent-icon" uk-nav>
                         <li class="uk-nav-header">Data Management</li>
                         <li>
-                            <a href="#"><span class="uk-margin-small-right" uk-icon="icon: file-text"></span> Blogs</a>
+                            <a href="<?= base_url('admin/blog'); ?>"><span class="uk-margin-small-right" uk-icon="icon: file-text"></span> Blogs</a>
                         </li>
                         <li>
                             <a href="#"><span class="uk-margin-small-right" uk-icon="icon: folder"></span> Books</a>
@@ -83,7 +83,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="uk-width-expand uk-margin-small-top uk-margin-small-left">
+                <div class="uk-width-expand uk-padding-small">
                     <!-- Content Here -->
                     <?php $this->load->view($page); ?>
                     <!-- Content Here -->

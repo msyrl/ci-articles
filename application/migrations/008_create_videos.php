@@ -16,7 +16,7 @@ class Migration_create_videos extends CI_Migration
                 'type' => 'VARCHAR',
                 'constraint' => '100',
             ),
-            'attachment_url' => array(
+            'link' => array(
                 'type' => 'VARCHAR',
                 'constraint' => '128',
             ),
@@ -24,18 +24,25 @@ class Migration_create_videos extends CI_Migration
                 'type' => 'VARCHAR',
                 'constraint' => '128',
             ),
-            'user_id' => array(
-                'type' => 'INT',
-                'constraint' => 11,
-                'unsigned' => TRUE,
-                'null' => TRUE,
-            ),
             'created_at' => array(
-                'type' => 'TIMESTAMP'
-            )
+                'type' => 'DATETIME'
+            ),
+            'updated_at' => array(
+                'type' => 'DATETIME'
+            ),
+            'is_publish' => array(
+                'type' => 'INT',
+                'constraint' => 1,
+                'unsigned' => TRUE,
+            ),
+            'updated_by' => array(
+                'type' => 'INT',
+                'constraint' => 1,
+                'unsigned' => TRUE,
+            ),
         ));
 
-        $this->dbforge->add_field('CONSTRAINT FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE RESTRICT ON UPDATE CASCADE');
+        $this->dbforge->add_field('CONSTRAINT FOREIGN KEY (updated_by) REFERENCES users(id) ON DELETE RESTRICT ON UPDATE CASCADE');
 
         $this->dbforge->add_key('id', TRUE);
 

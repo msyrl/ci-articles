@@ -12,12 +12,32 @@ class Migration_create_teams extends CI_Migration
                 'unsigned' => TRUE,
                 'auto_increment' => TRUE
             ),
+            'image' => array(
+                'type' => 'VARCHAR',
+                'constraint' => '128',
+            ),
             'name' => array(
                 'type' => 'VARCHAR',
                 'constraint' => '100',
             ),
+            'title' => array(
+                'type' => 'VARCHAR',
+                'constraint' => '100',
+            ),
+            'created_at' => array(
+                'type' => 'DATETIME'
+            ),
+            'updated_at' => array(
+                'type' => 'DATETIME'
+            ),
+            'updated_by' => array(
+                'type' => 'INT',
+                'constraint' => 1,
+                'unsigned' => TRUE,
+            ),
         ));
 
+        $this->dbforge->add_field('CONSTRAINT FOREIGN KEY (updated_by) REFERENCES users(id) ON DELETE RESTRICT ON UPDATE CASCADE');
         $this->dbforge->add_key('id', TRUE);
 
         $this->dbforge->create_table('teams');
