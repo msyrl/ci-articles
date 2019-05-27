@@ -65,13 +65,13 @@
                             <a href="#"><span class="uk-margin-small-right" uk-icon="icon: play-circle"></span> Videos</a>
                         </li>
                         <li>
-                            <a href="#"><span class="uk-margin-small-right" uk-icon="icon: users"></span> Teams</a>
+                            <a href="<?= base_url('admin/team'); ?>"><span class="uk-margin-small-right" uk-icon="icon: users"></span> Teams</a>
                         </li>
                         <li>
                             <a href="#"><span class="uk-margin-small-right" uk-icon="icon: social"></span> Experts</a>
                         </li>
                         <li>
-                            <a href="#"><span class="uk-margin-small-right" uk-icon="icon: thumbnails"></span> Connects</a>
+                            <a href="<?= base_url('admin/connect'); ?>"><span class="uk-margin-small-right" uk-icon="icon: thumbnails"></span> Connects</a>
                         </li>
                         <li class="uk-nav-divider"></li>
                         <li class="uk-nav-header">Page Management</li>
