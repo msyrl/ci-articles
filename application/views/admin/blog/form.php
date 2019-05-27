@@ -1,6 +1,12 @@
 <h2 class="uk-heading-small uk-margin-remove"><?= ucwords($title); ?></h2>
 <hr>
-<form class="uk-form-stacked uk-padding-small" action="" method="post" autocomplete="off">
+<?php if (isset($upload_error)) : ?>
+    <div class="uk-alert-danger uk-animation-slide-top" uk-alert>
+        <a class="uk-alert-close" uk-close></a>
+        <?= $upload_error; ?>
+    </div>
+<?php endif; ?>
+<form class="uk-form-stacked uk-padding-small" action="" method="post" autocomplete="off" enctype="multipart/form-data">
     <div class="uk-margin">
         <div uk-grid>
             <div class="uk-width-expand">
@@ -14,7 +20,7 @@
             <div>
                 <label class="uk-form-label" for="image">Image</label>
                 <div class="uk-form-controls" uk-form-custom>
-                    <input type="file">
+                    <input type="file" name="image">
                     <button class="uk-button uk-button-default uk-button-small uk-text-capitalize" type="button" tabindex="-1">Choose File</button>
                 </div>
             </div>
@@ -44,7 +50,7 @@
     <div class="uk-margin">
         <label class="uk-form-label" for="is_publish">Publish</label>
         <div class="uk-grid-small" uk-grid>
-            <label><input class="uk-radio" id="is_publish" type="radio" name="is_publish" value="1" <?= isset($blog) && $blog->is_publish == 1 ? 'checked' : '' ?>> Yes</label><br>
+            <label><input class="uk-radio" id="is_publish" type="radio" name="is_publish" value="1" <?= isset($blog) && $blog->is_publish == 1 ? 'checked' : '' ?> required> Yes</label><br>
             <label><input class="uk-radio" type="radio" name="is_publish" value="0" <?= isset($blog) && $blog->is_publish == 0 ? 'checked' : '' ?>> No</label>
         </div>
     </div>
@@ -52,11 +58,13 @@
     <div class="uk-margin">
         <div class="uk-flex uk-flex-center">
             <div>
-                <button class="uk-button uk-button-primary" type="submit">Save</button>
+                <button class="uk-button uk-button-primary" type="submit"><?= isset($blog) ? 'Update' : 'Save'; ?></button>
             </div>
-            <div class="uk-margin-small-left">
-                <button class="uk-button uk-button-default" type="reset">Reset</button>
-            </div>
+            <?php if (!isset($blog)) : ?>
+                <div class="uk-margin-small-left">
+                    <button class="uk-button uk-button-default" type="reset">Reset</button>
+                </div>
+            <?php endif; ?>
         </div>
     </div>
 </form>

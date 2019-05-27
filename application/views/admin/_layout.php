@@ -38,9 +38,20 @@
         </nav>
         <div class="uk-margin-medium-top uk-grid-collapse uk-flex-1">
             <div class="uk-grid-collapse uk-height-1-1" uk-grid>
-                <div class="uk-card uk-card-default uk-card-body uk-width-medium">
+                <div class="uk-card uk-card-default uk-card-body uk-width-medium@s admin-menu">
                     <ul class="uk-nav-default uk-nav-parent-icon" uk-nav>
-                        <li class="uk-nav-header">Data Management</li>
+                        <li class="uk-nav-header">
+                            <div class="uk-flex uk-flex-middle uk-flex-between">
+                                <div>
+                                    Data Management
+                                </div>
+                                <div class="mobile-admin-menu-toggle">
+                                    <a class="uk-navbar-toggle admin-menu-toggle" href="#" style="min-height: 40px">
+                                        <span uk-navbar-toggle-icon></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
                         <li>
                             <a href="<?= base_url('admin/blog'); ?>"><span class="uk-margin-small-right" uk-icon="icon: file-text"></span> Blogs</a>
                         </li>
@@ -83,7 +94,12 @@
                         </li>
                     </ul>
                 </div>
-                <div class="uk-width-expand uk-padding-small">
+                <div class="uk-width-expand uk-padding-small uk-animation-fade">
+                    <div class="uk-navbar uk-margin-bottom">
+                        <a class="uk-navbar-toggle admin-menu-toggle" href="#" style="min-height: 40px">
+                            <span uk-navbar-toggle-icon></span>
+                        </a>
+                    </div>
                     <!-- Content Here -->
                     <?php $this->load->view($page); ?>
                     <!-- Content Here -->
@@ -94,6 +110,7 @@
     <script src="<?= base_url('assets/vendor/uikit/js/uikit.min.js') ?>"></script>
     <script src="<?= base_url('assets/vendor/uikit/js/uikit-icons.min.js') ?>"></script>
     <script src="<?= base_url('assets/vendor/jquery/jquery-3.3.1.min.js'); ?>"></script>
+    <script src="<?= base_url('assets/js/main.js'); ?>"></script>
     <!-- Extra Script -->
     <?php if (isset($meta_script)) : ?>
         <script src="<?= base_url($meta_script); ?>"></script>

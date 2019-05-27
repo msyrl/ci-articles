@@ -1,3 +1,4 @@
+// Landing Page
 const btnSideNav = document.querySelectorAll(".sidebar-toggle");
 
 btnSideNav.forEach(btn => {
@@ -17,4 +18,9 @@ btnSideNavMenu.forEach(btn => {
       btn.parentElement.classList.add("active");
     }
   });
+});
+
+// Admin Page
+$('.admin-menu-toggle').click(function () {
+  $('.admin-menu').toggle('slow');
 });

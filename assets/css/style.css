@@ -189,6 +189,10 @@ article {
   padding: 0 1rem;
 }
 
+.mobile-admin-menu-toggle {
+  display: none;
+}
+
 @media (max-width: 1150px) {
   .main-nav {
     display: none;
@@ -200,7 +204,7 @@ article {
 }
 
 @media (max-width: 600px) {
- .search {
+ .search, .ext-title, .admin-menu {
     display: none;
   }
 
@@ -212,8 +216,8 @@ article {
     padding-right: 0;
   }
 
-  .ext-title {
-    display: none;
+  .mobile-admin-menu-toggle {
+    display: block;
   }
 }
 

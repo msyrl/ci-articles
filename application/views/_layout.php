@@ -68,6 +68,7 @@
     <script src="<?= base_url('assets/vendor/uikit/js/uikit.min.js') ?>"></script>
     <script src="<?= base_url('assets/vendor/uikit/js/uikit-icons.min.js') ?>"></script>
     <script src="<?= base_url('assets/vendor/jquery/jquery-3.3.1.min.js'); ?>"></script>
+    <script src="<?= base_url('assets/js/main.js'); ?>"></script>
     <!-- Extra Script -->
     <?php if (isset($meta_script)) : ?>
         <script src="<?= base_url($meta_script); ?>"></script>
