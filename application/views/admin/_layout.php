@@ -59,7 +59,7 @@
                             <a href="<?= base_url('admin/book'); ?>"><span class="uk-margin-small-right" uk-icon="icon: folder"></span> Books</a>
                         </li>
                         <li>
-                            <a href="#"><span class="uk-margin-small-right" uk-icon="icon: image"></span> Brochures</a>
+                            <a href="<?= base_url('admin/brochure'); ?>"><span class="uk-margin-small-right" uk-icon="icon: image"></span> Brochures</a>
                         </li>
                         <li>
                             <a href="#"><span class="uk-margin-small-right" uk-icon="icon: play-circle"></span> Videos</a>
