@@ -79,7 +79,7 @@
                             <a href="<?= base_url('admin/slide'); ?>"><span class="uk-margin-small-right" uk-icon="icon: image"></span> Slides</a>
                         </li>
                         <li>
-                            <a href="#"><span class="uk-margin-small-right" uk-icon="icon: info"></span> About</a>
+                            <a href="<?= base_url('admin/about'); ?>"><span class="uk-margin-small-right" uk-icon="icon: info"></span> About</a>
                         </li>
                         <li>
                             <a href="#"><span class="uk-margin-small-right" uk-icon="icon: receiver"></span> Contact</a>
