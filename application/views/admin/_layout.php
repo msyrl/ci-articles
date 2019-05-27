@@ -82,7 +82,7 @@
                             <a href="<?= base_url('admin/about'); ?>"><span class="uk-margin-small-right" uk-icon="icon: info"></span> About</a>
                         </li>
                         <li>
-                            <a href="#"><span class="uk-margin-small-right" uk-icon="icon: receiver"></span> Contact</a>
+                            <a href="<?= base_url('admin/general'); ?>"><span class="uk-margin-small-right" uk-icon="icon: receiver"></span> Generals</a>
                         </li>
                         <li class="uk-nav-divider"></li>
                         <li class="uk-nav-header">User Management</li>

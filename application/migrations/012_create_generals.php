@@ -14,22 +14,32 @@ class Migration_create_generals extends CI_Migration
             ),
             'address' => array(
                 'type' => 'TEXT',
+                'null' => TRUE,
+            ),
+            'phone' => array(
+                'type' => 'VARCHAR',
+                'constraint' => '30',
+                'null' => TRUE,
             ),
             'facebook' => array(
                 'type' => 'VARCHAR',
                 'constraint' => '100',
+                'null' => TRUE,
             ),
             'instagram' => array(
                 'type' => 'VARCHAR',
                 'constraint' => '100',
+                'null' => TRUE,
             ),
             'twitter' => array(
                 'type' => 'VARCHAR',
                 'constraint' => '100',
+                'null' => TRUE,
             ),
             'youtube' => array(
                 'type' => 'VARCHAR',
                 'constraint' => '100',
+                'null' => TRUE,
             ),
         ));
 

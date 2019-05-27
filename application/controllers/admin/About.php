@@ -8,8 +8,9 @@ class About extends Admin_Controller
         $this->load->model('About_m');
     }
 
-    public function index($id = 1)
+    public function index()
     {
+        $id = 1;
         $post = TRUE;
         $this->data['page'] = 'admin/about/index';
         $this->data['id'] = $id;
