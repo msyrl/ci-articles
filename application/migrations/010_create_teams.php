@@ -33,6 +33,7 @@ class Migration_create_teams extends CI_Migration
                 'type' => 'INT',
                 'constraint' => 11,
                 'unsigned' => TRUE,
+                'null' => TRUE,
             ),
         ));
 

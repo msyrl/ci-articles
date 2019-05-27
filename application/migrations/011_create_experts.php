@@ -32,8 +32,9 @@ class Migration_create_experts extends CI_Migration
             ),
             'updated_by' => array(
                 'type' => 'INT',
-                'constraint' => 1,
+                'constraint' => 11,
                 'unsigned' => TRUE,
+                'null' => TRUE,
             ),
         ));
 
