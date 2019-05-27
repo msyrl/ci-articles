@@ -56,7 +56,7 @@
                             <a href="<?= base_url('admin/blog'); ?>"><span class="uk-margin-small-right" uk-icon="icon: file-text"></span> Blogs</a>
                         </li>
                         <li>
-                            <a href="#"><span class="uk-margin-small-right" uk-icon="icon: folder"></span> Books</a>
+                            <a href="<?= base_url('admin/book'); ?>"><span class="uk-margin-small-right" uk-icon="icon: folder"></span> Books</a>
                         </li>
                         <li>
                             <a href="#"><span class="uk-margin-small-right" uk-icon="icon: image"></span> Brochures</a>

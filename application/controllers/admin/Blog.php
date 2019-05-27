@@ -31,11 +31,22 @@ class Blog extends Admin_Controller
         if ($this->form_validation->run() === FALSE) {
             $this->load->view('admin/_layout', $this->data);
         } else {
+            $data = array(
+                'title' => htmlspecialchars($this->input->post('title', TRUE)),
+                'source' => htmlspecialchars($this->input->post('source', TRUE)),
+                'body' => htmlspecialchars($this->input->post('body', TRUE)),
+                'slug' => url_title(strtolower($this->input->post('title', TRUE))),
+                'tags' => htmlspecialchars($this->input->post('tags', TRUE)),
+                'is_publish' => htmlspecialchars($this->input->post('is_publish', TRUE)),
+                // static updated_by
+                'updated_by' => 1,
+            );
             if ($_FILES['image']['name'] != '') {
+                $this->load->library('upload');
                 $uploadConfig = array(
                     'upload_path' => './assets/images/blogs/',
                     'allowed_types' => 'jpg|png|gif|jpeg',
-                    'max_size' => 1000,
+                    'max_size' => 2000,
                     'encrypt_name' => TRUE,
                 );
                 if (!empty($this->data['blog']->image)) {
@@ -43,25 +54,16 @@ class Blog extends Admin_Controller
                         unlink('./assets/images/blogs/' . $this->data['blog']->image);
                     }
                 }
-                $this->load->library('upload', $uploadConfig);
+                $this->upload->initialize($uploadConfig);
                 if ($this->upload->do_upload('image')) {
                     $imageName = $this->upload->data('file_name');
+                    $data['image'] = $imageName;
                 } else {
                     $this->data['upload_error'] = $this->upload->display_errors();
                     $post = FALSE;
                 }
             }
             if ($post) {
-                $data = array(
-                    'title' => htmlspecialchars($this->input->post('title', TRUE)),
-                    'image' => isset($imageName) ? $imageName : '',
-                    'source' => htmlspecialchars($this->input->post('source', TRUE)),
-                    'body' => htmlspecialchars($this->input->post('body', TRUE)),
-                    'slug' => url_title(strtolower($this->input->post('title', TRUE))),
-                    'tags' => htmlspecialchars($this->input->post('tags', TRUE)),
-                    'is_publish' => htmlspecialchars($this->input->post('is_publish', TRUE)),
-                    'updated_by' => 1,
-                );
                 if ($id === NULL) {
                     $this->Blog_m->save($data);
                 } else {
@@ -95,10 +97,8 @@ class Blog extends Admin_Controller
     public function delete($id)
     {
         $blog = $this->Blog_m->get($id, TRUE);
-        if (!empty($blog->image)) {
-            if ($blog->image && file_exists('./assets/images/blogs/' . $blog->image)) {
-                unlink('./assets/images/blogs/' . $blog->image);
-            }
+        if (!empty($blog->image) && file_exists('./assets/images/blogs/' . $blog->image)) {
+            unlink('./assets/images/blogs/' . $blog->image);
         }
         $this->Blog_m->delete($id);
         $this->session->set_flashdata('form_status', array(
