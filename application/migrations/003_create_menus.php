@@ -24,6 +24,10 @@ class Migration_create_menus extends CI_Migration
                 'type' => 'VARCHAR',
                 'constraint' => 30,
             ),
+            'type' => array(
+                'type' => 'VARCHAR',
+                'constraint' => '100',
+            ),
         ));
 
         $this->dbforge->add_key('id', TRUE);

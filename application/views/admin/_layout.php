@@ -40,19 +40,26 @@
             <div class="uk-grid-collapse uk-height-1-1" uk-grid>
                 <div class="uk-card uk-card-default uk-card-body uk-width-medium@s admin-menu">
                     <ul class="uk-nav-default uk-nav-parent-icon" uk-nav>
-                        <li class="uk-nav-header">
-                            <div class="uk-flex uk-flex-middle uk-flex-between">
-                                <div>
-                                    Data Management
+                        <?php if (!empty($data_menus)) : ?>
+                            <li class="uk-nav-header">
+                                <div class="uk-flex uk-flex-middle uk-flex-between">
+                                    <div>
+                                        Data Management
+                                    </div>
+                                    <div class="mobile-admin-menu-toggle">
+                                        <a class="uk-navbar-toggle admin-menu-toggle" href="#" style="min-height: 40px">
+                                            <span uk-navbar-toggle-icon></span>
+                                        </a>
+                                    </div>
                                 </div>
-                                <div class="mobile-admin-menu-toggle">
-                                    <a class="uk-navbar-toggle admin-menu-toggle" href="#" style="min-height: 40px">
-                                        <span uk-navbar-toggle-icon></span>
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
+                            </li>
+                            <?php foreach ($data_menus as $dm) : ?>
+                                <li>
+                                    <a href="<?= base_url($dm->url); ?>"><span class="uk-margin-small-right" uk-icon="icon: <?= $dm->icon; ?>"></span> <?= ucwords($dm->title); ?></a>
+                                </li>
+                            <?php endforeach; ?>
+                        <?php endif; ?>
+                        <!-- <li>
                             <a href="<?= base_url('admin/blog'); ?>"><span class="uk-margin-small-right" uk-icon="icon: file-text"></span> Blogs</a>
                         </li>
                         <li>
@@ -72,10 +79,17 @@
                         </li>
                         <li>
                             <a href="<?= base_url('admin/connect'); ?>"><span class="uk-margin-small-right" uk-icon="icon: thumbnails"></span> Connects</a>
-                        </li>
-                        <li class="uk-nav-divider"></li>
-                        <li class="uk-nav-header">Page Management</li>
-                        <li>
+                        </li> -->
+                        <?php if (!empty($page_menus)) : ?>
+                            <li class="uk-nav-divider"></li>
+                            <li class="uk-nav-header">Page Management</li>
+                            <?php foreach ($page_menus as $pm) : ?>
+                                <li>
+                                    <a href="<?= base_url($pm->url); ?>"><span class="uk-margin-small-right" uk-icon="icon: <?= $pm->icon; ?>"></span> <?= ucwords($pm->title); ?></a>
+                                </li>
+                            <?php endforeach; ?>
+                        <?php endif; ?>
+                        <!-- <li>
                             <a href="<?= base_url('admin/slide'); ?>"><span class="uk-margin-small-right" uk-icon="icon: image"></span> Slides</a>
                         </li>
                         <li>
@@ -83,15 +97,22 @@
                         </li>
                         <li>
                             <a href="<?= base_url('admin/general'); ?>"><span class="uk-margin-small-right" uk-icon="icon: receiver"></span> Generals</a>
-                        </li>
-                        <li class="uk-nav-divider"></li>
-                        <li class="uk-nav-header">User Management</li>
-                        <li>
+                        </li> -->
+                        <?php if (!empty($access_menus)) : ?>
+                            <li class="uk-nav-divider"></li>
+                            <li class="uk-nav-header">User Management</li>
+                            <?php foreach ($access_menus as $am) : ?>
+                                <li>
+                                    <a href="<?= base_url($am->url); ?>"><span class="uk-margin-small-right" uk-icon="icon: <?= $am->icon; ?>"></span> <?= ucwords($am->title); ?></a>
+                                </li>
+                            <?php endforeach; ?>
+                        <?php endif; ?>
+                        <!-- <li>
                             <a href="<?= base_url('admin/role'); ?>"><span class="uk-margin-small-right" uk-icon="icon: link"></span> Roles</a>
                         </li>
                         <li>
                             <a href="<?= base_url('admin/user'); ?>"><span class="uk-margin-small-right" uk-icon="icon: user"></span> Users</a>
-                        </li>
+                        </li> -->
                     </ul>
                 </div>
                 <div class="uk-width-expand uk-padding-small uk-animation-fade">
