@@ -62,7 +62,7 @@
                             <a href="<?= base_url('admin/brochure'); ?>"><span class="uk-margin-small-right" uk-icon="icon: image"></span> Brochures</a>
                         </li>
                         <li>
-                            <a href="#"><span class="uk-margin-small-right" uk-icon="icon: play-circle"></span> Videos</a>
+                            <a href="<?= base_url('admin/video'); ?>"><span class="uk-margin-small-right" uk-icon="icon: play-circle"></span> Videos</a>
                         </li>
                         <li>
                             <a href="<?= base_url('admin/team'); ?>"><span class="uk-margin-small-right" uk-icon="icon: users"></span> Teams</a>
