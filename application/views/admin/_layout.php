@@ -87,10 +87,10 @@
                         <li class="uk-nav-divider"></li>
                         <li class="uk-nav-header">User Management</li>
                         <li>
-                            <a href="#"><span class="uk-margin-small-right" uk-icon="icon: link"></span> Roles</a>
+                            <a href="<?= base_url('admin/role'); ?>"><span class="uk-margin-small-right" uk-icon="icon: link"></span> Roles</a>
                         </li>
                         <li>
-                            <a href="#"><span class="uk-margin-small-right" uk-icon="icon: user"></span> Users</a>
+                            <a href="<?= base_url('admin/user'); ?>"><span class="uk-margin-small-right" uk-icon="icon: user"></span> Users</a>
                         </li>
                     </ul>
                 </div>

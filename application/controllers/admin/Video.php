@@ -67,10 +67,6 @@ class Video extends Admin_Controller
 
     public function delete($id)
     {
-        $video = $this->Video_m->get($id, TRUE);
-        if (!empty($video->image) && file_exists('./assets/images/videos/' . $video->image)) {
-            unlink('./assets/images/videos/' . $video->image);
-        }
         $this->Video_m->delete($id);
         $this->session->set_flashdata('form_status', array(
             'status' => 'success',
