@@ -16,8 +16,8 @@
         <thead>
             <tr>
                 <th>Title</th>
-                <th>Link</th>
                 <th>Updated By</th>
+                <th>Publish Date</th>
                 <th>Published</th>
                 <th class="uk-text-center">Action</th>
             </tr>
@@ -26,8 +26,8 @@
             <?php foreach ($videos['data'] as $video) : ?>
                 <tr>
                     <td><?= $video->title; ?></td>
-                    <td><?= $video->link; ?></td>
                     <td><?= $video->updated_by; ?></td>
+                    <td><?= $video->created_at; ?></td>
                     <td class="uk-text-center uk-table-shrink"><?= $video->is_publish ? 'Yes' : 'No'; ?></td>
                     <td class="uk-text-center">
                         <div>

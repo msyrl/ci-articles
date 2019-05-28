@@ -33,7 +33,7 @@ class Video_m extends MY_Model
         $offset = ($page * $per_page) - $per_page;
 
         $data = $this->db
-            ->select("$this->_table_name.id as id, $this->_table_name.title as title, $this->_table_name.link as link, users.username as updated_by, $this->_table_name.created_at as created_at, $this->_table_name.is_publish as is_publish")
+            ->select("$this->_table_name.id as id, $this->_table_name.title as title, users.username as updated_by, $this->_table_name.created_at as created_at, $this->_table_name.is_publish as is_publish")
             ->join('users', 'videos.updated_by = users.id')
             ->order_by('created_at', 'DESC')
             ->get($this->_table_name, $per_page, $offset)
