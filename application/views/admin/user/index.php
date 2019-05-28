@@ -19,7 +19,7 @@
                 <th>Username</th>
                 <th>Role</th>
                 <th>Active</th>
-                <th class="uk-text-center">Action</th>
+                <th class="uk-text-center uk-table-shrink">Action</th>
             </tr>
         </thead>
         <tbody>

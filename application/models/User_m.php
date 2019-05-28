@@ -26,7 +26,7 @@ class User_m extends MY_Model
         array(
             'field' => 'password',
             'label' => 'Password',
-            'rules' => 'trim',
+            'rules' => 'trim|min_length[6]',
         ),
         array(
             'field' => 'password_confirmation',
