@@ -22,9 +22,6 @@
             <div class="uk-navbar-right">
                 <ul class="uk-navbar-nav">
                     <li>
-                        <a href="#"><i class="fas fa-user-circle fa-2x"></i>&nbsp;Login</a>
-                    </li>
-                    <li>
                         <a href="#"><i class="fas fa-globe-asia fa-2x"></i>&nbsp;EN</a>
                         <div class="uk-navbar-dropdown">
                             <ul class="uk-nav uk-navbar-dropdown-nav">
@@ -33,6 +30,15 @@
                             </ul>
                         </div>
                     </li>
+                    <?php if (!$this->session->userdata('user')) : ?>
+                        <li>
+                            <a href="#"><i class="fas fa-user-circle fa-2x"></i>&nbsp;Login</a>
+                        </li>
+                    <?php else : ?>
+                        <li>
+                            <a href="<?= base_url('logout'); ?>" onclick="return confirm('Are you sure want to logout?')"><i class="fas fa-sign-out-alt fa-2x"></i>&nbsp;Logout</a>
+                        </li>
+                    <?php endif; ?>
                 </ul>
             </div>
         </nav>
@@ -59,27 +65,6 @@
                                 </li>
                             <?php endforeach; ?>
                         <?php endif; ?>
-                        <!-- <li>
-                            <a href="<?= base_url('admin/blog'); ?>"><span class="uk-margin-small-right" uk-icon="icon: file-text"></span> Blogs</a>
-                        </li>
-                        <li>
-                            <a href="<?= base_url('admin/book'); ?>"><span class="uk-margin-small-right" uk-icon="icon: folder"></span> Books</a>
-                        </li>
-                        <li>
-                            <a href="<?= base_url('admin/brochure'); ?>"><span class="uk-margin-small-right" uk-icon="icon: image"></span> Brochures</a>
-                        </li>
-                        <li>
-                            <a href="<?= base_url('admin/video'); ?>"><span class="uk-margin-small-right" uk-icon="icon: play-circle"></span> Videos</a>
-                        </li>
-                        <li>
-                            <a href="<?= base_url('admin/team'); ?>"><span class="uk-margin-small-right" uk-icon="icon: users"></span> Teams</a>
-                        </li>
-                        <li>
-                            <a href="#"><span class="uk-margin-small-right" uk-icon="icon: social"></span> Experts</a>
-                        </li>
-                        <li>
-                            <a href="<?= base_url('admin/connect'); ?>"><span class="uk-margin-small-right" uk-icon="icon: thumbnails"></span> Connects</a>
-                        </li> -->
                         <?php if (!empty($page_menus)) : ?>
                             <li class="uk-nav-divider"></li>
                             <li class="uk-nav-header">Page Management</li>
@@ -89,15 +74,6 @@
                                 </li>
                             <?php endforeach; ?>
                         <?php endif; ?>
-                        <!-- <li>
-                            <a href="<?= base_url('admin/slide'); ?>"><span class="uk-margin-small-right" uk-icon="icon: image"></span> Slides</a>
-                        </li>
-                        <li>
-                            <a href="<?= base_url('admin/about'); ?>"><span class="uk-margin-small-right" uk-icon="icon: info"></span> About</a>
-                        </li>
-                        <li>
-                            <a href="<?= base_url('admin/general'); ?>"><span class="uk-margin-small-right" uk-icon="icon: receiver"></span> Generals</a>
-                        </li> -->
                         <?php if (!empty($access_menus)) : ?>
                             <li class="uk-nav-divider"></li>
                             <li class="uk-nav-header">User Management</li>
@@ -107,12 +83,6 @@
                                 </li>
                             <?php endforeach; ?>
                         <?php endif; ?>
-                        <!-- <li>
-                            <a href="<?= base_url('admin/role'); ?>"><span class="uk-margin-small-right" uk-icon="icon: link"></span> Roles</a>
-                        </li>
-                        <li>
-                            <a href="<?= base_url('admin/user'); ?>"><span class="uk-margin-small-right" uk-icon="icon: user"></span> Users</a>
-                        </li> -->
                     </ul>
                 </div>
                 <div class="uk-width-expand uk-padding-small uk-animation-fade">
@@ -121,6 +91,12 @@
                             <span uk-navbar-toggle-icon></span>
                         </a>
                     </div>
+                    <?php if ($this->session->flashdata('alert')) : ?>
+                        <div class="uk-alert-<?= $this->session->flashdata('alert')['status']; ?> uk-animation-slide-top" uk-alert>
+                            <a class="uk-alert-close" uk-close></a>
+                            <?= $this->session->flashdata('alert')['message']; ?>
+                        </div>
+                    <?php endif; ?>
                     <!-- Content Here -->
                     <?php $this->load->view($page); ?>
                     <!-- Content Here -->

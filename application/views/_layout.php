@@ -23,7 +23,7 @@
     <footer class="uk-background-secondary uk-light">
         <div class="uk-child-width-1-3@m uk-grid-divider uk-padding" uk-grid>
             <div>
-                <h4 class="uk-">UNDP INDONESIA COUNTRY OFFICE</h4>
+                <h4>UNDP INDONESIA COUNTRY OFFICE</h4>
                 <p>
                     Menara Thamrin 8-9th Floor <br />
                     Jl. MH Thamrin Kav. 3 <br />

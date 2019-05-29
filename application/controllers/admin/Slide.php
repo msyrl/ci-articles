@@ -33,8 +33,7 @@ class Slide extends Admin_Controller
             $data = array(
                 'title' => htmlspecialchars($this->input->post('title', TRUE)),
                 'is_publish' => htmlspecialchars($this->input->post('is_publish', TRUE)),
-                // static updated_by
-                'updated_by' => 1,
+                'updated_by' => $this->session->userdata('user')['id'],
             );
             if ($_FILES['image']['name'] != '') {
                 $this->load->library('upload');

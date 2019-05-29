@@ -7,7 +7,7 @@ class User_m extends MY_Model
     protected $_primary_filter = 'intval';
     protected $_order_by = '';
     protected $_order = 'desc';
-    protected $_timestamps = FALSE;
+    protected $_timestamps = TRUE;
 
     public function __construct()
     {

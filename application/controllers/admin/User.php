@@ -36,8 +36,7 @@ class User extends Admin_Controller
                 'name' => htmlspecialchars($this->input->post('name', TRUE)),
                 'username' => htmlspecialchars($this->input->post('username', TRUE)),
                 'is_active' => htmlspecialchars($this->input->post('active', TRUE)),
-                // static updated_by
-                'updated_by' => 1,
+                'updated_by' => $this->session->userdata('user')['id'],
             );
 
             $password = htmlspecialchars($this->input->post('password', TRUE));

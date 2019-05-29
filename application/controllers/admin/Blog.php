@@ -37,8 +37,7 @@ class Blog extends Admin_Controller
                 'slug' => url_title(strtolower($this->input->post('title', TRUE))),
                 'tags' => htmlspecialchars($this->input->post('tags', TRUE)),
                 'is_publish' => htmlspecialchars($this->input->post('is_publish', TRUE)),
-                // static updated_by
-                'updated_by' => 1,
+                'updated_by' => $this->session->userdata('user')['id'],
             );
             if ($_FILES['image']['name'] != '') {
                 $this->load->library('upload');

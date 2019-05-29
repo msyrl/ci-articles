@@ -2,17 +2,22 @@
 
 class Admin_Controller extends MY_Controller
 {
-    // temporary static role
-    protected $_role_id = 1;
-
     function __construct()
     {
         parent::__construct();
-        $this->data['meta_title'] =  ' | Admin';
-        $this->data['data_menus'] = $this->get_data_menus();
-        $this->data['page_menus'] = $this->get_page_menus();
-        $this->data['access_menus'] = $this->get_access_menus();
-        $this->check_permit();
+        if ($this->is_logged_in()) {
+            self::check_permit();
+            $this->data['meta_title'] =  ' | Admin';
+            $this->data['data_menus'] = $this->get_data_menus();
+            $this->data['page_menus'] = $this->get_page_menus();
+            $this->data['access_menus'] = $this->get_access_menus();
+        } else {
+            $this->session->set_flashdata('alert', array(
+                'status' => 'danger',
+                'message' => 'You should login first!',
+            ));
+            redirect('login');
+        }
     }
 
     protected function get_data_menus()
@@ -23,7 +28,7 @@ class Admin_Controller extends MY_Controller
             ->order_by('menus.id', 'asc')
             ->get_where('menus', array(
                 'menus.type' => 'data',
-                'menu_role.role_id' => $this->_role_id,
+                'menu_role.role_id' => $this->session->userdata('user')['role_id'],
             ))
             ->result();
     }
@@ -36,7 +41,7 @@ class Admin_Controller extends MY_Controller
             ->order_by('menus.id', 'asc')
             ->get_where('menus', array(
                 'menus.type' => 'page',
-                'menu_role.role_id' => $this->_role_id,
+                'menu_role.role_id' => $this->session->userdata('user')['role_id'],
             ))
             ->result();
     }
@@ -49,7 +54,7 @@ class Admin_Controller extends MY_Controller
             ->order_by('menus.id', 'asc')
             ->get_where('menus', array(
                 'menus.type' => 'access',
-                'menu_role.role_id' => $this->_role_id,
+                'menu_role.role_id' => $this->session->userdata('user')['role_id'],
             ))
             ->result();
     }
@@ -60,7 +65,7 @@ class Admin_Controller extends MY_Controller
             ->select('menus.*, menu_role.role_id')
             ->join('menu_role', 'menus.id = menu_role.menu_id')
             ->get_where('menus', array(
-                'menu_role.role_id' => $this->_role_id,
+                'menu_role.role_id' => $this->session->userdata('user')['role_id'],
                 'menus.title' => get_class($this),
             ))
             ->row();

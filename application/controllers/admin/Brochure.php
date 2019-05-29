@@ -35,8 +35,7 @@ class Brochure extends Admin_Controller
                 'source' => htmlspecialchars($this->input->post('source', TRUE)),
                 'slug' => url_title(strtolower($this->input->post('title', TRUE))),
                 'is_publish' => htmlspecialchars($this->input->post('is_publish', TRUE)),
-                // static updated_by
-                'updated_by' => 1,
+                'updated_by' => $this->session->userdata('user')['id'],
             );
             if ($_FILES['image']['name'] != '') {
                 $this->load->library('upload');

@@ -22,8 +22,7 @@ class About extends Admin_Controller
             $data = array(
                 'body' => htmlspecialchars($this->input->post('body', TRUE)),
                 'is_publish' => htmlspecialchars($this->input->post('is_publish', TRUE)),
-                // static updated_by
-                'updated_by' => 1,
+                'updated_by' => $this->session->userdata('user')['id'],
             );
             if ($_FILES['image']['name'] != '') {
                 $this->load->library('upload');

@@ -34,8 +34,7 @@ class Video extends Admin_Controller
                 'link' => htmlspecialchars($this->input->post('link', TRUE)),
                 'slug' => url_title(strtolower($this->input->post('title', TRUE))),
                 'is_publish' => htmlspecialchars($this->input->post('is_publish', TRUE)),
-                // static updated_by
-                'updated_by' => 1,
+                'updated_by' => $this->session->userdata('user')['id'],
             );
             if ($id === NULL) {
                 $this->Video_m->save($data);
