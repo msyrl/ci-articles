@@ -41,4 +41,31 @@ class Role_m extends MY_Model
             'data' => $data,
         );
     }
+
+    public function get_menus()
+    {
+        return $this->db->order_by('id', 'asc')->get('menus')->result();
+    }
+
+    public function get_saved_menu_role($role_id = NULL)
+    {
+        if ($role_id) {
+            return $this->db
+                ->select('menus.*, menu_role.role_id')
+                ->join('menu_role', 'menus.id = menu_role.menu_id')
+                ->order_by('menus.id', $this->_order)
+                ->get_where('menus', array(
+                    'menu_role.role_id' => $role_id,
+                ))
+                ->result();
+        }
+    }
+
+    public function save_menu_role($data = array(), $role_id = NULL)
+    {
+        if ($data) {
+            $this->db->delete('menu_role', array('role_id' => $role_id));
+            return $this->db->insert_batch('menu_role', $data);
+        }
+    }
 }

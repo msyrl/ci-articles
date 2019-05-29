@@ -18,26 +18,40 @@ class Role extends Admin_Controller
 
     public function form($id = NULL)
     {
-        $this->data['page'] = 'admin/role/form';
         if ($id === NULL) {
             $this->data['title'] = 'create new role';
         } else {
             $this->data['id'] = $id;
             $this->data['title'] = 'update role';
             $this->data['role'] = $this->Role_m->get($id, TRUE);
+            $this->data['saved_menu_role'] = $this->Role_m->get_saved_menu_role($id);
         }
         $this->form_validation->set_rules($this->Role_m->_rules);
         if ($this->form_validation->run() === FALSE) {
+            $this->data['menus'] = $this->Role_m->get_menus();
+            $this->data['page'] = 'admin/role/form';
             $this->load->view('admin/_layout', $this->data);
         } else {
             $data = array(
                 'name' => htmlspecialchars($this->input->post('name', TRUE))
             );
+            $menus = $this->input->post('menu');
+            $menu_data = array();
+            foreach ($menus as $key => $menu) :
+                $menu_data[] = array(
+                    'role_id' => $id,
+                    'menu_id' => $key
+                );
+            endforeach;
+
             if ($id === NULL) {
                 $this->Role_m->save($data);
             } else {
-                $this->Role_m->save($data, $this->input->post('id', TRUE));
+                $this->Role_m->save($data, $id);
             }
+
+            $this->Role_m->save_menu_role($menu_data, $id);
+
             $this->session->set_flashdata('form_status', array(
                 'status' => 'success',
                 'message' => 'Successfully ' . $this->data['title'] . '!',

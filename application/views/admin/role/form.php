@@ -10,10 +10,26 @@
     <div class="uk-margin">
         <label class="uk-form-label" for="name">Name</label>
         <div class="uk-form-controls">
-            <input type="hidden" name="id" value="<?= isset($role) ? $role->id : ''; ?>">
+            <!-- <input type="hidden" name="id" value="<?= isset($role) ? $role->id : ''; ?>"> -->
             <input class="uk-input uk-form-small <?= form_error('name') ? 'uk-form-danger' : '' ?>" id="name" type="text" name="name" value="<?= isset($role) ? $role->name : set_value('name'); ?>" placeholder="Name..." required autofocus>
         </div>
         <?= form_error('name', '<p class="uk-text-danger uk-text-small uk-margin-small-top">', '</p>'); ?>
+    </div>
+    <div class="uk-margin">
+        <label class="uk-form-label">Menu Access</label>
+        <div class="uk-form-controls uk-grid-small uk-child-width-1-4@s" uk-grid>
+            <?php foreach ($menus as $menu) : ?>
+                <?php $exist = false; ?>
+                <?php if (isset($role)) : ?>
+                    <?php foreach ($saved_menu_role as $smr) : ?>
+                        <?php if ($menu->id === $smr->id) : ?>
+                            <?php $exist = true; ?>
+                        <?php endif; ?>
+                    <?php endforeach; ?>
+                <?php endif; ?>
+                <label for="menu-<?= strtolower($menu->title); ?>"><input class="uk-checkbox" type="checkbox" id="menu-<?= strtolower($menu->title); ?>" name="menu[<?= $menu->id; ?>]" value="1" <?= $exist ? 'checked' : '' ?>> <?= $menu->title; ?></label>
+            <?php endforeach; ?>
+        </div>
     </div>
     <hr>
     <div class="uk-margin">
