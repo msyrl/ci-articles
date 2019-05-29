@@ -14,7 +14,6 @@
             <div class="uk-width-expand">
                 <label class="uk-form-label" for="title">Title</label>
                 <div class="uk-form-controls">
-                    <input type="hidden" name="id" value="<?= isset($brochure) ? $brochure->id : ''; ?>">
                     <input class="uk-input uk-form-small <?= form_error('title') ? 'uk-form-danger' : '' ?>" id="title" type="text" name="title" value="<?= isset($brochure) ? $brochure->title : set_value('title'); ?>" placeholder="Title..." required autofocus>
                 </div>
                 <?= form_error('title', '<p class="uk-text-danger uk-text-small uk-margin-small-top">', '</p>'); ?>

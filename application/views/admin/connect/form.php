@@ -12,7 +12,6 @@
             <div class="uk-width-expand">
                 <label class="uk-form-label" for="name">Name</label>
                 <div class="uk-form-controls">
-                    <input type="hidden" name="id" value="<?= isset($connect) ? $connect->id : ''; ?>">
                     <input class="uk-input uk-form-small <?= form_error('name') ? 'uk-form-danger' : '' ?>" id="name" type="text" name="name" value="<?= isset($connect) ? $connect->name : set_value('name'); ?>" placeholder="Name..." required autofocus>
                 </div>
                 <?= form_error('name', '<p class="uk-text-danger uk-text-small uk-margin-small-top">', '</p>'); ?>

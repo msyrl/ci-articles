@@ -12,10 +12,9 @@ class General extends Admin_Controller
     {
         $id = 1;
         $this->data['page'] = 'admin/general/index';
-        $this->data['id'] = $id;
         $this->data['title'] = 'update general';
         $this->data['general'] = $this->General_m->get($id, TRUE);
-        $this->form_validation->set_rules($this->General_m->_rules);
+        $this->form_validation->set_rules($this->General_m->validation_rules());
         if ($this->form_validation->run() === FALSE) {
             $this->load->view('admin/_layout', $this->data);
         } else {

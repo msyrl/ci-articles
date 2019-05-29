@@ -24,11 +24,10 @@ class User extends Admin_Controller
         if ($id === NULL) {
             $this->data['title'] = 'create new user';
         } else {
-            $this->data['id'] = $id;
             $this->data['title'] = 'update user';
             $this->data['user'] = $this->User_m->get($id, TRUE);
         }
-        $this->form_validation->set_rules($this->User_m->_rules);
+        $this->form_validation->set_rules($this->User_m->validation_rules($id));
         if ($this->form_validation->run() === FALSE) {
             $this->load->view('admin/_layout', $this->data);
         } else {
@@ -49,7 +48,7 @@ class User extends Admin_Controller
             if ($id === NULL) {
                 $this->User_m->save($data);
             } else {
-                $this->User_m->save($data, $this->input->post('id', TRUE));
+                $this->User_m->save($data, $id);
             }
             $this->session->set_flashdata('form_status', array(
                 'status' => 'success',
@@ -59,7 +58,7 @@ class User extends Admin_Controller
         }
     }
 
-    public function change_status($id)
+    public function change_active($id)
     {
         $user = $this->User_m->get($id);
         $data = array(
@@ -68,7 +67,7 @@ class User extends Admin_Controller
         $this->User_m->save($data, $id);
         $this->session->set_flashdata('form_status', array(
             'status' => 'success',
-            'message' => 'Successfully change status option!',
+            'message' => 'Successfully change active option!',
         ));
         redirect('admin/user');
     }

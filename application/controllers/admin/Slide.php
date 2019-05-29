@@ -23,11 +23,10 @@ class Slide extends Admin_Controller
         if ($id === NULL) {
             $this->data['title'] = 'create new slide';
         } else {
-            $this->data['id'] = $id;
             $this->data['title'] = 'update slide';
             $this->data['slide'] = $this->Slide_m->get($id, TRUE);
         }
-        $this->form_validation->set_rules($this->Slide_m->_rules);
+        $this->form_validation->set_rules($this->Slide_m->validation_rules($id));
         if ($this->form_validation->run() === FALSE) {
             $this->load->view('admin/_layout', $this->data);
         } else {
@@ -63,7 +62,7 @@ class Slide extends Admin_Controller
                 if ($id === NULL) {
                     $this->Slide_m->save($data);
                 } else {
-                    $this->Slide_m->save($data, $this->input->post('id', TRUE));
+                    $this->Slide_m->save($data, $id);
                 }
                 $this->session->set_flashdata('form_status', array(
                     'status' => 'success',

@@ -34,7 +34,7 @@
                             <a href="#" class="uk-link-text"><span uk-icon="icon: more-vertical"></span></a>
                             <div uk-dropdown="mode: click">
                                 <ul class="uk-nav uk-dropdown-nav">
-                                    <li><a href="<?= base_url('admin/user/change_status/' . $user->id); ?>" onclick="return confirm('Are you sure to change status option?')"><span uk-icon="icon: info"></span> Status</a></li>
+                                    <li><a href="<?= base_url('admin/user/change_active/' . $user->id); ?>" onclick="return confirm('Are you sure to change active option?')"><span uk-icon="icon: info"></span> Active</a></li>
                                     <li class="uk-nav-divider"></li>
                                     <li><a href="<?= base_url('admin/user/form/' . $user->id) ?>"><span uk-icon="icon: pencil"></span> Edit</a></li>
                                     <li class="uk-nav-divider"></li>

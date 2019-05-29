@@ -22,11 +22,10 @@ class Video extends Admin_Controller
         if ($id === NULL) {
             $this->data['title'] = 'create new video';
         } else {
-            $this->data['id'] = $id;
             $this->data['title'] = 'update video';
             $this->data['video'] = $this->Video_m->get($id, TRUE);
         }
-        $this->form_validation->set_rules($this->Video_m->_rules);
+        $this->form_validation->set_rules($this->Video_m->validation_rules($id));
         if ($this->form_validation->run() === FALSE) {
             $this->load->view('admin/_layout', $this->data);
         } else {
@@ -41,7 +40,7 @@ class Video extends Admin_Controller
             if ($id === NULL) {
                 $this->Video_m->save($data);
             } else {
-                $this->Video_m->save($data, $this->input->post('id', TRUE));
+                $this->Video_m->save($data, $id);
             }
             $this->session->set_flashdata('form_status', array(
                 'status' => 'success',

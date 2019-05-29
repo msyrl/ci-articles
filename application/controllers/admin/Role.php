@@ -18,18 +18,17 @@ class Role extends Admin_Controller
 
     public function form($id = NULL)
     {
+        $this->data['page'] = 'admin/role/form';
         if ($id === NULL) {
             $this->data['title'] = 'create new role';
         } else {
-            $this->data['id'] = $id;
             $this->data['title'] = 'update role';
             $this->data['role'] = $this->Role_m->get($id, TRUE);
             $this->data['saved_menu_role'] = $this->Role_m->get_saved_menu_role($id);
         }
-        $this->form_validation->set_rules($this->Role_m->_rules);
+        $this->form_validation->set_rules($this->Role_m->validation_rules($id));
         if ($this->form_validation->run() === FALSE) {
             $this->data['menus'] = $this->Role_m->get_menus();
-            $this->data['page'] = 'admin/role/form';
             $this->load->view('admin/_layout', $this->data);
         } else {
             $data = array(

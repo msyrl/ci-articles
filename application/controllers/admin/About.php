@@ -13,10 +13,9 @@ class About extends Admin_Controller
         $id = 1;
         $post = TRUE;
         $this->data['page'] = 'admin/about/index';
-        $this->data['id'] = $id;
         $this->data['title'] = 'update about';
         $this->data['about'] = $this->About_m->get($id, TRUE);
-        $this->form_validation->set_rules($this->About_m->_rules);
+        $this->form_validation->set_rules($this->About_m->validation_rules());
         if ($this->form_validation->run() === FALSE) {
             $this->load->view('admin/_layout', $this->data);
         } else {

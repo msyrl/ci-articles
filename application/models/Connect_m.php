@@ -7,18 +7,32 @@ class Connect_m extends MY_Model
     protected $_primary_filter = 'intval';
     protected $_order_by = 'created_at';
     protected $_order = 'desc';
-    public $_rules = array(
-        array(
-            'field' => 'name',
-            'label' => 'Name',
-            'rules' => 'trim|required',
-        ),
-    );
     protected $_timestamps = TRUE;
 
     public function __construct()
     {
         parent::__construct();
+    }
+
+    public function validation_rules($id = NULL)
+    {
+        if ($id) {
+            return array(
+                array(
+                    'field' => 'name',
+                    'label' => 'Name',
+                    'rules' => 'trim|required',
+                ),
+            );
+        } else {
+            return array(
+                array(
+                    'field' => 'name',
+                    'label' => 'Name',
+                    'rules' => 'trim|required|is_unique[connects.name]',
+                ),
+            );
+        }
     }
 
     public function get_with_paginate($page = 1, $per_page = 10)

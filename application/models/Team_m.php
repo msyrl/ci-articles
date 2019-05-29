@@ -26,6 +26,33 @@ class Team_m extends MY_Model
         parent::__construct();
     }
 
+    public function validation_rules($id = NULL)
+    {
+        $rules = array(
+            array(
+                'field' => 'desc',
+                'label' => 'Desc',
+                'rules' => 'trim|required',
+            ),
+        );
+
+        if ($id) {
+            $rules[] = array(
+                'field' => 'title',
+                'label' => 'Title',
+                'rules' => 'trim|required',
+            );
+        } else {
+            $rules[] = array(
+                'field' => 'title',
+                'label' => 'Title',
+                'rules' => 'trim|required|is_unique[teams.title]',
+            );
+        }
+
+        return $rules;
+    }
+
     public function get_with_paginate($page = 1, $per_page = 10)
     {
         $total_rows = $this->db->get($this->_table_name)->num_rows();

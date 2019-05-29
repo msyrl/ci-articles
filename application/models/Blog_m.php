@@ -7,33 +7,47 @@ class Blog_m extends MY_Model
     protected $_primary_filter = 'intval';
     protected $_order_by = 'created_at';
     protected $_order = 'desc';
-    public $_rules = array(
-        array(
-            'field' => 'title',
-            'label' => 'Title',
-            'rules' => 'trim|required',
-        ),
-        array(
-            'field' => 'source',
-            'label' => 'Source',
-            'rules' => 'trim|required',
-        ),
-        array(
-            'field' => 'body',
-            'label' => 'Body',
-            'rules' => 'trim|required',
-        ),
-        array(
-            'field' => 'tags',
-            'label' => 'Tags',
-            'rules' => 'trim',
-        ),
-    );
     protected $_timestamps = TRUE;
 
     public function __construct()
     {
         parent::__construct();
+    }
+
+    public function validation_rules($id = NULL)
+    {
+        $rules = array(
+            array(
+                'field' => 'source',
+                'label' => 'Source',
+                'rules' => 'trim|required',
+            ),
+            array(
+                'field' => 'body',
+                'label' => 'Body',
+                'rules' => 'trim|required',
+            ),
+            array(
+                'field' => 'tags',
+                'label' => 'Tags',
+                'rules' => 'trim',
+            ),
+        );
+        if ($id) {
+            $rules[] = array(
+                'field' => 'title',
+                'label' => 'Title',
+                'rules' => "trim|required",
+            );
+        } else {
+            $rules[] = array(
+                'field' => 'title',
+                'label' => 'Title',
+                'rules' => "trim|required|is_unique[blogs.title]",
+            );
+        }
+
+        return $rules;
     }
 
     public function get_with_paginate($page = 1, $per_page = 10)

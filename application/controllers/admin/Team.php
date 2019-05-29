@@ -23,11 +23,10 @@ class Team extends Admin_Controller
         if ($id === NULL) {
             $this->data['title'] = 'create new team';
         } else {
-            $this->data['id'] = $id;
             $this->data['title'] = 'update team';
             $this->data['team'] = $this->Team_m->get($id, TRUE);
         }
-        $this->form_validation->set_rules($this->Team_m->_rules);
+        $this->form_validation->set_rules($this->Team_m->validation_rules($id));
         if ($this->form_validation->run() === FALSE) {
             $this->load->view('admin/_layout', $this->data);
         } else {
@@ -63,7 +62,7 @@ class Team extends Admin_Controller
                 if ($id === NULL) {
                     $this->Team_m->save($data);
                 } else {
-                    $this->Team_m->save($data, $this->input->post('id', TRUE));
+                    $this->Team_m->save($data, $id);
                 }
                 $this->session->set_flashdata('form_status', array(
                     'status' => 'success',

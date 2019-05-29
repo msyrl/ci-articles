@@ -10,7 +10,6 @@
     <div class="uk-margin">
         <label class="uk-form-label" for="title">Title</label>
         <div class="uk-form-controls">
-            <input type="hidden" name="id" value="<?= isset($video) ? $video->id : ''; ?>">
             <input class="uk-input uk-form-small <?= form_error('title') ? 'uk-form-danger' : '' ?>" id="title" type="text" name="title" value="<?= isset($video) ? $video->title : set_value('title'); ?>" placeholder="Title..." required autofocus>
         </div>
         <?= form_error('title', '<p class="uk-text-danger uk-text-small uk-margin-small-top">', '</p>'); ?>

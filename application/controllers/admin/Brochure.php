@@ -23,11 +23,10 @@ class Brochure extends Admin_Controller
         if ($id === NULL) {
             $this->data['title'] = 'create new brochure';
         } else {
-            $this->data['id'] = $id;
             $this->data['title'] = 'update brochure';
             $this->data['brochure'] = $this->Brochure_m->get($id, TRUE);
         }
-        $this->form_validation->set_rules($this->Brochure_m->_rules);
+        $this->form_validation->set_rules($this->Brochure_m->validation_rules($id));
         if ($this->form_validation->run() === FALSE) {
             $this->load->view('admin/_layout', $this->data);
         } else {
@@ -86,7 +85,7 @@ class Brochure extends Admin_Controller
                 if ($id === NULL) {
                     $this->Brochure_m->save($data);
                 } else {
-                    $this->Brochure_m->save($data, $this->input->post('id', TRUE));
+                    $this->Brochure_m->save($data, $id);
                 }
                 $this->session->set_flashdata('form_status', array(
                     'status' => 'success',
