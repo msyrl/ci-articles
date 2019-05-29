@@ -31,25 +31,33 @@ class Auth extends Frontend_Controller
                 $username = htmlspecialchars($this->input->post('username', TRUE));
                 $password = htmlspecialchars($this->input->post('password', TRUE));
 
-                $user = $this->User_m->get_by(array('username' => $username), TRUE);
+                $user = $this->User_m->get_by(array('username' => $username, 'is_active' => 1), TRUE);
 
-                if (password_verify($password, $user->password)) {
-                    $data = array(
-                        'id' => $user->id,
-                        'role_id' => $user->role_id,
-                        'name' => $user->name,
-                    );
+                if ($user) {
+                    if (password_verify($password, $user->password)) {
+                        $data = array(
+                            'id' => $user->id,
+                            'role_id' => $user->role_id,
+                            'name' => $user->name,
+                        );
 
-                    $this->session->set_userdata(array('user' => $data));
-                    $this->session->set_flashdata('alert', array(
-                        'status' => 'success',
-                        'message' => 'Welcome to admin page ' . $data['name'] . '!',
-                    ));
-                    redirect('admin');
+                        $this->session->set_userdata(array('user' => $data));
+                        $this->session->set_flashdata('alert', array(
+                            'status' => 'success',
+                            'message' => 'Welcome to admin page ' . $data['name'] . '!',
+                        ));
+                        redirect('admin');
+                    } else {
+                        $this->session->set_flashdata('alert', array(
+                            'status' => 'danger',
+                            'message' => 'Invalid username or password!',
+                        ));
+                        $this->load->view('login', $this->data);
+                    }
                 } else {
                     $this->session->set_flashdata('alert', array(
                         'status' => 'danger',
-                        'message' => 'Invalid username or password!',
+                        'message' => 'Your account has been deactivated!',
                     ));
                     $this->load->view('login', $this->data);
                 }
