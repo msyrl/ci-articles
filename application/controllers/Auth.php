@@ -79,6 +79,6 @@ class Auth extends Frontend_Controller
             'status' => 'success',
             'message' => 'You have already logout!',
         ));
-        redirect('login');
+        redirect('/');
     }
 }

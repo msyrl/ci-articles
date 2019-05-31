@@ -19,14 +19,18 @@
         <div class="uk-form-controls uk-grid-small uk-child-width-1-4@s" uk-grid>
             <?php foreach ($menus as $menu) : ?>
                 <?php $exist = false; ?>
-                <?php if (isset($role)) : ?>
+                <?php if (isset($role) && $menu->title !== 'Profile') : ?>
                     <?php foreach ($saved_menu_role as $smr) : ?>
                         <?php if ($menu->id === $smr->id) : ?>
                             <?php $exist = true; ?>
                         <?php endif; ?>
                     <?php endforeach; ?>
                 <?php endif; ?>
-                <label for="menu-<?= strtolower($menu->title); ?>"><input class="uk-checkbox" type="checkbox" id="menu-<?= strtolower($menu->title); ?>" name="menu[<?= $menu->id; ?>]" value="1" <?= $exist ? 'checked' : '' ?>> <?= $menu->title; ?></label>
+                <?php if ($menu->title === 'Profile') : ?>
+                    <input type="hidden" name="menu[<?= $menu->id; ?>]" value="1">
+                <?php else : ?>
+                    <label for="menu-<?= strtolower($menu->title); ?>"><input class="uk-checkbox" type="checkbox" id="menu-<?= strtolower($menu->title); ?>" name="menu[<?= $menu->id; ?>]" value="1" <?= $exist ? 'checked' : '' ?>> <?= $menu->title; ?></label>
+                <?php endif; ?>
             <?php endforeach; ?>
         </div>
     </div>
