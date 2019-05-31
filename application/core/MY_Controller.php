@@ -11,13 +11,4 @@ class MY_Controller extends CI_Controller
         $this->data['site_name'] = $this->config->item('site_name');
         $this->data['meta_title'] = '';
     }
-
-    protected function is_logged_in()
-    {
-        if ($this->session->userdata('user')) {
-            return true;
-        } else {
-            return false;
-        }
-    }
 }

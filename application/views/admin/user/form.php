@@ -51,14 +51,14 @@
             <div>
                 <label class="uk-form-label" for="password">Password</label>
                 <div class="uk-form-controls">
-                    <input class="uk-input uk-form-small <?= form_error('password') ? 'uk-form-danger' : '' ?>" id="password" type="password" name="password" value="<?= set_value('password'); ?>" placeholder="Password..." <?= isset($user) ? '' : 'required'; ?>>
+                    <input class="uk-input uk-form-small <?= form_error('password') ? 'uk-form-danger' : '' ?>" id="password" type="password" name="password" placeholder="Password..." <?= isset($user) ? '' : 'required'; ?>>
                 </div>
                 <?= form_error('password', '<p class="uk-text-danger uk-text-small uk-margin-small-top">', '</p>'); ?>
             </div>
             <div>
                 <label class="uk-form-label" for="password_confirmation">Password Confirmation</label>
                 <div class="uk-form-controls">
-                    <input class="uk-input uk-form-small <?= form_error('password_confirmation') ? 'uk-form-danger' : '' ?>" id="password_confirmation" type="password" name="password_confirmation" value="<?= set_value('password_confirmation'); ?>" placeholder="Password Confirmation..." <?= isset($user) ? '' : 'required'; ?>>
+                    <input class="uk-input uk-form-small <?= form_error('password_confirmation') ? 'uk-form-danger' : '' ?>" id="password_confirmation" type="password" name="password_confirmation" placeholder="Password Confirmation..." <?= isset($user) ? '' : 'required'; ?>>
                 </div>
                 <?= form_error('password_confirmation', '<p class="uk-text-danger uk-text-small uk-margin-small-top">', '</p>'); ?>
             </div>

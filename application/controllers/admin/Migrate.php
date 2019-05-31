@@ -23,6 +23,12 @@ class Migrate extends CI_Controller
         if (empty($menus)) {
             $menusData = array(
                 array(
+                    'title' => 'Profile',
+                    'url' => 'admin/proflie',
+                    'icon' => 'home',
+                    'type' => 'data',
+                ),
+                array(
                     'title' => 'Blog',
                     'url' => 'admin/blog',
                     'icon' => 'file-text',

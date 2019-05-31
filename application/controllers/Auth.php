@@ -9,7 +9,7 @@ class Auth extends Frontend_Controller
 
     public function login()
     {
-        if (!$this->is_logged_in()) {
+        if (!$this->session->userdata('user')) {
             $rules = array(
                 array(
                     'field' => 'username',
@@ -38,6 +38,7 @@ class Auth extends Frontend_Controller
                         $data = array(
                             'id' => $user->id,
                             'role_id' => $user->role_id,
+                            'username' => $user->username,
                             'name' => $user->name,
                         );
 

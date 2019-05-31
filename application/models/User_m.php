@@ -83,4 +83,30 @@ class User_m extends MY_Model
             'data' => $data,
         );
     }
+
+    public function profile_validation_rules()
+    {
+        return array(
+            array(
+                'field' => 'name',
+                'label' => 'Name',
+                'rules' => 'trim|required',
+            ),
+            array(
+                'field' => 'old_password',
+                'label' => 'Old Password',
+                'rules' => 'trim|required',
+            ),
+            array(
+                'field' => 'new_password',
+                'label' => 'New Password',
+                'rules' => 'trim|required|min_length[6]',
+            ),
+            array(
+                'field' => 'password_confirmation',
+                'label' => 'Password Confirmation',
+                'rules' => 'trim|matches[new_password]',
+            ),
+        );
+    }
 }
