@@ -47,72 +47,72 @@
           <h3 class="uk-heading-small">IFL Team</h3>
           <div class="uk-child-width-1-2@s uk-child-width-1-3@m" uk-grid>
             <div>
-              <a href=" #">
+              <a href="donorcapital.html">
                 <div class="uk-card uk-card-small uk-card-body">
-                  <p class="uk-card-title">IFL Team 1</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                    labore
-                    et dolore magna aliqua.</p>
+                  <strong>Donor Capital/Philantrophist</strong>
+                  <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                      labore
+                      et dolore magna aliqua.</p> -->
                 </div>
               </a>
             </div>
             <div>
-              <a href="#">
+              <a href="socialentrepreneurship.html">
                 <div class="uk-card uk-card-small uk-card-body">
-                  <p class="uk-card-title">IFL Team 2</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                    labore
-                    et dolore magna aliqua.</p>
+                  <strong>Social Entrepreneurship Window</strong>
+                  <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                      labore
+                      et dolore magna aliqua.</p> -->
                 </div>
               </a>
             </div>
             <div>
-              <a href="#">
+              <a href="impactaim.html">
                 <div class="uk-card uk-card-small uk-card-body">
-                  <p class="uk-card-title">IFL Team 3</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                    labore
-                    et dolore magna aliqua.</p>
+                  <strong>Impact Aim</strong>
+                  <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                      labore
+                      et dolore magna aliqua.</p> -->
                 </div>
               </a>
             </div>
             <div>
-              <a href="#">
+              <a href="technology.html">
                 <div class="uk-card uk-card-small uk-card-body">
-                  <p class="uk-card-title">IFL Team 4</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                    labore
-                    et dolore magna aliqua.</p>
+                  <strong>Technology</strong>
+                  <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                      labore
+                      et dolore magna aliqua.</p> -->
                 </div>
               </a>
             </div>
             <div>
-              <a href="#">
+              <a href="impactinvestment.html">
                 <div class="uk-card uk-card-small uk-card-body">
-                  <p class="uk-card-title">IFL Team 5</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                    labore
-                    et dolore magna aliqua.</p>
+                  <strong>Impact Investment</strong>
+                  <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                      labore
+                      et dolore magna aliqua.</p> -->
                 </div>
               </a>
             </div>
             <div>
-              <a href="#">
+              <a href="greenfinancing.html">
                 <div class="uk-card uk-card-small uk-card-body">
-                  <p class="uk-card-title">IFL Team 6</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                    labore
-                    et dolore magna aliqua.</p>
+                  <strong>Green Financing/Islamic Financing</strong>
+                  <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                      labore
+                      et dolore magna aliqua.</p> -->
                 </div>
               </a>
             </div>
             <div>
-              <a href="#">
+              <a href="knowledgemanagement.html">
                 <div class="uk-card uk-card-small uk-card-body">
-                  <p class="uk-card-title">IFL Team 7</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                    labore
-                    et dolore magna aliqua.</p>
+                  <strong>Knowledge Management</strong>
+                  <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                      labore
+                      et dolore magna aliqua.</p> -->
                 </div>
               </a>
             </div>
@@ -125,72 +125,72 @@
           <h3 class="uk-heading-small">Publication</h3>
           <div class="uk-child-width-1-2@s uk-child-width-1-3@m" uk-grid>
             <div>
-              <a href=" #">
+              <a href="document/publication1.pdf">
                 <div class="uk-card uk-card-small uk-card-body">
-                  <p class="uk-card-title">Publication 1</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                    labore
-                    et dolore magna aliqua.</p>
+                  <strong>Green Bond and Green Sukuk Initiative</strong>
+                  <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                      labore
+                      et dolore magna aliqua.</p> -->
                 </div>
               </a>
             </div>
             <div>
-              <a href="#">
+              <a href="document/publication2.pdf">
                 <div class="uk-card uk-card-small uk-card-body">
-                  <p class="uk-card-title">Publication 2</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                    labore
-                    et dolore magna aliqua.</p>
+                  <strong>Innovative Financing Lab</strong>
+                  <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                      labore
+                      et dolore magna aliqua.</p> -->
                 </div>
               </a>
             </div>
             <div>
-              <a href="#">
+              <a href="document/publication3.pdf">
                 <div class="uk-card uk-card-small uk-card-body">
-                  <p class="uk-card-title">Publication 3</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                    labore
-                    et dolore magna aliqua.</p>
+                  <strong>Role of Zakat in Supporting Sustainble Development</strong>
+                  <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                      labore
+                      et dolore magna aliqua.</p> -->
                 </div>
               </a>
             </div>
             <div>
-              <a href="#">
+              <a href="document/publication4.pdf">
                 <div class="uk-card uk-card-small uk-card-body">
-                  <p class="uk-card-title">Publication 4</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                    labore
-                    et dolore magna aliqua.</p>
+                  <strong>Social Impact Bond</strong>
+                  <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                      labore
+                      et dolore magna aliqua.</p> -->
                 </div>
               </a>
             </div>
             <div>
-              <a href="#">
+              <a href="document/publication5.pdf">
                 <div class="uk-card uk-card-small uk-card-body">
-                  <p class="uk-card-title">Publication 5</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                    labore
-                    et dolore magna aliqua.</p>
+                  <strong>Women’s Entrepreneur and Access to Finance</strong>
+                  <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                      labore
+                      et dolore magna aliqua.</p> -->
                 </div>
               </a>
             </div>
             <div>
-              <a href="#">
+              <a href="document/publication6.pdf">
                 <div class="uk-card uk-card-small uk-card-body">
-                  <p class="uk-card-title">Publication 6</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                    labore
-                    et dolore magna aliqua.</p>
+                  <strong>UNDP Services in Financing the SDGs</strong>
+                  <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                      labore
+                      et dolore magna aliqua.</p> -->
                 </div>
               </a>
             </div>
             <div>
-              <a href="#">
+              <a href="document/publication7.pdf">
                 <div class="uk-card uk-card-small uk-card-body">
-                  <p class="uk-card-title">Publication 7</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                    labore
-                    et dolore magna aliqua.</p>
+                  <strong>MTRE3</strong>
+                  <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                      labore
+                      et dolore magna aliqua.</p> -->
                 </div>
               </a>
             </div>
@@ -203,77 +203,42 @@
           <h3 class="uk-heading-small">Blog</h3>
           <div class="uk-child-width-1-2@s uk-child-width-1-3@m" uk-grid>
             <div>
-              <a href=" #">
+              <a href="undpbekraf.html">
                 <div class="uk-card uk-card-small uk-card-body">
-                  <p class="uk-card-title">Blog 1</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                    labore
-                    et dolore magna aliqua.</p>
+                  <strong>UNDP Indonesia and BEKRAF join forces to boost youth participation in social
+                    entrepreneurship and startups</strong>
+                  <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                      labore
+                      et dolore magna aliqua.</p> -->
                 </div>
               </a>
             </div>
             <div>
-              <a href="#">
+              <a href="fasttracking.html">
                 <div class="uk-card uk-card-small uk-card-body">
-                  <p class="uk-card-title">Blog 2</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                    labore
-                    et dolore magna aliqua.</p>
+                  <strong>Fast-tracking SDGs in eastern Indonesia through youth entrepreneurship</strong>
+                  <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                      labore
+                      et dolore magna aliqua.</p> -->
                 </div>
               </a>
             </div>
             <div>
-              <a href="#">
+              <a href="undpwakaf.html">
                 <div class="uk-card uk-card-small uk-card-body">
-                  <p class="uk-card-title">Blog 3</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                    labore
-                    et dolore magna aliqua.</p>
-                </div>
-              </a>
-            </div>
-            <div>
-              <a href="#">
-                <div class="uk-card uk-card-small uk-card-body">
-                  <p class="uk-card-title">Blog 4</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                    labore
-                    et dolore magna aliqua.</p>
-                </div>
-              </a>
-            </div>
-            <div>
-              <a href="#">
-                <div class="uk-card uk-card-small uk-card-body">
-                  <p class="uk-card-title">Blog 5</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                    labore
-                    et dolore magna aliqua.</p>
-                </div>
-              </a>
-            </div>
-            <div>
-              <a href="#">
-                <div class="uk-card uk-card-small uk-card-body">
-                  <p class="uk-card-title">Blog 6</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                    labore
-                    et dolore magna aliqua.</p>
-                </div>
-              </a>
-            </div>
-            <div>
-              <a href="#">
-                <div class="uk-card uk-card-small uk-card-body">
-                  <p class="uk-card-title">Blog 7</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                    labore
-                    et dolore magna aliqua.</p>
+                  <strong>UNDP dan Badan Wakaf Indonesia bekerjasama untuk meluncurkan blockchain wakaf untuk
+                    SDGs</strong>
+                  <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                      labore
+                      et dolore magna aliqua.</p> -->
                 </div>
               </a>
             </div>
           </div>
         </div>
+      </li>
+      <li>
+        <a href="impactaim.html">Impact Aim <i class="fas fa-chevron-right"></i></a>
       </li>
     </ul>
   </div>
@@ -318,91 +283,50 @@
     </ul>
   </nav>
 </div>
-
-<div class="container">
-  <!-- Home -->
-  <section id="home" uk-scrollspy="cls: uk-animation-fade; repeat: true">
-    <div class="uk-position-relative uk-visible-toggle uk-light" uk-slideshow="autoplay: true; autoplay-interval: 6000">
-      <ul class="uk-slideshow-items" uk-height-viewport>
+<!-- Home -->
+<section id="home" uk-scrollspy="cls: uk-animation-fade; repeat: true">
+  <div class="uk-position-relative uk-visible-toggle uk-light" uk-slideshow="autoplay: true; autoplay-interval: 6000">
+    <ul class="uk-slideshow-items" uk-height-viewport>
+      <?php foreach ($slides['data'] as $slide) : ?>
         <li>
-          <img src="<?= base_url('assets/images/showcase/slide1.png'); ?>" alt="" class="uk-position-center" />
-          <!-- <div class="uk-position-large uk-position-center-left uk-overlay-primary uk-padding">
-            <h1 class="uk-margin-remove">INNOVATIVE FINANCING LAB</h1>
-            <p class="uk-margin-remove">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque,
-            necessitatibus?
-            </p>
-        </div> -->
-        </li>
-        <li>
-          <img src="<?= base_url('assets/images/showcase/slide2.png'); ?>" alt="" uk-cover />
-          <div class="uk-position-large uk-position-bottom-left uk-overlay-primary uk-padding">
-            <h1 class="uk-margin-remove">Blended financing for Microhydro powerplant for Jambi</h1>
-            <!-- <p class="uk-margin-remove">
-            Innovative Financing Lab
-            </p> -->
+          <div class="uk-background-<?= $slide->is_cover ? 'cover' : 'contain'; ?> uk-height-1-1 uk-flex uk-flex-center uk-flex-middle" style="background-image: url(<?= $slide->image ? base_url('assets/images/slides/') . $slide->image : ''; ?>)">
           </div>
+          <?php if ($slide->position) : ?>
+            <div class="uk-position-large uk-position-<?= $slide->position; ?> uk-overlay-primary uk-padding">
+              <h1 class="uk-margin-remove"><?= $slide->title; ?></h1>
+            </div>
+          <?php endif; ?>
         </li>
-        <li>
-          <img src="<?= base_url('assets/images/showcase/slide3.png'); ?>" alt="" class="uk-position-center" />
-          <!-- <div class="uk-position-large uk-position-center-right uk-overlay-primary uk-padding">
-            <h1 class="uk-margin-remove">INNOVATIVE FINANCING LAB</h1>
-            <p class="uk-margin-remove">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque,
-            necessitatibus?
-            </p>
-        </div> -->
-        </li>
-      </ul>
-
-      <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
-    </div>
-  </section>
-  <!-- About -->
-  <section id="about" uk-scrollspy="cls: uk-animation-scale-up; repeat: true">
-    <div class="uk-flex uk-flex-center" uk-height-viewport>
-      <div class="uk-child-width-1-2@m" uk-grid>
-        <div class="uk-cover-container">
-          <img src="<?= base_url('assets/images/about.jpg'); ?>" alt="" uk-cover />
-        </div>
-        <div class="uk-margin-remove">
-          <div class="uk-padding">
-            <h3>About the Innovative Financing Lab</h3>
-            <p>
-              UNDP Indonesia Country Office has established its Innovative Financing Lab which was inaugurated on 26
-              September 2018 in the presence of the Indonesian Minister of National Development Planning, Mr Bambang
-              Brodjonegoro, investors, entrepreneurs, representatives of national institution, religious organizations
-              and of the international community in Jakarta. Based in Jakarta but global in ambition to offer services
-              to partners, the Lab aims to innovate on means to unlock and leverage new finance to help close the SDGs
-              financing gap through designing and testing new innovative financing instruments, helping to enhance
-              investments for higher SDGs-returns, and contributing to a stronger enabling environment for
-              SDG-friendly finance. It is a collaborative space, involving the United Nations, business and civil
-              society. The offered services include mapping and analysing, co-designing and testing new financing
-              solutions and aligning existing investment with the SDGs, measuring progress and evaluating impact,
-              fostering social enterprises to deliver on SDGs, creating a platform for sharing of best practices, and
-              promoting a vibrant ecosystem for financing SDGs.
-            </p>
-          </div>
-        </div>
+      <?php endforeach; ?>
+    </ul>
+    <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+  </div>
+</section>
+<!-- About -->
+<section id="about" uk-scrollspy="cls: uk-animation-scale-up; repeat: true">
+  <div class="uk-flex uk-flex-middle" uk-height-viewport>
+    <div class="uk-margin-remove">
+      <div class="uk-padding">
+        <h2>About the Innovative Financing Lab</h2>
+        <p><?= $about->body; ?></p>
       </div>
     </div>
-  </section>
-  <!-- Blog -->
-  <section id="blog" class="uk-padding-small" uk-scrollspy="target: .uk-card, .more; cls:uk-animation-slide-left; delay: 350; repeat: true" uk-height-viewport>
-    <h1 class="uk-heading-line uk-text-center">
-      <span>Blog</span>
-    </h1>
-    <div class="uk-child-width-1-3@s" uk-grid>
+  </div>
+</section>
+<!-- Blog -->
+<section id="blog" class="uk-padding-small" uk-scrollspy="target: .uk-card, .more; cls:uk-animation-slide-left; delay: 350; repeat: true" uk-height-viewport>
+  <h1 class="uk-heading-line uk-text-center">
+    <span>Blog</span>
+  </h1>
+  <div class="uk-child-width-1-3@s" uk-grid>
+    <?php foreach ($blogs['data'] as $blog) : ?>
       <div>
         <div class="uk-card uk-card-small uk-card-hover uk-card-default">
-          <div class="uk-background-cover uk-height-small" data-src="<?= base_url('assets/images/blogs/blog1.jpeg'); ?>" uk-img>
-            <!-- <img src="images/blog1.jpeg" alt="" /> -->
+          <div class="uk-background-cover uk-height-small" data-src="<?= $blog->image ? base_url('assets/images/blogs/') . $blog->image : ''; ?>" uk-img>
           </div>
           <div class="uk-card-body uk-height-small">
-            <!-- <h3 class="uk-card-title">Blog 1</h3> -->
             <p>
-              UNDP Indonesia and BEKRAF join forces to boost youth participation in social entrepreneurship and
-              startups
+              <?= $blog->title; ?>
             </p>
           </div>
           <div class="uk-card-footer">
@@ -410,229 +334,73 @@
           </div>
         </div>
       </div>
-      <div>
-        <div class="uk-card uk-card-small uk-card-hover uk-card-default">
-          <div class="uk-background-cover uk-height-small" data-src="<?= base_url('assets/images/blogs/blog2.jpeg'); ?>" uk-img>
-            <!-- <img src="images/blog2.jpeg" alt="" /> -->
-          </div>
-          <div class="uk-card-body uk-height-small">
-            <!-- <h3 class="uk-card-title">Blog 2</h3> -->
-            <p>
-              Fast-tracking SDGs in eastern Indonesia through youth entrepreneurship
-            </p>
-          </div>
-          <div class="uk-card-footer">
-            <a href="#" class="uk-button uk-button-text">Read more</a>
-          </div>
-        </div>
-      </div>
-      <div>
-        <div class="uk-card uk-card-small uk-card-hover uk-card-default">
-          <div class="uk-background-cover uk-height-small" data-src="<?= base_url('assets/images/blogs/blog3.jpeg'); ?>" uk-img>
-            <!-- <img src="images/blog3.jpeg" alt="" /> -->
-          </div>
-          <div class="uk-card-body uk-height-small">
-            <!-- <h3 class="uk-card-title">Blog 3</h3> -->
-            <p>
-              UNDP dan Badan Wakaf Indonesia bekerjasama untuk meluncurkan blockchain wakaf untuk SDGs
-            </p>
-          </div>
-          <div class="uk-card-footer">
-            <a href="#" class="uk-button uk-button-text">Read more</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- <div class="more uk-flex uk-flex-center uk-padding-small">
-    <a href="blog.html" class="uk-button uk-button-default">More Blog</a>
-    </div> -->
-  </section>
-  <!-- Publication -->
-  <section id="publication" class="uk-padding-small">
-    <h1 class="uk-heading-line uk-text-center">
-      <span>Publication</span>
-    </h1>
-    <div class="uk-child-width-1-2@l" uk-grid>
-      <!-- Books -->
-      <div uk-scrollspy="target: .uk-card; cls:uk-animation-slide-left; delay: 350; repeat: true">
-        <div class="uk-card uk-card-medium uk-card-hover uk-card-default uk-grid-collapse uk-margin" uk-grid>
-          <div class="uk-width-small uk-cover-container">
-            <img src="<?= base_url('assets/images/brochures/brochure1.png'); ?>" alt="" uk-cover />
-          </div>
-          <div class="uk-width-expand">
-            <div class="uk-card-body">
-              <!-- <h3 class="uk-card-title">Book 1</h3> -->
-              <p>
-                Green Bond and Green Sukuk Initiative
-              </p>
-            </div>
-            <div class="uk-card-footer">
-              <a href="#" class="uk-button uk-button-text">Read more</a>
-            </div>
-          </div>
-        </div>
-        <div class="uk-card uk-card-medium uk-card-hover uk-card-default uk-grid-collapse uk-margin" uk-grid>
-          <div class="uk-width-small uk-cover-container">
-            <img src="<?= base_url('assets/images/books/book1.png'); ?>" alt="" uk-cover />
-          </div>
-          <div class="uk-width-expand">
-            <div class="uk-card-body">
-              <!-- <h3 class="uk-card-title">Book 2</h3> -->
-              <p>
-                Innovative Financing Lab
-              </p>
-            </div>
-            <div class="uk-card-footer">
-              <a href="#" class="uk-button uk-button-text">Read more</a>
-            </div>
-          </div>
-        </div>
-        <div class="uk-card uk-card-medium uk-card-hover uk-card-default uk-grid-collapse uk-margin" uk-grid>
-          <div class="uk-width-small uk-cover-container">
-            <img src="<?= base_url('assets/images/books/book2.png'); ?>" uk-cover />
-          </div>
-          <div class=" uk-width-expand">
-            <div class="uk-card-body">
-              <!-- <h3 class="uk-card-title">Book 3</h3> -->
-              <p>
-                Role of Zakat in Supporting Sustainble Development
-              </p>
-            </div>
-            <div class="uk-card-footer">
-              <a href="#" class="uk-button uk-button-text">Read more</a>
-            </div>
-          </div>
-        </div>
-        <div class="uk-card uk-card-medium uk-card-hover uk-card-default uk-grid-collapse uk-margin" uk-grid>
-          <div class="uk-width-small uk-cover-container">
-            <img src="<?= base_url('assets/images/books/book3.png'); ?>" uk-cover />
-          </div>
-          <div class="uk-width-expand">
-            <div class="uk-card-body">
-              <!-- <h3 class="uk-card-title">Book 4</h3> -->
-              <p>
-                Social Impact Bond
-              </p>
-            </div>
-            <div class="uk-card-footer">
-              <a href="#" class="uk-button uk-button-text">Read more</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Brochures -->
-      <div uk-scrollspy="target: .uk-card; cls:uk-animation-fade; delay: 350; repeat: true">
-        <div class="uk-card uk-card-medium uk-card-hover uk-card-default uk-grid-collapse uk-margin" uk-grid>
-          <div class="uk-width-small uk-cover-container">
-            <img src="<?= base_url('assets/images/books/book4.png'); ?>" uk-cover />
-          </div>
-          <div class="uk-width-expand">
-            <div class="uk-card-body">
-              <!-- <h3 class="uk-card-title">Brochure 1</h3> -->
-              <p>
-                Women’s Entrepreneur and Access to Finance
-              </p>
-            </div>
-            <div class="uk-card-footer">
-              <a href="#" class="uk-button uk-button-text">Read more</a>
-            </div>
-          </div>
-        </div>
-        <div class="uk-card uk-card-medium uk-card-hover uk-card-default uk-grid-collapse uk-margin" uk-grid>
-          <div class="uk-width-small uk-cover-container">
-            <img src="<?= base_url('assets/images/brochures/brochure2.png'); ?>" uk-cover />
-            <canvas width="" height=""></canvas>
-          </div>
-          <div class="uk-width-expand">
-            <div class="uk-card-body">
-              <!-- <h3 class="uk-card-title">Brochure 2</h3> -->
-              <p>
-                UNDP Services in Financing the SDGs
-              </p>
-            </div>
-            <div class="uk-card-footer">
-              <a href="#" class="uk-button uk-button-text">Read more</a>
-            </div>
-          </div>
-        </div>
-        <div class="uk-card uk-card-medium uk-card-hover uk-card-default uk-grid-collapse uk-margin" uk-grid>
-          <div class="uk-width-small uk-cover-container">
-            <img src="<?= base_url('assets/images/brochures/brochure3.png'); ?>" uk-cover />
-          </div>
-          <div class="uk-width-expand">
-            <div class="uk-card-body">
-              <!-- <h3 class="uk-card-title">Brochure 3</h3> -->
-              <p>
-                MTRE3
-              </p>
-            </div>
-            <div class="uk-card-footer">
-              <a href="#" class="uk-button uk-button-text">Read more</a>
-            </div>
-          </div>
-        </div>
-        <!-- <div class="uk-card uk-card-hover uk-card-default uk-position-relative uk-visible-toogle uk-light"
-            uk-slideshow="animation: push;">
-            <ul class="uk-slideshow-items">
-              <li>
-                <iframe class="uk-width-1-1 uk-height-1-1" src="https://www.youtube.com/embed/bZHgSJik9NM" width="560"
-                  height="315" frameborder="0" allowfullscreen uk-video></iframe>
-              </li>
-              <li>
-                <iframe class="uk-width-1-1 uk-height-1-1" src="https://www.youtube.com/embed/tgbNymZ7vqY" width="560"
-                  height="315" frameborder="0" allowfullscreen uk-video></iframe>
-              </li>
-            </ul>
-            <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous
-              uk-slideshow-item="previous"></a>
-            <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next
-              uk-slideshow-item="next"></a>
-          </div> -->
-      </div>
-    </div>
-    <!-- <div class="uk-flex uk-flex-center uk-padding-small"
-        uk-scrollspy="target: a; cls:uk-animation-slide-top; delay: 350; repeat: true">
-        <a href="publication.html" class="uk-button uk-button-default">More Publication</a>
+    <?php endforeach; ?>
+  </div>
+  <!-- <div class="more uk-flex uk-flex-center uk-padding-small">
+        <a href="blog.html" class="uk-button uk-button-default">More Blog</a>
       </div> -->
-  </section>
-  <!-- Connect -->
-  <section id="connect" class="uk-padding uk-background-default">
-    <h1 class="uk-heading-line uk-text-center uk-margin-large-bottom">
-      <span>Our Connection</span>
-    </h1>
-    <div class="uk-child-width-1-6 uk-flex-center uk-margin-remove" uk-scrollspy="target: div; cls:uk-animation-fade; delay: 200; repeat: true" uk-grid>
-      <div>
-        <img src="<?= base_url('assets/images/connects/connect1.png'); ?>" alt="" />
-      </div>
-      <div>
-        <img src="<?= base_url('assets/images/connects/connect2.png'); ?>" alt="" />
-      </div>
-      <div>
-        <img src="<?= base_url('assets/images/connects/connect3.png'); ?>" alt="" />
-      </div>
-      <div>
-        <img src="<?= base_url('assets/images/connects/connect4.png'); ?>" alt="" />
-      </div>
-      <div>
-        <img src="<?= base_url('assets/images/connects/connect5.png'); ?>" alt="" />
-      </div>
-      <div>
-        <img src="<?= base_url('assets/images/connects/connect6.png'); ?>" alt="" />
-      </div>
-      <div>
-        <img src="<?= base_url('assets/images/connects/connect7.png'); ?>" alt="" />
-      </div>
-      <div>
-        <img src="<?= base_url('assets/images/connects/connect8.png'); ?>" alt="" />
-      </div>
-      <div>
-        <img src="<?= base_url('assets/images/connects/connect9.png'); ?>" alt="" />
-      </div>
-      <div>
-        <img src="<?= base_url('assets/images/connects/connect10.png'); ?>" alt="" />
-      </div>
-      <div>
-        <img src="<?= base_url('assets/images/connects/connect11.png'); ?>" alt="" />
-      </div>
+</section>
+<!-- Publication -->
+<section id="publication" class="uk-padding-small" uk-height-viewport>
+  <h1 class="uk-heading-line uk-text-center">
+    <span>Publication</span>
+  </h1>
+  <div class="uk-child-width-1-2@l" uk-grid>
+    <!-- Books -->
+    <div uk-scrollspy="target: .uk-card; cls:uk-animation-slide-left; delay: 350; repeat: true">
+      <?php foreach ($books['data'] as $book) : ?>
+        <div class="uk-card uk-card-medium uk-card-hover uk-card-default uk-grid-collapse uk-margin" uk-grid>
+          <div class="uk-width-small uk-cover-container">
+            <img src="<?= $book->image ? base_url('assets/images/books/') . $book->image : ''; ?>" alt="<?= $book->title; ?>" uk-cover />
+          </div>
+          <div class="uk-width-expand">
+            <div class="uk-card-body">
+              <p>
+                <?= $book->title; ?>
+              </p>
+            </div>
+            <div class="uk-card-footer">
+              <a href="<?= $book->attachment ? base_url('assets/attachments/books/') . $book->attachment : '#'; ?>" class="uk-button uk-button-text">Read more</a>
+            </div>
+          </div>
+        </div>
+      <?php endforeach; ?>
     </div>
-  </section>
+    <!-- Brochures -->
+    <div uk-scrollspy="target: .uk-card; cls:uk-animation-fade; delay: 350; repeat: true">
+      <?php foreach ($brochures['data'] as $brochure) : ?>
+        <div class="uk-card uk-card-medium uk-card-hover uk-card-default uk-grid-collapse uk-margin" uk-grid>
+          <div class="uk-width-small uk-cover-container">
+            <img src="<?= $brochure->image ? base_url('assets/images/brochures/') . $brochure->image : ''; ?>" alt="<?= $brochure->title; ?>" uk-cover />
+          </div>
+          <div class="uk-width-expand">
+            <div class="uk-card-body">
+              <p>
+                <?= $brochure->title; ?>
+              </p>
+            </div>
+            <div class="uk-card-footer">
+              <a href="<?= $brochure->attachment ? base_url('assets/attachments/brochures/') . $brochure->attachment : '#'; ?>" class="uk-button uk-button-text">Read more</a>
+            </div>
+          </div>
+        </div>
+      <?php endforeach; ?>
+    </div>
+  </div>
+  <div class="uk-flex uk-flex-center uk-padding-small" uk-scrollspy="target: a; cls:uk-animation-slide-top; delay: 350; repeat: true">
+    <a href="publication.html" class="uk-button uk-button-default">More Publication</a>
+  </div>
+</section>
+<!-- Connect -->
+<section id="connect" class="uk-padding uk-background-default">
+  <h1 class="uk-heading-line uk-text-center uk-margin-large-bottom">
+    <span>Our Connection</span>
+  </h1>
+  <div class="uk-child-width-1-6 uk-flex-center uk-margin-remove" uk-scrollspy="target: div; cls:uk-animation-fade; delay: 200; repeat: true" uk-grid>
+    <?php foreach ($connects['data'] as $connect) : ?>
+      <div>
+        <img src="<?= base_url('assets/images/connects/') . $connect->image; ?>" alt="<?= $connect->name; ?>" />
+      </div>
+    <?php endforeach; ?>
+  </div>
+</section>

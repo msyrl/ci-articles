@@ -24,28 +24,22 @@
         <div class="uk-child-width-1-3@m uk-grid-divider uk-padding" uk-grid>
             <div>
                 <h4>UNDP INDONESIA COUNTRY OFFICE</h4>
-                <p>
-                    Menara Thamrin 8-9th Floor <br />
-                    Jl. MH Thamrin Kav. 3 <br />
-                    Jakarta 10250 <br />
-                    Phone: +62-21-29802300 <br />
-                    Fax: +62-21-39838941 <br />
-                </p>
+                <?= htmlspecialchars_decode($general->address); ?>
             </div>
             <div>
                 <h4>Social Media</h4>
                 <ul>
                     <li>
-                        <a href="#"><i class="fab fa-fw fa-facebook"></i> Facebook</a>
+                        <a href="<?= $general->facebook; ?>"><i class="fab fa-fw fa-facebook"></i> Facebook</a>
                     </li>
                     <li>
-                        <a href="#"><i class="fab fa-fw fa-youtube"></i> Youtube</a>
+                        <a href="<?= $general->youtube; ?>"><i class="fab fa-fw fa-youtube"></i> Youtube</a>
                     </li>
                     <li>
-                        <a href="#"><i class="fab fa-fw fa-twitter"></i> Twitter</a>
+                        <a href="<?= $general->twitter; ?>"><i class="fab fa-fw fa-twitter"></i> Twitter</a>
                     </li>
                     <li>
-                        <a href="#"><i class="fab fa-fw fa-instagram"></i> Instagram</a>
+                        <a href="<?= $general->instagram; ?>"><i class="fab fa-fw fa-instagram"></i> Instagram</a>
                     </li>
                 </ul>
             </div>

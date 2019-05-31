@@ -16,11 +16,6 @@ class Migration_create_generals extends CI_Migration
                 'type' => 'TEXT',
                 'null' => TRUE,
             ),
-            'phone' => array(
-                'type' => 'VARCHAR',
-                'constraint' => '30',
-                'null' => TRUE,
-            ),
             'facebook' => array(
                 'type' => 'VARCHAR',
                 'constraint' => '100',

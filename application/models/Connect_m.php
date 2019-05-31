@@ -35,16 +35,19 @@ class Connect_m extends MY_Model
         }
     }
 
-    public function get_with_paginate($page = 1, $per_page = 10)
+    public function get_with_paginate($page = 1, $per_page = 10, $is_publish = FALSE)
     {
         $total_rows = $this->db->get($this->_table_name)->num_rows();
         $total_pages = ceil($total_rows / $per_page);
         $offset = ($page * $per_page) - $per_page;
 
         $data = $this->db
-            ->select("$this->_table_name.id as id, $this->_table_name.name as name, users.username as updated_by, $this->_table_name.created_at as created_at, $this->_table_name.is_publish as is_publish")
-            ->join('users', 'connects.updated_by = users.id')
-            ->order_by('created_at', 'DESC')
+            ->select("$this->_table_name.id as id, $this->_table_name.name as name, $this->_table_name.image as image, users.username as updated_by, $this->_table_name.created_at as created_at, $this->_table_name.is_publish as is_publish")
+            ->join('users', 'connects.updated_by = users.id');
+        if ($is_publish) {
+            $data = $data->where("$this->_table_name.is_publish", 1);
+        }
+        $data = $data->order_by('created_at', 'DESC')
             ->get($this->_table_name, $per_page, $offset)
             ->result();
 

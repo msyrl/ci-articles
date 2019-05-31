@@ -1,11 +1,5 @@
 <h2 class="uk-heading-small uk-margin-remove"><?= ucwords($title); ?></h2>
 <hr>
-<?php if (isset($upload_error)) : ?>
-    <div class="uk-alert-danger uk-animation-slide-top" uk-alert>
-        <a class="uk-alert-close" uk-close></a>
-        <?= $upload_error; ?>
-    </div>
-<?php endif; ?>
 <?php if ($this->session->flashdata('form_status') !== NULL) : ?>
     <div class="uk-alert-<?= $this->session->flashdata('form_status')['status']; ?> uk-animation-slide-top" uk-alert>
         <a class="uk-alert-close" uk-close></a>
@@ -13,13 +7,6 @@
     </div>
 <?php endif; ?>
 <form class="uk-form-stacked uk-padding-small" action="" method="post" autocomplete="off" enctype="multipart/form-data">
-    <div class="uk-margin">
-        <label class="uk-form-label" for="image">Image</label>
-        <div class="uk-form-controls" uk-form-custom>
-            <input type="file" name="image">
-            <button class="uk-button uk-button-default uk-button-small uk-text-capitalize" type="button" tabindex="-1">Choose File</button>
-        </div>
-    </div>
     <div class="uk-margin">
         <label class="uk-form-label" for="body">Body</label>
         <div class="uk-form-controls">

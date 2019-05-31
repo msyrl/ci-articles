@@ -22,14 +22,14 @@
                 <label class="uk-form-label" for="image">Image</label>
                 <div class="uk-form-controls" uk-form-custom>
                     <input type="file" name="image">
-                    <button class="uk-button uk-button-default uk-button-small uk-text-capitalize" type="button" tabindex="-1">Choose File</button>
+                    <button class="uk-button uk-button-default uk-button-small uk-text-capitalize" type="button">Choose File</button>
                 </div>
             </div>
             <div>
                 <label class="uk-form-label" for="attachment">Attachment</label>
                 <div class="uk-form-controls" uk-form-custom>
                     <input type="file" name="attachment">
-                    <button class="uk-button uk-button-default uk-button-small uk-text-capitalize" type="button" tabindex="-1">Choose File</button>
+                    <button class="uk-button uk-button-default uk-button-small uk-text-capitalize" type="button">Choose File</button>
                 </div>
             </div>
         </div>

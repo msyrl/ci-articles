@@ -15,13 +15,6 @@
         <?= form_error('address', '<p class="uk-text-danger uk-text-small uk-margin-small-top">', '</p>'); ?>
     </div>
     <div class="uk-margin">
-        <label class="uk-form-label" for="phone">Phone Number</label>
-        <div class="uk-form-controls">
-            <input type="number" class="uk-input uk-form-small <?= form_error('phone') ? 'uk-form-danger' : '' ?>" id="phone" name="phone" placeholder="Phone Number..." value="<?= isset($general) ? $general->phone : set_value('phone'); ?>" required oninput="validity.valid || (value='')">
-        </div>
-        <?= form_error('phone', '<p class="uk-text-danger uk-text-small uk-margin-small-top">', '</p>'); ?>
-    </div>
-    <div class="uk-margin">
         <div class="uk-grid-small uk-child-width-1-2@m" uk-grid>
             <div>
                 <label class="uk-form-label" for="facebook">Facebook</label>

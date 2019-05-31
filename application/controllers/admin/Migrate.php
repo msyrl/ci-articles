@@ -64,7 +64,7 @@ class Migrate extends CI_Controller
             $menusData = array(
                 array(
                     'title' => 'Profile',
-                    'url' => 'admin/proflie',
+                    'url' => 'admin/profile',
                     'icon' => 'home',
                     'type' => 'data',
                 ),

@@ -8,13 +8,40 @@
 <?php endif; ?>
 <form class="uk-form-stacked uk-padding-small" action="" method="post" autocomplete="off" enctype="multipart/form-data">
     <div class="uk-margin">
-        <div uk-grid>
+        <div class="uk-grid-small" uk-grid>
             <div class="uk-width-expand">
                 <label class="uk-form-label" for="title">Title</label>
                 <div class="uk-form-controls">
                     <input class="uk-input uk-form-small <?= form_error('title') ? 'uk-form-danger' : '' ?>" id="title" type="text" name="title" value="<?= isset($slide) ? $slide->title : set_value('title'); ?>" placeholder="Title..." required autofocus>
                 </div>
                 <?= form_error('title', '<p class="uk-text-danger uk-text-small uk-margin-small-top">', '</p>'); ?>
+            </div>
+            <div>
+                <label class="uk-form-label" for="position">Position</label>
+                <div class="uk-form-controls">
+                    <select name="position" id="position" class="uk-select uk-form-small">
+                        <option value="" hidden selected>Position..</option>
+                        <option value="top">Full Top</option>
+                        <option value="right">Full Right</option>
+                        <option value="bottom">Full Bottom</option>
+                        <option value="left">Full Left</option>
+                        <option value="top-left">Top Left</option>
+                        <option value="top-center">Top Center</option>
+                        <option value="top-right">Top Right</option>
+                        <option value="center-left">Center Left</option>
+                        <option value="center">Center</option>
+                        <option value="center-right">Center Right</option>
+                        <option value="bottom-left">Bottom Left</option>
+                        <option value="bottom-center">Bottom Center</option>
+                        <option value="bottom-right">Bottom Right</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <label class="uk-form-label" for="is_cover">Cover</label>
+                <div class="uk-grid-small" uk-grid>
+                    <label><input class="uk-checkbox" id="is_cover" type="checkbox" name="is_cover" value="1" <?= isset($slide) && $slide->is_cover == 1 ? 'checked' : '' ?>> Yes</label><br>
+                </div>
             </div>
             <div>
                 <label class="uk-form-label" for="image">Image</label>
@@ -25,7 +52,6 @@
             </div>
         </div>
     </div>
-
     <div class="uk-margin">
         <label class="uk-form-label" for="is_publish">Publish</label>
         <div class="uk-grid-small" uk-grid>

@@ -20,6 +20,17 @@ class Migration_create_slides extends CI_Migration
                 'type' => 'VARCHAR',
                 'constraint' => '100',
             ),
+            'position' => array(
+                'type' => 'VARCHAR',
+                'constraint' => 30,
+                'null' => TRUE,
+            ),
+            'is_cover' => array(
+                'type' => 'INT',
+                'constraint' => 1,
+                'unsigned' => TRUE,
+                'null' => TRUE,
+            ),
             'created_at' => array(
                 'type' => 'DATETIME'
             ),

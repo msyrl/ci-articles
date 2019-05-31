@@ -12,10 +12,6 @@ class Migration_create_abouts extends CI_Migration
                 'unsigned' => TRUE,
                 'auto_increment' => TRUE
             ),
-            'image' => array(
-                'type' => 'VARCHAR',
-                'constraint' => '128',
-            ),
             'body' => array(
                 'type' => 'TEXT',
             ),

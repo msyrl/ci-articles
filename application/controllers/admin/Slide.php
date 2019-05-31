@@ -32,6 +32,8 @@ class Slide extends Admin_Controller
         } else {
             $data = array(
                 'title' => htmlspecialchars($this->input->post('title', TRUE)),
+                'position' => htmlspecialchars($this->input->post('position', TRUE)),
+                'is_cover' => htmlspecialchars($this->input->post('is_cover', TRUE)),
                 'is_publish' => htmlspecialchars($this->input->post('is_publish', TRUE)),
                 'updated_by' => $this->session->userdata('user')['id'],
             );
