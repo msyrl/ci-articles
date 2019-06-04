@@ -14,15 +14,15 @@ class Migration_create_videos extends CI_Migration
             ),
             'title' => array(
                 'type' => 'VARCHAR',
-                'constraint' => '100',
+                'constraint' => '255',
             ),
             'link' => array(
                 'type' => 'VARCHAR',
-                'constraint' => '128',
+                'constraint' => '255',
             ),
             'slug' => array(
                 'type' => 'VARCHAR',
-                'constraint' => '128',
+                'constraint' => '255',
             ),
             'created_at' => array(
                 'type' => 'DATETIME'

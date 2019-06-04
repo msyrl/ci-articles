@@ -14,11 +14,11 @@ class Migration_create_connects extends CI_Migration
             ),
             'image' => array(
                 'type' => 'VARCHAR',
-                'constraint' => '100',
+                'constraint' => '255',
             ),
             'name' => array(
                 'type' => 'VARCHAR',
-                'constraint' => '100',
+                'constraint' => '255',
             ),
             'created_at' => array(
                 'type' => 'DATETIME'

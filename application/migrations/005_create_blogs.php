@@ -14,11 +14,11 @@ class Migration_create_blogs extends CI_Migration
             ),
             'image' => array(
                 'type' => 'VARCHAR',
-                'constraint' => '128',
+                'constraint' => '255',
             ),
             'title' => array(
                 'type' => 'VARCHAR',
-                'constraint' => '100',
+                'constraint' => '255',
             ),
             'source' => array(
                 'type' => 'VARCHAR',
@@ -29,11 +29,11 @@ class Migration_create_blogs extends CI_Migration
             ),
             'slug' => array(
                 'type' => 'VARCHAR',
-                'constraint' => '128',
+                'constraint' => '255',
             ),
             'tags' => array(
                 'type' => 'VARCHAR',
-                'constraint' => '128',
+                'constraint' => '255',
             ),
             'created_at' => array(
                 'type' => 'DATETIME'

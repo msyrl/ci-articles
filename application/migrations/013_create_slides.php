@@ -14,11 +14,11 @@ class Migration_create_slides extends CI_Migration
             ),
             'image' => array(
                 'type' => 'VARCHAR',
-                'constraint' => '128',
+                'constraint' => '255',
             ),
             'title' => array(
                 'type' => 'VARCHAR',
-                'constraint' => '100',
+                'constraint' => '255',
             ),
             'position' => array(
                 'type' => 'VARCHAR',

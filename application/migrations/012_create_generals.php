@@ -18,22 +18,22 @@ class Migration_create_generals extends CI_Migration
             ),
             'facebook' => array(
                 'type' => 'VARCHAR',
-                'constraint' => '100',
+                'constraint' => '255',
                 'null' => TRUE,
             ),
             'instagram' => array(
                 'type' => 'VARCHAR',
-                'constraint' => '100',
+                'constraint' => '255',
                 'null' => TRUE,
             ),
             'twitter' => array(
                 'type' => 'VARCHAR',
-                'constraint' => '100',
+                'constraint' => '255',
                 'null' => TRUE,
             ),
             'youtube' => array(
                 'type' => 'VARCHAR',
-                'constraint' => '100',
+                'constraint' => '255',
                 'null' => TRUE,
             ),
         ));

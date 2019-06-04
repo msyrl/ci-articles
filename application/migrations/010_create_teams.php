@@ -14,18 +14,18 @@ class Migration_create_teams extends CI_Migration
             ),
             'image' => array(
                 'type' => 'VARCHAR',
-                'constraint' => '128',
+                'constraint' => '255',
             ),
             'title' => array(
                 'type' => 'VARCHAR',
-                'constraint' => '100',
+                'constraint' => '255',
             ),
             'body' => array(
                 'type' => 'TEXT',
             ),
             'slug' => array(
                 'type' => 'VARCHAR',
-                'constraint' => '128',
+                'constraint' => '255',
             ),
             'created_at' => array(
                 'type' => 'DATETIME'

@@ -14,7 +14,7 @@ class Migration_create_experts extends CI_Migration
             ),
             'name' => array(
                 'type' => 'VARCHAR',
-                'constraint' => '100',
+                'constraint' => '255',
             ),
             'position' => array(
                 'type' => 'VARCHAR',
@@ -22,7 +22,7 @@ class Migration_create_experts extends CI_Migration
             ),
             'email' => array(
                 'type' => 'VARCHAR',
-                'constraint' => '100',
+                'constraint' => '255',
             ),
             'created_at' => array(
                 'type' => 'DATETIME'

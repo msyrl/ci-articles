@@ -40,7 +40,7 @@
         <?= form_error('body', '<p class="uk-text-danger uk-text-small uk-margin-small-top">', '</p>'); ?>
     </div>
     <div class="uk-margin">
-        <label class="uk-form-label" for="tags">Tags <small>- Please separated by commas (,) </small></label>
+        <label class="uk-form-label" for="tags">Tags</label>
         <div class="uk-form-controls">
             <input class="uk-input uk-form-small <?= form_error('tags') ? 'uk-form-danger' : '' ?>" id="tags" type="text" name="tags" value="<?= isset($blog) ? $blog->tags : set_value('tags'); ?>" placeholder="Tags...">
         </div>

@@ -20,6 +20,10 @@
                 <li>
                     <a href="<?= base_url('logout'); ?>" onclick="return confirm('Are you sure want to logout?')"><i class="fas fa-sign-out-alt fa-2x"></i>&nbsp;Logout</a>
                 </li>
+            <?php else : ?>
+                <li>
+                    <a href="<?= base_url('login'); ?>"><i class="fas fa-user-circle fa-2x"></i>&nbsp;Login</a>
+                </li>
             <?php endif; ?>
         </ul>
     </div>
