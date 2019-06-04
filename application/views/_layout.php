@@ -81,24 +81,28 @@
                     <div class="menu-list uk-padding">
                         <h3 class="uk-heading-small">Publication</h3>
                         <div class="uk-child-width-1-2@s uk-child-width-1-3@m" uk-grid>
-                            <?php foreach ($books['data'] as $book) : ?>
-                                <div>
-                                    <a href="<?= $book->attachment ? base_url('assets/attachments/books/') . $book->attachment : '#'; ?>">
-                                        <div class="uk-card uk-card-small uk-card-body">
-                                            <strong><?= $book->title; ?></strong>
-                                        </div>
-                                    </a>
-                                </div>
-                            <?php endforeach; ?>
-                            <?php foreach ($brochures['data'] as $brochure) : ?>
-                                <div>
-                                    <a href="<?= $brochure->attachment ? base_url('assets/attachments/books/') . $brochure->attachment : '#'; ?>">
-                                        <div class="uk-card uk-card-small uk-card-body">
-                                            <strong><?= $brochure->title; ?></strong>
-                                        </div>
-                                    </a>
-                                </div>
-                            <?php endforeach; ?>
+                            <?php if (!empty($books['data'])) : ?>
+                                <?php foreach ($books['data'] as $book) : ?>
+                                    <div>
+                                        <a href="<?= $book->attachment ? base_url('assets/attachments/books/') . $book->attachment : '#'; ?>">
+                                            <div class="uk-card uk-card-small uk-card-body">
+                                                <strong><?= $book->title; ?></strong>
+                                            </div>
+                                        </a>
+                                    </div>
+                                <?php endforeach; ?>
+                            <?php endif; ?>
+                            <?php if (!empty($brochures['data'])) : ?>
+                                <?php foreach ($brochures['data'] as $brochure) : ?>
+                                    <div>
+                                        <a href="<?= $brochure->attachment ? base_url('assets/attachments/books/') . $brochure->attachment : '#'; ?>">
+                                            <div class="uk-card uk-card-small uk-card-body">
+                                                <strong><?= $brochure->title; ?></strong>
+                                            </div>
+                                        </a>
+                                    </div>
+                                <?php endforeach; ?>
+                            <?php endif; ?>
                         </div>
                     </div>
                 </li>
@@ -107,15 +111,17 @@
                     <div class="menu-list uk-padding">
                         <h3 class="uk-heading-small">Blog</h3>
                         <div class="uk-child-width-1-2@s uk-child-width-1-3@m" uk-grid>
-                            <?php foreach ($blogs['data'] as $blog) : ?>
-                                <div>
-                                    <a href="<?= base_url('blog/') . $blog->slug; ?>">
-                                        <div class="uk-card uk-card-small uk-card-body">
-                                            <strong><?= $blog->title; ?></strong>
-                                        </div>
-                                    </a>
-                                </div>
-                            <?php endforeach; ?>
+                            <?php if (!empty(blogs['data'])) : ?>
+                                <?php foreach ($blogs['data'] as $blog) : ?>
+                                    <div>
+                                        <a href="<?= base_url('blog/') . $blog->slug; ?>">
+                                            <div class="uk-card uk-card-small uk-card-body">
+                                                <strong><?= $blog->title; ?></strong>
+                                            </div>
+                                        </a>
+                                    </div>
+                                <?php endforeach; ?>
+                            <?php endif; ?>
                         </div>
                     </div>
                 </li>
@@ -133,35 +139,37 @@
     <!-- Footer -->
     <footer class="uk-background-secondary uk-light">
         <div class="uk-child-width-1-3@m uk-grid-divider uk-padding" uk-grid>
-            <div>
-                <h4>UNDP INDONESIA COUNTRY OFFICE</h4>
-                <?= htmlspecialchars_decode($general->address); ?>
-            </div>
-            <div>
-                <h4>Social Media</h4>
-                <ul>
-                    <li>
-                        <a href="<?= $general->facebook; ?>"><i class="fab fa-fw fa-facebook"></i> Facebook</a>
-                    </li>
-                    <li>
-                        <a href="<?= $general->youtube; ?>"><i class="fab fa-fw fa-youtube"></i> Youtube</a>
-                    </li>
-                    <li>
-                        <a href="<?= $general->twitter; ?>"><i class="fab fa-fw fa-twitter"></i> Twitter</a>
-                    </li>
-                    <li>
-                        <a href="<?= $general->instagram; ?>"><i class="fab fa-fw fa-instagram"></i> Instagram</a>
-                    </li>
-                </ul>
-            </div>
-            <div>
-                <h4>Information</h4>
-                <p>
-                    Our Team <br />
-                    Career <br />
-                    Partnership <br />
-                </p>
-            </div>
+            <?php if (!empty($general)) : ?>
+                <div>
+                    <h4>UNDP INDONESIA COUNTRY OFFICE</h4>
+                    <?= htmlspecialchars_decode($general->address); ?>
+                </div>
+                <div>
+                    <h4>Social Media</h4>
+                    <ul>
+                        <li>
+                            <a href="<?= $general->facebook; ?>"><i class="fab fa-fw fa-facebook"></i> Facebook</a>
+                        </li>
+                        <li>
+                            <a href="<?= $general->youtube; ?>"><i class="fab fa-fw fa-youtube"></i> Youtube</a>
+                        </li>
+                        <li>
+                            <a href="<?= $general->twitter; ?>"><i class="fab fa-fw fa-twitter"></i> Twitter</a>
+                        </li>
+                        <li>
+                            <a href="<?= $general->instagram; ?>"><i class="fab fa-fw fa-instagram"></i> Instagram</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Information</h4>
+                    <p>
+                        Our Team <br />
+                        Career <br />
+                        Partnership <br />
+                    </p>
+                </div>
+            <?php endif; ?>
         </div>
         <hr class="uk-margin-remove" />
         <p class="uk-margin-remove uk-padding-small">

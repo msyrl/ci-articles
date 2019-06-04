@@ -74,12 +74,12 @@
   </div>
 </section>
 <!-- Blog -->
-<section id="blog" class="uk-padding-small" uk-scrollspy="target: .uk-card, .more; cls:uk-animation-slide-left; delay: 350; repeat: true" uk-height-viewport>
+<section id="blog" class="uk-padding-small" uk-scrollspy="target: .uk-card, .more; cls:uk-animation-slide-left; delay: 350; repeat: true">
   <h1 class="uk-heading-line uk-text-center">
     <span>Blog</span>
   </h1>
   <div class="uk-child-width-1-3@s" uk-grid>
-    <?php if (!empty($blogs)) : ?>
+    <?php if (!empty($blogs['data'])) : ?>
       <?php for ($i = 0; $i < 3; $i++) : ?>
         <div>
           <div class="uk-card uk-card-small uk-card-hover uk-card-default">
@@ -103,14 +103,14 @@
   </div>
 </section>
 <!-- Publication -->
-<section id="publication" class="uk-padding-small" uk-height-viewport>
+<section id="publication" class="uk-padding-small">
   <h1 class="uk-heading-line uk-text-center">
     <span>Publication</span>
   </h1>
   <div class="uk-child-width-1-2@l" uk-grid>
     <!-- Books -->
     <div uk-scrollspy="target: .uk-card; cls:uk-animation-slide-left; delay: 350; repeat: true">
-      <?php if (!empty($books)) : ?>
+      <?php if (!empty($books['data'])) : ?>
         <?php for ($i = 0; $i < 2; $i++) : ?>
           <div class="uk-card uk-card-medium uk-card-hover uk-card-default uk-grid-collapse uk-margin" uk-grid>
             <div class="uk-width-small uk-cover-container">
@@ -132,7 +132,7 @@
     </div>
     <!-- Brochures -->
     <div uk-scrollspy="target: .uk-card; cls:uk-animation-fade; delay: 350; repeat: true">
-      <?php if (!empty($brochures)) : ?>
+      <?php if (!empty($brochures['data'])) : ?>
         <?php for ($i = 0; $i < 2; $i++) : ?>
           <div class="uk-card uk-card-medium uk-card-hover uk-card-default uk-grid-collapse uk-margin" uk-grid>
             <div class="uk-width-small uk-cover-container">
@@ -163,7 +163,7 @@
     <span>Our Connection</span>
   </h1>
   <div class="uk-child-width-1-6 uk-flex-center uk-margin-remove" uk-scrollspy="target: div; cls:uk-animation-fade; delay: 200; repeat: true" uk-grid>
-    <?php if (!empty($connects)) : ?>
+    <?php if (!empty($connects['data'])) : ?>
       <?php foreach ($connects['data'] as $connect) : ?>
         <div>
           <img src="<?= base_url('assets/images/connects/') . $connect->image; ?>" alt="<?= $connect->name; ?>" />

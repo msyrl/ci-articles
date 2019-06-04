@@ -25,35 +25,37 @@
     </div>
 </nav>
 <section class="uk-margin-medium-top uk-padding uk-animation-fade">
-    <?php foreach ($blogs['data'] as $blog) : ?>
-        <article>
-            <div class="uk-child-width-expand" uk-grid>
-                <div class="uk-width-1-4@m">
-                    <div class="uk-background-cover uk-height-medium" data-src="<?= empty($blog->image) ? base_url('assets/images/icon/logo.png') : base_url('assets/images/blogs/') . $blog->image; ?>" uk-img>
-                    </div>
-                </div>
-                <div>
-                    <div class="uk-flex-middle">
-                        <div>
-                            <h3 class="uk-heading-bullet uk-text-capitalize"><?= $blog->title ?></h3>
+    <?php if (!empty($blogs['data'])) : ?>
+        <?php foreach ($blogs['data'] as $blog) : ?>
+            <article>
+                <div class="uk-child-width-expand" uk-grid>
+                    <div class="uk-width-1-4@m">
+                        <div class="uk-background-cover uk-height-medium" data-src="<?= empty($blog->image) ? base_url('assets/images/icon/logo.png') : base_url('assets/images/blogs/') . $blog->image; ?>" uk-img>
                         </div>
                     </div>
-                    <p class="uk-text-small">Publish at <?= $blog->created_at; ?></p>
-                    <div class="uk-panel uk-panel-box">
-                        <?php
-                        $words = explode(". ", $blog->body);
-                        $shortword = implode(". ", array_splice($words, 0, 3));
-                        echo $shortword;
-                        ?>
-                    </div>
-                    <div class="uk-padding uk-text-right">
-                        <a href="<?= base_url('blog/') . $blog->slug; ?>" class="uk-button uk-button-text uk-button-small uk-link uk-link-muted">Read more</a>
+                    <div>
+                        <div class="uk-flex-middle">
+                            <div>
+                                <h3 class="uk-heading-bullet uk-text-capitalize"><?= $blog->title ?></h3>
+                            </div>
+                        </div>
+                        <p class="uk-text-small">Publish at <?= $blog->created_at; ?></p>
+                        <div class="uk-panel uk-panel-box">
+                            <?php
+                            $words = explode(". ", $blog->body);
+                            $shortword = implode(". ", array_splice($words, 0, 3));
+                            echo $shortword;
+                            ?>
+                        </div>
+                        <div class="uk-padding uk-text-right">
+                            <a href="<?= base_url('blog/') . $blog->slug; ?>" class="uk-button uk-button-text uk-button-small uk-link uk-link-muted">Read more</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <hr>
-        </article>
-    <?php endforeach; ?>
+                <hr>
+            </article>
+        <?php endforeach; ?>
+    <?php endif; ?>
     <ul class="uk-pagination uk-flex-right">
         <li class="<?= $blogs['prev_page'] ? '' : 'uk-disabled'; ?>"><a href="<?= $blogs['prev_page'] ? (base_url('blog?page=') . $blogs['prev_page']) : '#'; ?>"><span uk-pagination-previous></span></a></li>
         <?php for ($i = 1; $i <= $blogs['total_pages']; $i++) : ?>

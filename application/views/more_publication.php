@@ -41,23 +41,25 @@
                 Books
             </h3>
             <ul class="uk-list uk-list-divider">
-                <?php foreach ($publications['data'] as $publication) : ?>
-                    <li>
-                        <div class="uk-child-width-expand" uk-grid>
-                            <div class="uk-width-1-4@m">
-                                <div class="uk-background-contain uk-height-medium" data-src="<?= empty($publication->image) ? base_url('assets/images/icon/logo.png') : base_url('assets/images/') . $type . 's/' . $publication->image; ?>" uk-img>
+                <?php if (!empty($publications['data'])) : ?>
+                    <?php foreach ($publications['data'] as $publication) : ?>
+                        <li>
+                            <div class="uk-child-width-expand" uk-grid>
+                                <div class="uk-width-1-4@m">
+                                    <div class="uk-background-contain uk-height-medium" data-src="<?= empty($publication->image) ? base_url('assets/images/icon/logo.png') : base_url('assets/images/') . $type . 's/' . $publication->image; ?>" uk-img>
+                                    </div>
+                                </div>
+                                <div class="uk-text-small">
+                                    <h4 class="uk-heading-bullet uk-text-capitalize"><?= $publication->title; ?></h4>
+                                    <p>by <?= $publication->updated_by ?>, <?= $publication->created_at; ?></p>
+                                    <div class="uk-margin">
+                                        <a href="<?= empty($publication->attachment) ? '#' : base_url('assets/attachments/books/') . $publication->attachment; ?>" class="uk-button uk-button-small uk-button-default"><span uk-icon="icon: download"></span> Download</a>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="uk-text-small">
-                                <h4 class="uk-heading-bullet uk-text-capitalize"><?= $publication->title; ?></h4>
-                                <p>by <?= $publication->updated_by ?>, <?= $publication->created_at; ?></p>
-                                <div class="uk-margin">
-                                    <a href="<?= empty($publication->attachment) ? '#' : base_url('assets/attachments/books/') . $publication->attachment; ?>" class="uk-button uk-button-small uk-button-default"><span uk-icon="icon: download"></span> Download</a>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                <?php endforeach; ?>
+                        </li>
+                    <?php endforeach; ?>
+                <?php endif; ?>
             </ul>
         </div>
     </div>
