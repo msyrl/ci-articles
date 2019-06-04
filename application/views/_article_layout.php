@@ -3,7 +3,7 @@
         <button type="button" class="sidebar-toggle">
             <i class="fas fa-bars fa-2x"></i>
         </button>
-        <p>IFL <span class="ext-title">| <?= $type === 'teams' ? 'Window' : ucwords($type); ?></span></p>
+        <p><a href="<?= base_url('/'); ?>" class="uk-link-reset">IFL <span class="ext-title">| <?= $type === 'teams' ? 'Window' : ucwords($type); ?></span></a></p>
     </div>
     <div class="uk-navbar-right">
         <ul class="uk-navbar-nav">

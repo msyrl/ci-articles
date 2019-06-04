@@ -68,4 +68,37 @@ class Welcome extends Frontend_Controller
 		$this->data['data'] = $this->About_m->get(1, TRUE);
 		$this->load->view('_layout', $this->data);
 	}
+
+	public function publication()
+	{
+		redirect('/publication/book');
+	}
+
+	public function book()
+	{
+		$this->data['page'] = 'more_publication';
+		$this->data['type'] = 'book';
+		$page = $this->input->get('page') ? $this->input->get('page') : 1;
+		$books = $this->Book_m->get_with_paginate($page, 1);
+		if ($books['data']) {
+			$this->data['publications'] = $books;
+			$this->load->view('_layout', $this->data);
+		} else {
+			redirect('/publication');
+		}
+	}
+
+	public function brochure()
+	{
+		$this->data['page'] = 'more_publication';
+		$this->data['type'] = 'brochure';
+		$page = $this->input->get('page') ? $this->input->get('page') : 1;
+		$brochures = $this->Brochure_m->get_with_paginate($page, 1);
+		if ($brochures['data']) {
+			$this->data['publications'] = $brochures;
+			$this->load->view('_layout', $this->data);
+		} else {
+			redirect('/publication');
+		}
+	}
 }

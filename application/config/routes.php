@@ -56,6 +56,9 @@ $route['window/(:any)'] = 'welcome/window/$1';
 $route['blog'] = 'welcome/blog';
 $route['blog/(:any)'] = 'welcome/blog/$1';
 $route['about'] = 'welcome/about';
+$route['publication'] = 'welcome/publication';
+$route['publication/book'] = 'welcome/book';
+$route['publication/brochure'] = 'welcome/brochure';
 
 $route['default_controller'] = 'Welcome';
 $route['404_override'] = '';

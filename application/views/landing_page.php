@@ -154,7 +154,7 @@
     </div>
   </div>
   <div class="uk-flex uk-flex-center uk-padding-small" uk-scrollspy="target: a; cls:uk-animation-slide-top; delay: 350; repeat: true">
-    <a href="publication.html" class="uk-button uk-button-default">More Publication</a>
+    <a href="<?= base_url('publication/book'); ?>" class="uk-button uk-button-default">More Publication</a>
   </div>
 </section>
 <!-- Connect -->
