@@ -162,10 +162,10 @@
   <h1 class="uk-heading-line uk-text-center uk-margin-large-bottom">
     <span>Our Connection</span>
   </h1>
-  <div class="uk-child-width-1-6 uk-flex-center uk-margin-remove" uk-scrollspy="target: div; cls:uk-animation-fade; delay: 200; repeat: true" uk-grid>
+  <div class="uk-child-width-1-6@m uk-flex uk-flex-center uk-margin-remove" uk-scrollspy="target: div; cls:uk-animation-fade; delay: 200; repeat: true" uk-grid>
     <?php if (!empty($connects['data'])) : ?>
       <?php foreach ($connects['data'] as $connect) : ?>
-        <div>
+        <div class="uk-flex uk-flex-center uk-flex-middle">
           <img src="<?= base_url('assets/images/connects/') . $connect->image; ?>" alt="<?= $connect->name; ?>" />
         </div>
       <?php endforeach; ?>
