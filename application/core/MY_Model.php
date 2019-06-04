@@ -15,6 +15,11 @@ class MY_Model extends CI_Model
         parent::__construct();
     }
 
+    public function get_table_name()
+    {
+        return $this->_table_name;
+    }
+
     public function get($id = NULL, $single = FALSE)
     {
         if ($id != NULL) {

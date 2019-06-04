@@ -6,18 +6,48 @@ class Welcome extends Frontend_Controller
 	public function __construct()
 	{
 		parent::__construct();
+		$this->data['teams'] = $this->Team_m->get_with_paginate(1, 12, TRUE);
+		$this->data['blogs'] = $this->Blog_m->get_with_paginate(1, 12, TRUE);
+		$this->data['books'] = $this->Book_m->get_with_paginate(1, 5, TRUE);
+		$this->data['brochures'] = $this->Brochure_m->get_with_paginate(1, 5, TRUE);
 	}
 
 	public function index()
 	{
 		$this->data['page'] = 'landing_page';
-		$this->data['teams'] = $this->Team_m->get_with_paginate(1, 12, TRUE);
 		$this->data['slides'] = $this->Slide_m->get_with_paginate(1, 3, TRUE);
 		$this->data['about'] = $this->About_m->get(1, TRUE);
-		$this->data['blogs'] = $this->Blog_m->get_with_paginate(1, 3, TRUE);
-		$this->data['books'] = $this->Book_m->get_with_paginate(1, 2, TRUE);
-		$this->data['brochures'] = $this->Brochure_m->get_with_paginate(1, 2, TRUE);
 		$this->data['connects'] = $this->Connect_m->get_with_paginate(1, 10, TRUE);
 		$this->load->view('_layout', $this->data);
+	}
+
+	public function window($slug = NULL)
+	{
+		if ($slug != NULL) {
+			$this->data['page'] = '_article_layout';
+			$team = $this->Team_m->get_by(array('slug' => $slug), TRUE);
+			if ($team) {
+				$this->data['type'] = $this->Team_m->get_table_name();
+				$this->data['data'] = $team;
+				$this->load->view('_layout', $this->data);
+			} else {
+				redirect('/');
+			}
+		}
+	}
+
+	public function blog($slug = NULL)
+	{
+		if ($slug != NULL) {
+			$this->data['page'] = '_article_layout';
+			$blog = $this->Blog_m->get_by(array('slug' => $slug), TRUE);
+			if ($blog) {
+				$this->data['type'] = $this->Blog_m->get_table_name();
+				$this->data['data'] = $blog;
+				$this->load->view('_layout', $this->data);
+			} else {
+				redirect('/');
+			}
+		}
 	}
 }

@@ -32,7 +32,8 @@ class Team extends Admin_Controller
         } else {
             $data = array(
                 'title' => htmlspecialchars($this->input->post('title', TRUE)),
-                'desc' => htmlspecialchars($this->input->post('desc', TRUE)),
+                'body' => htmlspecialchars($this->input->post('body', TRUE)),
+                'slug' => url_title(strtolower(htmlspecialchars($this->input->post('title', TRUE)))),
                 'updated_by' => $this->session->userdata('user')['id'],
             );
             if ($_FILES['image']['name'] != '') {

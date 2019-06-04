@@ -1,159 +1,3 @@
-<!-- Nav -->
-<nav class="side-nav">
-  <div class="uk-grid-small head-content uk-child-width-expand" uk-grid>
-    <div class="uk-grid-small" uk-grid>
-      <div class="uk-width-auto">
-        <button type="button" class="sidebar-toggle">
-          <i class="fas fa-times fa-2x"></i>
-        </button>
-      </div>
-      <div>
-        <h2 class="uk-heading-small">IFL</h2>
-      </div>
-    </div>
-    <div class="uk-width-1-2 uk-flex uk-flex-middle search">
-      <form class="uk-width-1-1">
-        <input class="uk-input uk-form-small" placeholder="Looking for something?" />
-      </form>
-    </div>
-    <div class="uk-flex uk-flex-middle uk-flex-right auth">
-      <ul class="uk-navbar-nav">
-        <li>
-          <a href="#"><i class="fas fa-globe-asia fa-2x"></i>&nbsp;EN</a>
-          <div uk-dropdown>
-            <ul class="uk-nav uk-dropdown-nav">
-              <li class="uk-active"><a href="#">English</a></li>
-              <li><a href="#">Indonesia</a></li>
-            </ul>
-          </div>
-        </li>
-        <?php if ($this->session->userdata('user')) : ?>
-          <li>
-            <a href="<?= base_url('logout'); ?>" onclick="return confirm('Are you sure want to logout?')"><i class="fas fa-sign-out-alt fa-2x"></i>&nbsp;Logout</a>
-          </li>
-        <?php else : ?>
-          <li>
-            <a href="<?= base_url('login'); ?>"><i class="fas fa-user-circle fa-2x"></i>&nbsp;Login</a>
-          </li>
-        <?php endif; ?>
-      </ul>
-    </div>
-  </div>
-  <div class="main-content">
-    <ul class="uk-width-medium@s nav-menu">
-      <li>
-        <a href="#">IFL Window <i class="fas fa-chevron-right"></i></a>
-        <div class="menu-list uk-padding">
-          <h3 class="uk-heading-small">IFL Window</h3>
-          <div class="uk-child-width-1-2@s uk-child-width-1-3@m" uk-grid>
-            <?php if (!empty($teams)) : ?>
-              <?php foreach ($teams['data'] as $team) : ?>
-                <div>
-                  <a href="#">
-                    <div class="uk-card uk-card-small uk-card-body">
-                      <strong><?= $team->title; ?></strong>
-                    </div>
-                  </a>
-                </div>
-              <?php endforeach; ?>
-            <?php endif; ?>
-          </div>
-        </div>
-      </li>
-      <li>
-        <a href="#">Publication <i class="fas fa-chevron-right"></i></a>
-        <div class="menu-list uk-padding">
-          <h3 class="uk-heading-small">Publication</h3>
-          <div class="uk-child-width-1-2@s uk-child-width-1-3@m" uk-grid>
-            <div>
-              <a href="document/publication1.pdf">
-                <div class="uk-card uk-card-small uk-card-body">
-                  <strong>Green Bond and Green Sukuk Initiative</strong>
-                </div>
-              </a>
-            </div>
-            <div>
-              <a href="document/publication2.pdf">
-                <div class="uk-card uk-card-small uk-card-body">
-                  <strong>Innovative Financing Lab</strong>
-                </div>
-              </a>
-            </div>
-            <div>
-              <a href="document/publication3.pdf">
-                <div class="uk-card uk-card-small uk-card-body">
-                  <strong>Role of Zakat in Supporting Sustainble Development</strong>
-                </div>
-              </a>
-            </div>
-            <div>
-              <a href="document/publication4.pdf">
-                <div class="uk-card uk-card-small uk-card-body">
-                  <strong>Social Impact Bond</strong>
-                </div>
-              </a>
-            </div>
-            <div>
-              <a href="document/publication5.pdf">
-                <div class="uk-card uk-card-small uk-card-body">
-                  <strong>Women’s Entrepreneur and Access to Finance</strong>
-                </div>
-              </a>
-            </div>
-            <div>
-              <a href="document/publication6.pdf">
-                <div class="uk-card uk-card-small uk-card-body">
-                  <strong>UNDP Services in Financing the SDGs</strong>
-                </div>
-              </a>
-            </div>
-            <div>
-              <a href="document/publication7.pdf">
-                <div class="uk-card uk-card-small uk-card-body">
-                  <strong>MTRE3</strong>
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li>
-        <a href="#">Blog <i class="fas fa-chevron-right"></i></a>
-        <div class="menu-list uk-padding">
-          <h3 class="uk-heading-small">Blog</h3>
-          <div class="uk-child-width-1-2@s uk-child-width-1-3@m" uk-grid>
-            <div>
-              <a href="undpbekraf.html">
-                <div class="uk-card uk-card-small uk-card-body">
-                  <strong>UNDP Indonesia and BEKRAF join forces to boost youth participation in social
-                    entrepreneurship and startups</strong>
-                </div>
-              </a>
-            </div>
-            <div>
-              <a href="fasttracking.html">
-                <div class="uk-card uk-card-small uk-card-body">
-                  <strong>Fast-tracking SDGs in eastern Indonesia through youth entrepreneurship</strong>
-                </div>
-              </a>
-            </div>
-            <div>
-              <a href="undpwakaf.html">
-                <div class="uk-card uk-card-small uk-card-body">
-                  <strong>UNDP dan Badan Wakaf Indonesia bekerjasama untuk meluncurkan blockchain wakaf untuk
-                    SDGs</strong>
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li>
-        <a href="impactaim.html">Impact Aim <i class="fas fa-chevron-right"></i></a>
-      </li>
-    </ul>
-  </div>
-</nav>
 <nav class="top-nav uk-position-fixed uk-position-top uk-position-z-index uk-navbar-container uk-navbar-transparent" uk-navbar>
   <div class="uk-navbar-left auth">
     <button type="button" class="sidebar-toggle">
@@ -233,22 +77,22 @@
   </h1>
   <div class="uk-child-width-1-3@s" uk-grid>
     <?php if (!empty($blogs)) : ?>
-      <?php foreach ($blogs['data'] as $blog) : ?>
+      <?php for ($i = 0; $i < 3; $i++) : ?>
         <div>
           <div class="uk-card uk-card-small uk-card-hover uk-card-default">
-            <div class="uk-background-cover uk-height-small" data-src="<?= $blog->image ? base_url('assets/images/blogs/') . $blog->image : ''; ?>" uk-img>
+            <div class="uk-background-cover uk-height-small" data-src="<?= $blogs['data'][$i]->image ? base_url('assets/images/blogs/') . $blogs['data'][$i]->image : ''; ?>" uk-img>
             </div>
             <div class="uk-card-body uk-height-small">
               <p>
-                <?= $blog->title; ?>
+                <?= $blogs['data'][$i]->title; ?>
               </p>
             </div>
             <div class="uk-card-footer">
-              <a href="#" class="uk-button uk-button-text">Read more</a>
+              <a href="<?= base_url('blog/') . $blogs['data'][$i]->slug; ?>" class="uk-button uk-button-text">Read more</a>
             </div>
           </div>
         </div>
-      <?php endforeach; ?>
+      <?php endfor; ?>
     <?php endif; ?>
   </div>
   <!-- <div class="more uk-flex uk-flex-center uk-padding-small">
@@ -264,45 +108,45 @@
     <!-- Books -->
     <div uk-scrollspy="target: .uk-card; cls:uk-animation-slide-left; delay: 350; repeat: true">
       <?php if (!empty($books)) : ?>
-        <?php foreach ($books['data'] as $book) : ?>
+        <?php for ($i = 0; $i < 2; $i++) : ?>
           <div class="uk-card uk-card-medium uk-card-hover uk-card-default uk-grid-collapse uk-margin" uk-grid>
             <div class="uk-width-small uk-cover-container">
-              <img src="<?= $book->image ? base_url('assets/images/books/') . $book->image : ''; ?>" alt="<?= $book->title; ?>" uk-cover />
+              <img src="<?= $books['data'][$i]->image ? base_url('assets/images/books/') . $books['data'][$i]->image : ''; ?>" alt="<?= $books['data'][$i]->title; ?>" uk-cover />
             </div>
             <div class="uk-width-expand">
               <div class="uk-card-body">
                 <p>
-                  <?= $book->title; ?>
+                  <?= $books['data'][$i]->title; ?>
                 </p>
               </div>
               <div class="uk-card-footer">
-                <a href="<?= $book->attachment ? base_url('assets/attachments/books/') . $book->attachment : '#'; ?>" class="uk-button uk-button-text">Read more</a>
+                <a href="<?= $books['data'][$i]->attachment ? base_url('assets/attachments/books/') . $books['data'][$i]->attachment : '#'; ?>" class="uk-button uk-button-text">Read more</a>
               </div>
             </div>
           </div>
-        <?php endforeach; ?>
+        <?php endfor; ?>
       <?php endif; ?>
     </div>
     <!-- Brochures -->
     <div uk-scrollspy="target: .uk-card; cls:uk-animation-fade; delay: 350; repeat: true">
       <?php if (!empty($brochures)) : ?>
-        <?php foreach ($brochures['data'] as $brochure) : ?>
+        <?php for ($i = 0; $i < 2; $i++) : ?>
           <div class="uk-card uk-card-medium uk-card-hover uk-card-default uk-grid-collapse uk-margin" uk-grid>
             <div class="uk-width-small uk-cover-container">
-              <img src="<?= $brochure->image ? base_url('assets/images/brochures/') . $brochure->image : ''; ?>" alt="<?= $brochure->title; ?>" uk-cover />
+              <img src="<?= $brochures['data'][$i]->image ? base_url('assets/images/brochures/') . $brochures['data'][$i]->image : ''; ?>" alt="<?= $brochures['data'][$i]->title; ?>" uk-cover />
             </div>
             <div class="uk-width-expand">
               <div class="uk-card-body">
                 <p>
-                  <?= $brochure->title; ?>
+                  <?= $brochures['data'][$i]->title; ?>
                 </p>
               </div>
               <div class="uk-card-footer">
-                <a href="<?= $brochure->attachment ? base_url('assets/attachments/brochures/') . $brochure->attachment : '#'; ?>" class="uk-button uk-button-text">Read more</a>
+                <a href="<?= $brochures['data'][$i]->attachment ? base_url('assets/attachments/brochures/') . $brochures['data'][$i]->attachment : '#'; ?>" class="uk-button uk-button-text">Read more</a>
               </div>
             </div>
           </div>
-        <?php endforeach; ?>
+        <?php endfor; ?>
       <?php endif; ?>
     </div>
   </div>

@@ -26,11 +26,11 @@
         </div>
     </div>
     <div class="uk-margin">
-        <label class="uk-form-label" for="desc">Description</label>
+        <label class="uk-form-label" for="body">Body</label>
         <div class="uk-form-controls">
-            <textarea class="uk-textarea uk-form-small <?= form_error('desc') ? 'uk-form-danger' : '' ?>" id="desc" rows="10" name="desc" placeholder="Description..." required><?= isset($team) ? $team->desc : set_value('desc'); ?></textarea>
+            <textarea class="uk-textarea uk-form-small <?= form_error('body') ? 'uk-form-danger' : '' ?>" id="body" rows="10" name="body" placeholder="Description..." required><?= isset($team) ? $team->body : set_value('body'); ?></textarea>
         </div>
-        <?= form_error('desc', '<p class="uk-text-danger uk-text-small uk-margin-small-top">', '</p>'); ?>
+        <?= form_error('body', '<p class="uk-text-danger uk-text-small uk-margin-small-top">', '</p>'); ?>
     </div>
     <hr>
     <div class="uk-margin">

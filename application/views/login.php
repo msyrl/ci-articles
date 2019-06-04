@@ -14,9 +14,9 @@
 </head>
 
 <body>
-    <section class="uk-grid-collapse" uk-grid>
+    <section class="uk-grid-collapse uk-animation-fade" uk-grid>
         <div class="uk-width-expand@s" uk-height-viewport>
-            <div class="uk-background-cover uk-height-1-1 uk-panel uk-flex uk-flex-center uk-flex-middle" style="background-image: url(<?= base_url('assets/images/showcase/slide1.png'); ?>);">
+            <div class="uk-background-cover uk-height-1-1 uk-panel uk-flex uk-flex-center uk-flex-middle" style="background-image: url(<?= base_url('assets/images/icon/logo.png'); ?>);">
             </div>
         </div>
         <div class="uk-width-1-3@s">

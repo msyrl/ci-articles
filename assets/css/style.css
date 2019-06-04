@@ -4,9 +4,9 @@
 }
 
 /* Initial HTML */
-html, body {
+/* html, body {
   height: 100%;
-}
+} */
 
 * {
   margin: 0;
@@ -34,8 +34,8 @@ textarea {
 
 /* Sidenav */
 .sidebar-toggle {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 45px;
+  height: 45px;
   outline: none;
   border: none;
   cursor: pointer;
@@ -59,6 +59,7 @@ textarea {
   flex-flow: column;
   width: 100%;
   height: 100%;
+  top: 0;
   left: -100%;
   background-color: white;
   transition: all 0.35s;
