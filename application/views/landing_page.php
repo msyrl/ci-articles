@@ -66,7 +66,7 @@
       <div class="uk-padding">
         <h2>About the Innovative Financing Lab</h2>
         <p><?= $about->short_body ? $about->short_body : ''; ?></p>
-        <div class="uk-flex uk-flex-center uk-padding-small" uk-scrollspy="target: a; cls:uk-animation-slide-top; delay: 350; repeat: true">
+        <div class="uk-flex uk-flex-center uk-padding-small" uk-scrollspy="target: a; cls:uk-animation-slide-top; delay: 750; repeat: true">
           <a href="<?= base_url('about'); ?>" class="uk-button uk-button-default">Read More</a>
         </div>
       </div>
@@ -98,9 +98,9 @@
       <?php endfor; ?>
     <?php endif; ?>
   </div>
-  <!-- <div class="more uk-flex uk-flex-center uk-padding-small">
-          <a href="blog.html" class="uk-button uk-button-default">More Blog</a>
-        </div> -->
+  <div class="more uk-flex uk-flex-center uk-padding-small">
+    <a href="<?= base_url('blog'); ?>" class="uk-button uk-button-default">More Blog</a>
+  </div>
 </section>
 <!-- Publication -->
 <section id="publication" class="uk-padding-small" uk-height-viewport>

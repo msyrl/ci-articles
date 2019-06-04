@@ -48,6 +48,16 @@ class Welcome extends Frontend_Controller
 			} else {
 				redirect('/');
 			}
+		} else {
+			$this->data['page'] = 'more_blog';
+			$page = $this->input->get('page') ? $this->input->get('page') : 1;
+			$blogs = $this->Blog_m->get_with_paginate($page, 10);
+			if ($blogs['data']) {
+				$this->data['blogs'] = $blogs;
+				$this->load->view('_layout', $this->data);
+			} else {
+				redirect('/blog');
+			}
 		}
 	}
 

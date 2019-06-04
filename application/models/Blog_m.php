@@ -57,7 +57,7 @@ class Blog_m extends MY_Model
         $offset = ($page * $per_page) - $per_page;
 
         $data = $this->db
-            ->select("$this->_table_name.id as id, $this->_table_name.title as title, $this->_table_name.image as image, $this->_table_name.slug as slug, users.username as updated_by, $this->_table_name.created_at as created_at, $this->_table_name.is_publish as is_publish")
+            ->select("$this->_table_name.id as id, $this->_table_name.title as title, $this->_table_name.image as image, $this->_table_name.body as body, $this->_table_name.slug as slug, users.username as updated_by, $this->_table_name.created_at as created_at, $this->_table_name.is_publish as is_publish")
             ->join('users', 'blogs.updated_by = users.id');
         if ($is_publish) {
             $data = $data->where("$this->_table_name.is_publish", 1);
