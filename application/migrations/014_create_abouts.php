@@ -15,16 +15,14 @@ class Migration_create_abouts extends CI_Migration
             'body' => array(
                 'type' => 'TEXT',
             ),
+            'short_body' => array(
+                'type' => 'TEXT',
+            ),
             'created_at' => array(
                 'type' => 'DATETIME'
             ),
             'updated_at' => array(
                 'type' => 'DATETIME'
-            ),
-            'is_publish' => array(
-                'type' => 'INT',
-                'constraint' => 1,
-                'unsigned' => TRUE,
             ),
             'updated_by' => array(
                 'type' => 'INT',

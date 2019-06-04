@@ -65,7 +65,10 @@
     <div class="uk-margin-remove">
       <div class="uk-padding">
         <h2>About the Innovative Financing Lab</h2>
-        <p><?= $about->body ? $about->body : ''; ?></p>
+        <p><?= $about->short_body ? $about->short_body : ''; ?></p>
+        <div class="uk-flex uk-flex-center uk-padding-small" uk-scrollspy="target: a; cls:uk-animation-slide-top; delay: 350; repeat: true">
+          <a href="<?= base_url('about'); ?>" class="uk-button uk-button-default">Read More</a>
+        </div>
       </div>
     </div>
   </div>

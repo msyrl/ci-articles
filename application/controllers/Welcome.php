@@ -50,4 +50,12 @@ class Welcome extends Frontend_Controller
 			}
 		}
 	}
+
+	public function about()
+	{
+		$this->data['page'] = '_article_layout';
+		$this->data['type'] = $this->About_m->get_table_name();
+		$this->data['data'] = $this->About_m->get(1, TRUE);
+		$this->load->view('_layout', $this->data);
+	}
 }

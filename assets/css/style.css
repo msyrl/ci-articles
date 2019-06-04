@@ -4,9 +4,15 @@
 }
 
 /* Initial HTML */
-/* html, body {
+html, body {
   height: 100%;
-} */
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
 * {
   margin: 0;

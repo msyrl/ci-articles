@@ -15,11 +15,11 @@
         <?= form_error('body', '<p class="uk-text-danger uk-text-small uk-margin-small-top">', '</p>'); ?>
     </div>
     <div class="uk-margin">
-        <label class="uk-form-label" for="is_publish">Publish</label>
-        <div class="uk-grid-small" uk-grid>
-            <label><input class="uk-radio" id="is_publish" type="radio" name="is_publish" value="1" <?= isset($about) && $about->is_publish == 1 ? 'checked' : '' ?> required> Yes</label><br>
-            <label><input class="uk-radio" type="radio" name="is_publish" value="0" <?= isset($about) && $about->is_publish == 0 ? 'checked' : '' ?>> No</label>
+        <label class="uk-form-label" for="short_body">Short Body</label>
+        <div class="uk-form-controls">
+            <textarea class="uk-textarea uk-form-small <?= form_error('short_body') ? 'uk-form-danger' : '' ?>" id="short_body" rows="5" name="short_body" placeholder="Body..." required><?= isset($about) ? $about->short_body : set_value('short_body'); ?></textarea>
         </div>
+        <?= form_error('short_body', '<p class="uk-text-danger uk-text-small uk-margin-small-top">', '</p>'); ?>
     </div>
     <hr>
     <div class="uk-margin">

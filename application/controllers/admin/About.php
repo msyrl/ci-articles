@@ -20,7 +20,7 @@ class About extends Admin_Controller
         } else {
             $data = array(
                 'body' => htmlspecialchars($this->input->post('body', TRUE)),
-                'is_publish' => htmlspecialchars($this->input->post('is_publish', TRUE)),
+                'short_body' => htmlspecialchars($this->input->post('short_body', TRUE)),
                 'updated_by' => $this->session->userdata('user')['id'],
             );
             if (empty($this->data['about'])) {

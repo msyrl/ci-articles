@@ -22,6 +22,11 @@ class About_m extends MY_Model
                 'label' => 'Body',
                 'rules' => 'trim|required',
             ),
+            array(
+                'field' => 'short_body',
+                'label' => 'Short Body',
+                'rules' => 'trim|required',
+            ),
         );
     }
 }
