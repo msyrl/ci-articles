@@ -111,7 +111,7 @@
                     <div class="menu-list uk-padding">
                         <h3 class="uk-heading-small">Blog</h3>
                         <div class="uk-child-width-1-2@s uk-child-width-1-3@m" uk-grid>
-                            <?php if (!empty(blogs['data'])) : ?>
+                            <?php if (!empty($blogs['data'])) : ?>
                                 <?php foreach ($blogs['data'] as $blog) : ?>
                                     <div>
                                         <a href="<?= base_url('blog/') . $blog->slug; ?>">
