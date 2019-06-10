@@ -42,6 +42,17 @@ class MY_Model extends CI_Model
         return $this->get(NULL, $single);
     }
 
+    public function get_like($where)
+    {
+        foreach ($where as $key => $item) {
+            if ($this->db->field_exists($key, $this->_table_name)) {
+                $this->db->or_like($key, $item);
+            };
+        }
+        $this->db->select("*, '$this->_table_name' as type");
+        return $this->db->get($this->_table_name)->result_array();
+    }
+
     public function save($data, $id = NULL)
     {
         // Set timestamps

@@ -53,6 +53,7 @@ $route['login'] = 'auth/login';
 $route['logout'] = 'auth/logout';
 $route['admin'] = 'admin/profile';
 $route['window/(:any)'] = 'welcome/window/$1';
+$route['search'] = 'welcome/search';
 $route['blog'] = 'welcome/blog';
 $route['blog/(:any)'] = 'welcome/blog/$1';
 $route['about'] = 'welcome/about';

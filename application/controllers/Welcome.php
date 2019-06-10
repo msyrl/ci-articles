@@ -101,4 +101,35 @@ class Welcome extends Frontend_Controller
 			redirect('/publication');
 		}
 	}
+
+	public function search()
+	{
+		$this->data['page'] = 'search';
+		if ($this->input->get('q')) {
+			$param = array(
+				'title' => htmlspecialchars($this->input->get('q', TRUE)),
+				'slug' => htmlspecialchars($this->input->get('q', TRUE)),
+				'tags' => htmlspecialchars($this->input->get('q', TRUE)),
+			);
+			$this->data['result'] = array();
+
+			$blogs = $this->Blog_m->get_like($param);
+			if ($blogs) {
+				array_push($this->data['result'], ...$blogs);
+			}
+			$books = $this->Book_m->get_like($param);
+			if ($books) {
+				array_push($this->data['result'], ...$books);
+			}
+			$brochures = $this->Brochure_m->get_like($param);
+			if ($brochures) {
+				array_push($this->data['result'], ...$brochures);
+			}
+			$teams = $this->Team_m->get_like($param);
+			if ($teams) {
+				array_push($this->data['result'], ...$teams);
+			}
+		}
+		$this->load->view('_layout', $this->data);
+	}
 }
