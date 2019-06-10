@@ -28,9 +28,14 @@
                 </div>
             </div>
             <div class="uk-width-1-2 uk-flex uk-flex-middle search">
-                <form class="uk-width-1-1">
-                    <input class="uk-input uk-form-small" placeholder="Looking for something?" />
-                </form>
+                <div class="uk-width-expand">
+                    <form action="" method="get" autocomplete="off">
+                        <div class="uk-inline uk-width-expand">
+                            <span class="uk-form-icon uk-form-icon-flip" uk-icon="icon: search"></span>
+                            <input class="uk-input" type="search" name="q" placeholder="Looking for something?" value="<?= $this->input->get('q') ?>">
+                        </div>
+                    </form>
+                </div>
             </div>
             <div class="uk-flex uk-flex-middle uk-flex-right auth">
                 <ul class="uk-navbar-nav">
