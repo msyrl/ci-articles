@@ -45,11 +45,7 @@
                         </div>
                         <p class="uk-text-small">Publish at <?= $blog->created_at; ?></p>
                         <div class="uk-panel uk-panel-box">
-                            <?php
-                            $words = explode(". ", $blog->body);
-                            $shortword = implode(". ", array_splice($words, 0, 3));
-                            echo $shortword;
-                            ?>
+                            <?= explode("</p>", htmlspecialchars_decode($blog->body))[0]; ?>
                         </div>
                         <div class="uk-padding uk-text-right">
                             <a href="<?= base_url('blog/') . $blog->slug; ?>" class="uk-button uk-button-text uk-button-small uk-link uk-link-muted">Read more</a>
