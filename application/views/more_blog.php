@@ -11,8 +11,8 @@
                 <a href="#"><i class="fas fa-globe-asia fa-2x"></i>&nbsp;EN</a>
                 <div class="uk-navbar-dropdown">
                     <ul class="uk-nav uk-navbar-dropdown-nav">
-                        <li class="uk-active"><a href="#">English</a></li>
-                        <li><a href="#">Indonesia</a></li>
+                        <li class="<?= $this->session->userdata('lang') === 'english' ? 'uk-active uk-disabled' : ''; ?>"><a href="<?= base_url('set_lang?lang=english'); ?>">English</a></li>
+                        <li class="<?= $this->session->userdata('lang') === 'indonesia' ? 'uk-active uk-disabled' : ''; ?>"><a href="<?= base_url('set_lang?lang=indonesia'); ?>">Indonesia</a></li>
                     </ul>
                 </div>
             </li>

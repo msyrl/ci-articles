@@ -10,8 +10,8 @@
         <a href="#"><i class="fas fa-globe-asia fa-2x"></i>&nbsp;EN</a>
         <div class="uk-navbar-dropdown">
           <ul class="uk-nav uk-navbar-dropdown-nav">
-            <li class="uk-active"><a href="#">English</a></li>
-            <li><a href="#">Indonesia</a></li>
+            <li class="<?= $this->session->userdata('lang') === 'english' ? 'uk-active uk-disabled' : ''; ?>"><a href="<?= base_url('set_lang?lang=english'); ?>">English</a></li>
+            <li class="<?= $this->session->userdata('lang') === 'indonesia' ? 'uk-active uk-disabled' : ''; ?>"><a href="<?= base_url('set_lang?lang=indonesia'); ?>">Indonesia</a></li>
           </ul>
         </div>
       </li>
@@ -30,11 +30,11 @@
 <div>
   <nav class="main-nav">
     <ul uk-scrollspy-nav="closest: li; scroll: true">
-      <li><a href="#home" class="active">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#blog">Blog</a></li>
-      <li><a href="#publication">Publication</a></li>
-      <li><a href="#connect">Connect</a></li>
+      <li><a href="#home" class="active"><?= $this->lang->line('home'); ?></a></li>
+      <li><a href="#about"><?= $this->lang->line('about'); ?></a></li>
+      <li><a href="#blog"><?= $this->lang->line('blog'); ?></a></li>
+      <li><a href="#publication"><?= $this->lang->line('publication'); ?></a></li>
+      <li><a href="#connect"><?= $this->lang->line('connect'); ?></a></li>
     </ul>
   </nav>
 </div>
