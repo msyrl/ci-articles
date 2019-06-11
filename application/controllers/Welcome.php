@@ -111,24 +111,33 @@ class Welcome extends Frontend_Controller
 				'slug' => htmlspecialchars($this->input->get('q', TRUE)),
 				'tags' => htmlspecialchars($this->input->get('q', TRUE)),
 			);
-			$this->data['result'] = array();
 
-			$blogs = $this->Blog_m->get_like($param);
+			$page = $this->input->get('page') ? $this->input->get('page') : 1;
+
+			$data = array();
+
+			$blogs = $this->Blog_m->get_like($param, $page);
 			if ($blogs) {
-				array_push($this->data['result'], ...$blogs);
+				array_push($data, ...$blogs);
 			}
-			$books = $this->Book_m->get_like($param);
+			$books = $this->Book_m->get_like($param, $page);
 			if ($books) {
-				array_push($this->data['result'], ...$books);
+				array_push($data, ...$books);
 			}
-			$brochures = $this->Brochure_m->get_like($param);
+			$brochures = $this->Brochure_m->get_like($param, $page);
 			if ($brochures) {
-				array_push($this->data['result'], ...$brochures);
+				array_push($data, ...$brochures);
 			}
-			$teams = $this->Team_m->get_like($param);
+			$teams = $this->Team_m->get_like($param, $page);
 			if ($teams) {
-				array_push($this->data['result'], ...$teams);
+				array_push($data, ...$teams);
 			}
+
+			$this->data['result'] = array(
+				'prev_page' => ($page - 1) > 0 ? base_url('search?q=') . $this->input->get('q') . '&page=' . ($page - 1) : NULL,
+				'next_page' => !empty($data) ? base_url('search?q=') . $this->input->get('q') . '&page=' . ($page + 1) : NULL,
+				'data' => $data,
+			);
 		}
 		$this->load->view('_layout', $this->data);
 	}

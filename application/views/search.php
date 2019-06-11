@@ -39,19 +39,27 @@
             </div>
         </form>
     </div>
-    <div class="uk-grid-small uk-child-width-1-3@m" uk-grid>
-        <?php if (isset($result)) : ?>
-            <?php foreach ($result as $data) : ?>
-                <div>
-                    <div class="uk-card uk-card-small uk-card-hover uk-card-default">
-                        <div class="uk-background-cover uk-height-small" data-src="<?= isset($data['image']) && !empty($data['image']) ? base_url('assets/images/') . $data['type'] . '/' . $data['image'] : base_url('assets/images/icon/logo.png'); ?>" uk-img>
+    <?php if (isset($result)) : ?>
+        <?php foreach ($result['data'] as $data) : ?>
+            <article>
+                <div class="uk-child-width-expand" uk-grid>
+                    <div class="uk-width-1-4@m">
+                        <div class="uk-background-cover uk-height-medium" data-src="<?= isset($data['image']) && !empty($data['image']) ? base_url('assets/images/') . $data['type'] . '/' . $data['image'] : base_url('assets/images/icon/logo.png'); ?>" uk-img>
                         </div>
-                        <div class="uk-card-body">
-                            <p>
-                                <?= $data['title']; ?>
-                            </p>
+                    </div>
+                    <div>
+                        <div class="uk-flex-middle">
+                            <div>
+                                <h3 class="uk-heading-bullet uk-text-capitalize"><?= $data['title']; ?></h3>
+                            </div>
                         </div>
-                        <div class="uk-card-footer">
+                        <p class="uk-text-small">Publish at <?= $data['created_at']; ?></p>
+                        <?php if (isset($data['body']) && !empty($data['body'])) : ?>
+                            <div class="uk-panel uk-panel-box">
+                                <?= explode("</p>", htmlspecialchars_decode($data['body']))[0]; ?>
+                            </div>
+                        <?php endif; ?>
+                        <div class="uk-padding uk-text-right">
                             <?php if ($data['type'] === 'teams') : ?>
                                 <a href="<?= base_url('window/') . $data['slug']; ?>" class="uk-button uk-button-text">Read more</a>
                             <?php elseif ($data['type'] === 'books' || $data['type'] === 'brochures') : ?>
@@ -62,7 +70,12 @@
                         </div>
                     </div>
                 </div>
-            <?php endforeach; ?>
-        <?php endif; ?>
-    </div>
+                <hr>
+            </article>
+        <?php endforeach; ?>
+    <?php endif; ?>
+    <ul class="uk-pagination uk-flex-right">
+        <li class="<?= $result['prev_page'] ? '' : 'uk-disabled'; ?>"><a href="<?= $result['prev_page'] ? $result['prev_page'] : '#'; ?>"><span uk-pagination-previous></span> Previous</a></li>
+        <li class="<?= $result['next_page'] ? '' : 'uk-disabled'; ?>"><a href="<?= $result['next_page'] ? $result['next_page'] : '#'; ?>">Next <span uk-pagination-next></span></a></li>
+    </ul>
 </section>

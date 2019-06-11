@@ -100,7 +100,7 @@
                             <?php if (!empty($brochures['data'])) : ?>
                                 <?php foreach ($brochures['data'] as $brochure) : ?>
                                     <div>
-                                        <a href="<?= $brochure->attachment ? base_url('assets/attachments/books/') . $brochure->attachment : '#'; ?>">
+                                        <a href="<?= $brochure->attachment ? base_url('assets/attachments/brochures/') . $brochure->attachment : '#'; ?>">
                                             <div class="uk-card uk-card-small uk-card-body">
                                                 <strong><?= $brochure->title; ?></strong>
                                             </div>

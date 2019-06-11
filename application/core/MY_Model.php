@@ -42,15 +42,26 @@ class MY_Model extends CI_Model
         return $this->get(NULL, $single);
     }
 
-    public function get_like($where)
+    public function get_like($where, $page)
     {
+        $per_page = 2;
+        $offset = ($page * $per_page) - $per_page;
+        $result = $this->db;
+
+        if ($this->db->field_exists('is_publish', $this->_table_name)) {
+            $result = $result->where('is_publish', 1);
+        }
+
+        $result = $result->group_start();
         foreach ($where as $key => $item) {
             if ($this->db->field_exists($key, $this->_table_name)) {
-                $this->db->or_like($key, $item);
+                $result = $result->or_like($key, $item);
             };
         }
-        $this->db->select("*, '$this->_table_name' as type");
-        return $this->db->get($this->_table_name)->result_array();
+        $result = $result->group_end();
+
+        $result = $result->select("*, '$this->_table_name' as type")->order_by('created_at', 'DESC')->get($this->_table_name, $per_page, $offset)->result_array();
+        return $result;
     }
 
     public function save($data, $id = NULL)
