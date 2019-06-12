@@ -79,7 +79,7 @@
 <!-- Blog -->
 <section id="blog" class="uk-padding-small" uk-scrollspy="target: .uk-card, .more; cls:uk-animation-slide-left; delay: 350; repeat: true">
   <h1 class="uk-heading-line uk-text-center">
-    <span>Blog</span>
+    <span class="uk-text-capitalize"><?= $this->lang->line('blog'); ?></span>
   </h1>
   <div class="uk-child-width-1-3@s" uk-grid>
     <?php if (!empty($blogs['data'])) : ?>
