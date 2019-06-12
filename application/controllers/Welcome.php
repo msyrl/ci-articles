@@ -23,6 +23,7 @@ class Welcome extends Frontend_Controller
 
 	public function window($slug = NULL)
 	{
+		$this->data['meta_title'] = ucwords($this->lang->line('windows'));
 		if ($slug != NULL) {
 			$this->data['page'] = '_article_layout';
 			$team = $this->Team_m->get_by(array('slug' => $slug), TRUE);
@@ -38,6 +39,7 @@ class Welcome extends Frontend_Controller
 
 	public function blog($slug = NULL)
 	{
+		$this->data['meta_title'] = ucwords($this->lang->line('blogs'));
 		if ($slug != NULL) {
 			$this->data['page'] = '_article_layout';
 			$blog = $this->Blog_m->get_by(array('slug' => $slug), TRUE);
@@ -63,6 +65,7 @@ class Welcome extends Frontend_Controller
 
 	public function about()
 	{
+		$this->data['meta_title'] = ucwords($this->lang->line('about'));
 		$this->data['page'] = '_article_layout';
 		$this->data['type'] = $this->About_m->get_table_name();
 		$this->data['data'] = $this->About_m->get(1, TRUE);
@@ -76,6 +79,7 @@ class Welcome extends Frontend_Controller
 
 	public function book()
 	{
+		$this->data['meta_title'] = ucwords($this->lang->line('books'));
 		$this->data['page'] = 'more_publication';
 		$this->data['type'] = 'book';
 		$page = $this->input->get('page') ? $this->input->get('page') : 1;
@@ -90,6 +94,7 @@ class Welcome extends Frontend_Controller
 
 	public function brochure()
 	{
+		$this->data['meta_title'] = ucwords($this->lang->line('brochures'));
 		$this->data['page'] = 'more_publication';
 		$this->data['type'] = 'brochure';
 		$page = $this->input->get('page') ? $this->input->get('page') : 1;
@@ -104,6 +109,7 @@ class Welcome extends Frontend_Controller
 
 	public function search()
 	{
+		$this->data['meta_title'] = ucwords($this->lang->line('search'));
 		$this->data['page'] = 'search';
 		if ($this->input->get('q')) {
 			$param = array(

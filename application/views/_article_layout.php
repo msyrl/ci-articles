@@ -1,33 +1,4 @@
-<nav class="top-nav uk-background-secondary uk-text-primary uk-position-fixed uk-position-top uk-position-z-index uk-navbar-container uk-navbar-transparent" uk-navbar>
-    <div class="uk-navbar-left">
-        <button type="button" class="sidebar-toggle">
-            <i class="fas fa-bars fa-2x"></i>
-        </button>
-        <p><a href="<?= base_url('/'); ?>" class="uk-link-reset">IFL <span class="ext-title">| <?= $type === 'teams' ? 'Window' : ucwords($type); ?></span></a></p>
-    </div>
-    <div class="uk-navbar-right">
-        <ul class="uk-navbar-nav">
-            <li>
-                <a href="#"><i class="fas fa-globe-asia fa-2x"></i>&nbsp;EN</a>
-                <div class="uk-navbar-dropdown">
-                    <ul class="uk-nav uk-navbar-dropdown-nav">
-                        <li class="<?= $this->session->userdata('lang') === 'english' ? 'uk-active uk-disabled' : ''; ?>"><a href="<?= base_url('set_lang?lang=english'); ?>">English</a></li>
-                        <li class="<?= $this->session->userdata('lang') === 'indonesia' ? 'uk-active uk-disabled' : ''; ?>"><a href="<?= base_url('set_lang?lang=indonesia'); ?>">Indonesia</a></li>
-                    </ul>
-                </div>
-            </li>
-            <?php if ($this->session->userdata('user')) : ?>
-                <li>
-                    <a href="<?= base_url('logout'); ?>" onclick="return confirm('Are you sure want to logout?')"><i class="fas fa-sign-out-alt fa-2x"></i>&nbsp;Logout</a>
-                </li>
-            <?php else : ?>
-                <li>
-                    <a href="<?= base_url('login'); ?>"><i class="fas fa-user-circle fa-2x"></i>&nbsp;Login</a>
-                </li>
-            <?php endif; ?>
-        </ul>
-    </div>
-</nav>
+<?php $this->load->view('_topnav'); ?>
 <article class="uk-margin-medium-top uk-padding uk-animation-fade">
     <h2 class="uk-heading-divider uk-text-capitalize"><?= $type === 'abouts' ? $site_name : $data->title; ?></h2>
     <?php if (!empty($data->image)) : ?>
@@ -43,7 +14,7 @@
     <?php endif; ?>
     <?php if (!empty($data->source)) : ?>
         <div class="uk-text-small uk-text-right">
-            <p>Source : <?= $data->source; ?></p>
+            <p class="uk-text-capitalize"><?= $this->lang->line('source') . " : " .  $data->source; ?></p>
         </div>
     <?php endif; ?>
     <div class="uk-card uk-text-left">
@@ -54,18 +25,12 @@
         <div class="padding-horizontal uk-text-bold">
             <p><i class="fas fa-tags"></i> TAGGING :</p>
             <div class="uk-grid-small uk-child-width-auto uk-margin-top uk-text-small uk-text-capitalize" uk-grid>
-                <div>
-                    <a href="#" class="uk-text-muted">#ImpactAccelerator</a>
-                </div>
-                <div>
-                    <a href="#" class="uk-text-muted">#youthentrepreneurship</a>
-                </div>
-                <div>
-                    <a href="#" class="uk-text-muted">#Innovation</a>
-                </div>
-                <div>
-                    <a href="#" class="uk-text-muted">#YouthCoLab</a>
-                </div>
+                <?php $tags = explode(" ", $data->tags); ?>
+                <?php foreach ($tags as $tag) : ?>
+                    <div>
+                        <a href="<?= base_url('search?q=') . trim($tag, "# "); ?>" class="uk-text-muted"><?= $tag; ?></a>
+                    </div>
+                <?php endforeach; ?>
             </div>
         </div>
     <?php endif; ?>

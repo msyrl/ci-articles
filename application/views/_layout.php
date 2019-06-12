@@ -10,13 +10,13 @@
     <link rel="stylesheet" href="<?= base_url('assets/vendor/fontawesome/css/all.css'); ?>" />
     <link rel="stylesheet" href="<?= base_url('assets/css/font.css'); ?>" />
     <link rel="stylesheet" href="<?= base_url('assets/css/style.css'); ?>" />
-    <title><?= $site_name . $meta_title; ?></title>
+    <title><?= $site_name . " | " . $meta_title; ?></title>
 </head>
 
 <body>
     <!-- Nav -->
     <nav class="side-nav">
-        <div class="uk-grid-small head-content uk-child-width-expand" uk-grid>
+        <div class="uk-grid-small head-content uk-child-width-expand uk-flex-middle" uk-grid>
             <div class="uk-grid-small" uk-grid>
                 <div class="uk-width-auto">
                     <button type="button" class="sidebar-toggle">
@@ -27,12 +27,12 @@
                     <h2 class="uk-heading-small">IFL</h2>
                 </div>
             </div>
-            <div class="uk-width-1-2 uk-flex uk-flex-middle search">
+            <div class="uk-width-1-2 search">
                 <div class="uk-width-expand">
                     <form action="<?= base_url('search'); ?>" method="get" autocomplete="off">
                         <div class="uk-inline uk-width-expand">
-                            <span class="uk-form-icon uk-form-icon-flip" uk-icon="icon: search"></span>
-                            <input class="uk-input" type="search" name="q" placeholder="Looking for something?" value="<?= $this->input->get('q') ?>">
+                            <button type="submit" class="uk-form-icon uk-form-icon-flip" uk-icon="icon: search"></button>
+                            <input class="uk-input" type="search" name="q" placeholder="<?= ucfirst($this->lang->line('looking_for_something')); ?>?" value="<?= $this->input->get('q') ?>">
                         </div>
                     </form>
                 </div>
@@ -40,7 +40,7 @@
             <div class="uk-flex uk-flex-middle uk-flex-right auth">
                 <ul class="uk-navbar-nav">
                     <li>
-                        <a href="#"><i class="fas fa-globe-asia fa-2x"></i>&nbsp;EN</a>
+                        <a href="#"><i class="fas fa-globe-asia fa-2x"></i>&nbsp;<?= $lang; ?></a>
                         <div uk-dropdown>
                             <ul class="uk-nav uk-dropdown-nav">
                                 <li class="<?= $this->session->userdata('lang') === 'english' ? 'uk-active uk-disabled' : ''; ?>"><a href="<?= base_url('set_lang?lang=english'); ?>">English</a></li>
@@ -50,11 +50,11 @@
                     </li>
                     <?php if ($this->session->userdata('user')) : ?>
                         <li>
-                            <a href="<?= base_url('logout'); ?>" onclick="return confirm('Are you sure want to logout?')"><i class="fas fa-sign-out-alt fa-2x"></i>&nbsp;Logout</a>
+                            <a href="<?= base_url('logout'); ?>" onclick="return confirm('Are you sure want to logout?')"><i class="fas fa-sign-out-alt fa-2x"></i>&nbsp;<?= $this->lang->line('logout'); ?></a>
                         </li>
                     <?php else : ?>
                         <li>
-                            <a href="<?= base_url('login'); ?>"><i class="fas fa-user-circle fa-2x"></i>&nbsp;Login</a>
+                            <a href="<?= base_url('login'); ?>"><i class="fas fa-user-circle fa-2x"></i>&nbsp;<?= $this->lang->line('login'); ?></a>
                         </li>
                     <?php endif; ?>
                 </ul>
@@ -63,9 +63,9 @@
         <div class="main-content">
             <ul class="uk-width-medium@s nav-menu">
                 <li>
-                    <a href="#">IFL Window <i class="fas fa-chevron-right"></i></a>
+                    <a href="#"><?= $this->lang->line('ifl_window'); ?> <i class="fas fa-chevron-right"></i></a>
                     <div class="menu-list uk-padding">
-                        <h3 class="uk-heading-small">IFL Window</h3>
+                        <h3 class="uk-heading-small"><?= $this->lang->line('ifl_window'); ?></h3>
                         <div class="uk-child-width-1-2@s uk-child-width-1-3@m" uk-grid>
                             <?php if (!empty($teams)) : ?>
                                 <?php foreach ($teams['data'] as $team) : ?>
@@ -82,9 +82,9 @@
                     </div>
                 </li>
                 <li>
-                    <a href="#">Publication <i class="fas fa-chevron-right"></i></a>
+                    <a href="#" class="uk-text-capitalize"><?= $this->lang->line('publication'); ?> <i class="fas fa-chevron-right"></i></a>
                     <div class="menu-list uk-padding">
-                        <h3 class="uk-heading-small">Publication</h3>
+                        <h3 class="uk-heading-small uk-text-capitalize"><?= $this->lang->line('publication'); ?></h3>
                         <div class="uk-child-width-1-2@s uk-child-width-1-3@m" uk-grid>
                             <?php if (!empty($books['data'])) : ?>
                                 <?php foreach ($books['data'] as $book) : ?>
@@ -112,9 +112,9 @@
                     </div>
                 </li>
                 <li>
-                    <a href="#">Blog <i class="fas fa-chevron-right"></i></a>
+                    <a href="#" class="uk-text-capitalize"><?= $this->lang->line('blog'); ?> <i class="fas fa-chevron-right"></i></a>
                     <div class="menu-list uk-padding">
-                        <h3 class="uk-heading-small">Blog</h3>
+                        <h3 class="uk-heading-small uk-text-capitalize"><?= $this->lang->line('blog'); ?></h3>
                         <div class="uk-child-width-1-2@s uk-child-width-1-3@m" uk-grid>
                             <?php if (!empty($blogs['data'])) : ?>
                                 <?php foreach ($blogs['data'] as $blog) : ?>

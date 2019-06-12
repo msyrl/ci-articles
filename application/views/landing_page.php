@@ -7,7 +7,7 @@
   <div class="uk-navbar-right auth">
     <ul class="uk-navbar-nav">
       <li>
-        <a href="#"><i class="fas fa-globe-asia fa-2x"></i>&nbsp;EN</a>
+        <a href="#"><i class="fas fa-globe-asia fa-2x"></i>&nbsp;<?= $lang; ?></a>
         <div class="uk-navbar-dropdown">
           <ul class="uk-nav uk-navbar-dropdown-nav">
             <li class="<?= $this->session->userdata('lang') === 'english' ? 'uk-active uk-disabled' : ''; ?>"><a href="<?= base_url('set_lang?lang=english'); ?>">English</a></li>
@@ -17,11 +17,14 @@
       </li>
       <?php if ($this->session->userdata('user')) : ?>
         <li>
-          <a href="<?= base_url('logout'); ?>" onclick="return confirm('Are you sure want to logout?')"><i class="fas fa-sign-out-alt fa-2x"></i>&nbsp;Logout</a>
+          <a href="<?= base_url('admin'); ?>"><i class="fas fa-tachometer-alt fa-2x"></i>&nbsp;<?= ucwords($this->lang->line('admin')); ?></a>
+        </li>
+        <li>
+          <a href="<?= base_url('logout'); ?>" onclick="return confirm('Are you sure want to logout?')"><i class="fas fa-sign-out-alt fa-2x"></i>&nbsp;<?= $this->lang->line('logout'); ?></a>
         </li>
       <?php else : ?>
         <li>
-          <a href="<?= base_url('login'); ?>"><i class="fas fa-user-circle fa-2x"></i>&nbsp;Login</a>
+          <a href="<?= base_url('login'); ?>"><i class="fas fa-user-circle fa-2x"></i>&nbsp;<?= $this->lang->line('login'); ?></a>
         </li>
       <?php endif; ?>
     </ul>
@@ -64,10 +67,10 @@
   <div class="uk-flex uk-flex-middle" uk-height-viewport>
     <div class="uk-margin-remove">
       <div class="uk-padding">
-        <h2>About the Innovative Financing Lab</h2>
+        <h2 class="uk-text-capitalize"><?= $this->lang->line('about') . " " . $this->lang->line('us'); ?></h2>
         <?= $about->short_body ? htmlspecialchars_decode($about->short_body) : ''; ?>
         <div class="uk-flex uk-flex-center uk-padding-small" uk-scrollspy="target: a; cls:uk-animation-slide-top; delay: 750; repeat: true">
-          <a href="<?= base_url('about'); ?>" class="uk-button uk-button-default">Read More</a>
+          <a href="<?= base_url('about'); ?>" class="uk-button uk-button-default"><?= $this->lang->line('read') . " " . $this->lang->line('more'); ?></a>
         </div>
       </div>
     </div>
@@ -91,7 +94,7 @@
               </p>
             </div>
             <div class="uk-card-footer">
-              <a href="<?= base_url('blog/') . $blogs['data'][$i]->slug; ?>" class="uk-button uk-button-text">Read more</a>
+              <a href="<?= base_url('blog/') . $blogs['data'][$i]->slug; ?>" class="uk-button uk-button-text"><?= $this->lang->line('read') . " " . $this->lang->line('more'); ?></a>
             </div>
           </div>
         </div>
@@ -99,13 +102,13 @@
     <?php endif; ?>
   </div>
   <div class="more uk-flex uk-flex-center uk-padding-small">
-    <a href="<?= base_url('blog'); ?>" class="uk-button uk-button-default">More Blog</a>
+    <a href="<?= base_url('blog'); ?>" class="uk-button uk-button-default"><?= $this->lang->line('more') . " " . $this->lang->line('blog'); ?></a>
   </div>
 </section>
 <!-- Publication -->
 <section id="publication" class="uk-padding-small">
   <h1 class="uk-heading-line uk-text-center">
-    <span>Publication</span>
+    <span class="uk-text-capitalize"><?= $this->lang->line('publication'); ?></span>
   </h1>
   <div class="uk-child-width-1-2@l" uk-grid>
     <!-- Books -->
@@ -123,7 +126,7 @@
                 </p>
               </div>
               <div class="uk-card-footer">
-                <a href="<?= $books['data'][$i]->attachment ? base_url('assets/attachments/books/') . $books['data'][$i]->attachment : '#'; ?>" class="uk-button uk-button-text">Read more</a>
+                <a href="<?= $books['data'][$i]->attachment ? base_url('assets/attachments/books/') . $books['data'][$i]->attachment : '#'; ?>" class="uk-button uk-button-text"><?= $this->lang->line('read') . " " . $this->lang->line('more'); ?></a>
               </div>
             </div>
           </div>
@@ -145,7 +148,7 @@
                 </p>
               </div>
               <div class="uk-card-footer">
-                <a href="<?= $brochures['data'][$i]->attachment ? base_url('assets/attachments/brochures/') . $brochures['data'][$i]->attachment : '#'; ?>" class="uk-button uk-button-text">Read more</a>
+                <a href="<?= $brochures['data'][$i]->attachment ? base_url('assets/attachments/brochures/') . $brochures['data'][$i]->attachment : '#'; ?>" class="uk-button uk-button-text"><?= $this->lang->line('read') . " " . $this->lang->line('more'); ?></a>
               </div>
             </div>
           </div>
@@ -154,19 +157,19 @@
     </div>
   </div>
   <div class="uk-flex uk-flex-center uk-padding-small" uk-scrollspy="target: a; cls:uk-animation-slide-top; delay: 350; repeat: true">
-    <a href="<?= base_url('publication/book'); ?>" class="uk-button uk-button-default">More Publication</a>
+    <a href="<?= base_url('publication/book'); ?>" class="uk-button uk-button-default"><?= $this->lang->line('more') . " " . $this->lang->line('publication'); ?></a>
   </div>
 </section>
 <!-- Connect -->
 <section id="connect" class="uk-padding uk-background-default">
   <h1 class="uk-heading-line uk-text-center uk-margin-large-bottom">
-    <span>Our Connection</span>
+    <span class="uk-text-capitalize"><?= $this->lang->line('our_connection'); ?></span>
   </h1>
   <div class="uk-child-width-1-6@m uk-flex uk-flex-center uk-margin-remove" uk-scrollspy="target: div; cls:uk-animation-fade; delay: 200; repeat: true" uk-grid>
     <?php if (!empty($connects['data'])) : ?>
       <?php foreach ($connects['data'] as $connect) : ?>
         <div class="uk-flex uk-flex-center uk-flex-middle">
-          <img src="<?= base_url('assets/images/connects/') . $connect->image; ?>" alt="<?= $connect->name; ?>" />
+          <img src="<?= base_url('assets/images/connects/') . $connect->image; ?>" alt="<?= $connect->name; ?>" title="<?= $connect->name; ?>" />
         </div>
       <?php endforeach; ?>
     <?php endif; ?>

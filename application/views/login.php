@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="<?= base_url('assets/vendor/fontawesome/css/all.css'); ?>" />
     <link rel="stylesheet" href="<?= base_url('assets/css/font.css'); ?>" />
     <link rel="stylesheet" href="<?= base_url('assets/css/style.css'); ?>" />
-    <title><?= $site_name . $meta_title; ?></title>
+    <title><?= $site_name . " | " . $meta_title; ?></title>
 </head>
 
 <body>
@@ -30,13 +30,13 @@
                             <div class="uk-margin">
                                 <div class="uk-inline">
                                     <span class="uk-form-icon" uk-icon="icon: user"></span>
-                                    <input class="uk-input uk-width-medium" type="text" name="username" placeholder="Username..." required>
+                                    <input class="uk-input uk-width-medium" type="text" name="username" placeholder="<?= ucwords($this->lang->line('username')); ?>..." required>
                                 </div>
                             </div>
                             <div class="uk-margin">
                                 <div class="uk-inline">
                                     <span class="uk-form-icon" uk-icon="icon: lock"></span>
-                                    <input class="uk-input uk-width-medium" type="password" name="password" placeholder="Password..." required>
+                                    <input class="uk-input uk-width-medium" type="password" name="password" placeholder="<?= ucwords($this->lang->line('username')); ?>..." required>
                                 </div>
                             </div>
                             <?php if ($this->session->flashdata('alert')) : ?>
@@ -46,7 +46,7 @@
                                 </div>
                             <?php endif; ?>
                             <div class="uk-margin">
-                                <button type="submit" class="uk-button uk-button-default uk-align-center">Login</button>
+                                <button type="submit" class="uk-button uk-button-default uk-align-center"><?= ucfirst($this->lang->line('login')); ?></button>
                             </div>
                         </form>
                     </div>

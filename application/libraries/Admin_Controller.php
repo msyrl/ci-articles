@@ -7,7 +7,7 @@ class Admin_Controller extends MY_Controller
         parent::__construct();
         if ($this->session->userdata('user')) {
             self::check_permit();
-            $this->data['meta_title'] =  ' | Admin';
+            $this->data['meta_title'] =  'Admin';
             $this->data['data_menus'] = $this->get_data_menus();
             $this->data['page_menus'] = $this->get_page_menus();
             $this->data['access_menus'] = $this->get_access_menus();

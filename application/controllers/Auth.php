@@ -25,6 +25,7 @@ class Auth extends Frontend_Controller
 
             $this->form_validation->set_rules($rules);
             if ($this->form_validation->run() === FALSE) {
+                $this->data['meta_title'] = ucfirst($this->lang->line('login'));
                 $this->load->view('login', $this->data);
             } else {
                 $this->load->model('User_m');
@@ -45,20 +46,20 @@ class Auth extends Frontend_Controller
                         $this->session->set_userdata(array('user' => $data));
                         $this->session->set_flashdata('alert', array(
                             'status' => 'success',
-                            'message' => 'Welcome to admin page ' . $data['name'] . '!',
+                            'message' => ucfirst($this->lang->line('welcome_to_admin_page')) . ', ' . $data['name'] . '!',
                         ));
                         redirect('admin');
                     } else {
                         $this->session->set_flashdata('alert', array(
                             'status' => 'danger',
-                            'message' => 'Invalid username or password!',
+                            'message' => ucfirst($this->lang->line('invalid_password')) . ' !',
                         ));
                         $this->load->view('login', $this->data);
                     }
                 } else {
                     $this->session->set_flashdata('alert', array(
                         'status' => 'danger',
-                        'message' => 'Your account has been deactivated!',
+                        'message' => ucfirst($this->lang->line('username_not_found')) . ' !',
                     ));
                     $this->load->view('login', $this->data);
                 }
@@ -66,7 +67,7 @@ class Auth extends Frontend_Controller
         } else {
             $this->session->set_flashdata('alert', array(
                 'status' => 'danger',
-                'message' => 'You have already login!',
+                'message' => ucfirst($this->lang->line('you_have_already_login')) . ' !',
             ));
             redirect('admin');
         }
@@ -77,7 +78,7 @@ class Auth extends Frontend_Controller
         $this->session->unset_userdata('user');
         $this->session->set_flashdata('alert', array(
             'status' => 'success',
-            'message' => 'You have already logout!',
+            'message' => ucfirst($this->lang->line('you_have_been_logout')) . ' !',
         ));
         redirect('/');
     }

@@ -11,6 +11,7 @@ class MY_Controller extends CI_Controller
         $this->data['site_name'] = $this->config->item('site_name');
         $this->data['meta_title'] = '';
         $lang = $this->session->userdata('lang') ? $this->session->userdata('lang') : 'english';
+        $this->data['lang'] = $this->selected_lang($lang);
         $this->lang->load($lang, $lang);
     }
 
@@ -19,5 +20,18 @@ class MY_Controller extends CI_Controller
         $lang = htmlspecialchars($this->input->get('lang', TRUE));
         $this->session->set_userdata('lang', $lang);
         redirect($_SERVER['HTTP_REFERER']);
+    }
+
+    public function selected_lang($lang)
+    {
+        switch ($lang) {
+            case 'english':
+                return 'en';
+                break;
+
+            case 'indonesia':
+                return 'id';
+                break;
+        }
     }
 }
