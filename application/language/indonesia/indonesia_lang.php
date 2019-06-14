@@ -71,7 +71,8 @@ $lang['role'] = 'peran';
 $lang['roles'] = 'peran';
 // S
 $lang['save'] = 'simpan';
-$lang['search'] = 'Cari';
+$lang['search'] = 'cari';
+$lang['select'] = 'pilih';
 $lang['slide'] = 'slide';
 $lang['success'] = 'sukses';
 $lang['source'] = 'sumber';

@@ -72,6 +72,7 @@ $lang['roles'] = 'roles';
 // S
 $lang['save'] = 'save';
 $lang['search'] = 'search';
+$lang['select'] = 'select';
 $lang['slide'] = 'slide';
 $lang['source'] = 'source';
 $lang['success'] = 'success';

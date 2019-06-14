@@ -18,9 +18,9 @@
             </div>
             <div>
                 <label class="uk-form-label" for="image"><?= ucwords($this->lang->line('image')); ?></label>
-                <div class="uk-form-controls" uk-form-custom>
+                <div uk-form-custom="target: true">
                     <input type="file" name="image">
-                    <button class="uk-button uk-button-default uk-button-small uk-text-capitalize" type="button" tabindex="-1">Choose File</button>
+                    <input class="uk-input uk-form-small" type="text" placeholder="<?= ucwords($this->lang->line('select') . " " . $this->lang->line('image')); ?>..." disabled>
                 </div>
             </div>
         </div>
