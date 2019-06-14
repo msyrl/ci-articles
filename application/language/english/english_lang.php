@@ -3,6 +3,7 @@
 // A
 $lang['about'] = 'about';
 $lang['action'] = 'action';
+$lang['add'] = 'add';
 $lang['admin'] = 'admin';
 $lang['attachment'] = 'attachment';
 // B
@@ -16,7 +17,6 @@ $lang['brochures'] = 'brochures';
 $lang['by'] = 'by';
 // C
 $lang['connect'] = 'connect';
-$lang['create'] = 'create';
 // D
 $lang['data_management'] = 'data management';
 $lang['delete'] = 'delete';
@@ -52,6 +52,7 @@ $lang['next'] = 'next';
 $lang['new_blog'] = 'new blog';
 $lang['new_book'] = 'new book';
 $lang['new_brochure'] = 'new brochure';
+$lang['new_video'] = 'new video';
 $lang['no'] = 'no';
 // O
 $lang['our_connection'] = 'our connection';

@@ -20,9 +20,9 @@ class Video extends Admin_Controller
     {
         $this->data['page'] = 'admin/video/form';
         if ($id === NULL) {
-            $this->data['title'] = 'create new video';
+            $this->data['title'] = $this->lang->line('add') . ' ' . $this->lang->line('new_video');
         } else {
-            $this->data['title'] = 'update video';
+            $this->data['title'] = $this->lang->line('update') . ' ' . $this->lang->line('video');
             $this->data['video'] = $this->Video_m->get($id, TRUE);
         }
         $this->form_validation->set_rules($this->Video_m->validation_rules($id));
@@ -43,7 +43,7 @@ class Video extends Admin_Controller
             }
             $this->session->set_flashdata('form_status', array(
                 'status' => 'success',
-                'message' => 'Successfully ' . $this->data['title'] . '!',
+                'message' => ucfirst($this->lang->line('success')) . ' ' . $this->data['title'] . '!',
             ));
             redirect('admin/video');
         }
@@ -58,7 +58,7 @@ class Video extends Admin_Controller
         $this->Video_m->save($data, $id);
         $this->session->set_flashdata('form_status', array(
             'status' => 'success',
-            'message' => 'Successfully change publish option!',
+            'message' => ucfirst($this->lang->line('success')) . ' ' .  $this->lang->line('edit') . ' ' . $this->lang->line('publish_option') . '!',
         ));
         redirect('admin/video');
     }
@@ -68,7 +68,7 @@ class Video extends Admin_Controller
         $this->Video_m->delete($id);
         $this->session->set_flashdata('form_status', array(
             'status' => 'success',
-            'message' => 'Successfully delete video!',
+            'message' => ucfirst($this->lang->line('success')) . ' ' . $this->lang->line('delete') . ' ' . $this->lang->line('video') . '!',
         ));
         redirect('admin/video');
     }

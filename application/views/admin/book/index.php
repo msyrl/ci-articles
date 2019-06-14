@@ -1,7 +1,7 @@
 <div class="uk-flex uk-flex-middle uk-flex-between">
     <h2 class="uk-heading-small uk-margin-remove"><?= ucwords($this->lang->line('books')); ?></h2>
     <div>
-        <a href="<?= base_url('admin/book/form'); ?>" class="uk-button uk-button-default uk-button-small"><span uk-icon="icon: plus-circle"></span> <?= ucwords($this->lang->line('create') . ' ' . $this->lang->line('book')); ?></a>
+        <a href="<?= base_url('admin/book/form'); ?>" class="uk-button uk-button-default uk-button-small"><span uk-icon="icon: plus-circle"></span> <?= ucwords($this->lang->line('add') . ' ' . $this->lang->line('book')); ?></a>
     </div>
 </div>
 <hr>

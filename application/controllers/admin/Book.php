@@ -21,7 +21,7 @@ class Book extends Admin_Controller
         $post = TRUE;
         $this->data['page'] = 'admin/book/form';
         if ($id === NULL) {
-            $this->data['title'] = $this->lang->line('create') . ' ' . $this->lang->line('new_book');
+            $this->data['title'] = $this->lang->line('add') . ' ' . $this->lang->line('new_book');
         } else {
             $this->data['title'] = $this->lang->line('update') . ' ' . $this->lang->line('book');
             $this->data['book'] = $this->Book_m->get($id, TRUE);

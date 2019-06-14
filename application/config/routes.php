@@ -61,6 +61,7 @@ $route['about'] = 'welcome/about';
 $route['publication'] = 'welcome/publication';
 $route['publication/book'] = 'welcome/book';
 $route['publication/brochure'] = 'welcome/brochure';
+$route['publication/video'] = 'welcome/video';
 
 $route['default_controller'] = 'Welcome';
 $route['404_override'] = '';

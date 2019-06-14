@@ -8,6 +8,7 @@
             <ul class="uk-nav uk-nav-default">
                 <li class="<?= $type === 'book' ? 'uk-active' : ''; ?>"><a href="<?= base_url('publication/book'); ?>" class="uk-heading-bullet uk-text-uppercase"><?= $this->lang->line('books'); ?></a></li>
                 <li class="<?= $type === 'brochure' ? 'uk-active' : ''; ?>"><a href="<?= base_url('publication/brochure'); ?>" class="uk-heading-bullet uk-text-uppercase"><?= $this->lang->line('brochures'); ?></a></li>
+                <li class="<?= $type === 'video' ? 'uk-active' : ''; ?>"><a href="<?= base_url('publication/video'); ?>" class="uk-heading-bullet uk-text-uppercase"><?= $this->lang->line('videos'); ?></a></li>
                 <!-- <li><a href="#">Videos</a></li> -->
             </ul>
         </div>
@@ -16,21 +17,27 @@
             <ul class="uk-list uk-list-divider">
                 <?php if (!empty($publications['data'])) : ?>
                     <?php foreach ($publications['data'] as $publication) : ?>
-                        <li>
-                            <div class="uk-child-width-expand" uk-grid>
-                                <div class="uk-width-1-4@m">
-                                    <div class="uk-background-contain uk-height-medium" data-src="<?= empty($publication->image) ? base_url('assets/images/icon/logo.png') : base_url('assets/images/') . $type . 's/' . $publication->image; ?>" uk-img>
+                        <?php if ($type === 'video') : ?>
+                            <li class="uk-margin">
+                                <iframe class="uk-width-1-1 uk-height-large" src="https://www.youtube.com/embed/<?= $publication->link; ?>?autoplay=0" frameborder="0" allowfullscreen uk-video></iframe>
+                            </li>
+                        <?php else : ?>
+                            <li>
+                                <div class="uk-child-width-expand" uk-grid>
+                                    <div class="uk-width-1-4@m">
+                                        <div class="uk-background-contain uk-height-medium" data-src="<?= empty($publication->image) ? base_url('assets/images/icon/logo.png') : base_url('assets/images/') . $type . 's/' . $publication->image; ?>" uk-img>
+                                        </div>
+                                    </div>
+                                    <div class="uk-text-small">
+                                        <h4 class="uk-heading-bullet uk-text-capitalize"><?= $publication->title; ?></h4>
+                                        <p><?= $this->lang->line('by') . " " . $publication->updated_by . ", " . $publication->created_at; ?></p>
+                                        <div class="uk-margin">
+                                            <a href="<?= empty($publication->attachment) ? '#' : base_url('assets/attachments/books/') . $publication->attachment; ?>" class="uk-button uk-button-small uk-button-default"><span uk-icon="icon: download"></span> <?= ucfirst($this->lang->line('download')); ?></a>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="uk-text-small">
-                                    <h4 class="uk-heading-bullet uk-text-capitalize"><?= $publication->title; ?></h4>
-                                    <p><?= $this->lang->line('by') . " " . $publication->updated_by . ", " . $publication->created_at; ?></p>
-                                    <div class="uk-margin">
-                                        <a href="<?= empty($publication->attachment) ? '#' : base_url('assets/attachments/books/') . $publication->attachment; ?>" class="uk-button uk-button-small uk-button-default"><span uk-icon="icon: download"></span> <?= ucfirst($this->lang->line('download')); ?></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
+                            </li>
+                        <?php endif; ?>
                     <?php endforeach; ?>
                 <?php endif; ?>
             </ul>

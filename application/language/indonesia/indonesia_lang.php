@@ -3,6 +3,7 @@
 // A
 $lang['about'] = 'tentang';
 $lang['action'] = 'aksi';
+$lang['add'] = 'tambah';
 $lang['admin'] = 'admin';
 $lang['attachment'] = 'lampiran';
 // B
@@ -16,7 +17,6 @@ $lang['brochures'] = 'brosur';
 $lang['by'] = 'oleh';
 // C
 $lang['connect'] = 'koneksi';
-$lang['create'] = 'buat';
 // D
 $lang['data_management'] = 'manajemen data';
 $lang['delete'] = 'hapus';
@@ -52,6 +52,7 @@ $lang['next'] = 'selanjutnya';
 $lang['new_blog'] = 'blog baru';
 $lang['new_book'] = 'buku baru';
 $lang['new_brochure'] = 'brosur baru';
+$lang['new_video'] = 'video baru';
 $lang['no'] = 'tidak';
 // O
 $lang['our_connection'] = 'koneksi kami';

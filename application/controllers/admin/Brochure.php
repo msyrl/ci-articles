@@ -21,7 +21,7 @@ class Brochure extends Admin_Controller
         $post = TRUE;
         $this->data['page'] = 'admin/brochure/form';
         if ($id === NULL) {
-            $this->data['title'] = $this->lang->line('create') . " " . $this->lang->line('new_brochure');
+            $this->data['title'] = $this->lang->line('add') . " " . $this->lang->line('new_brochure');
         } else {
             $this->data['title'] = $this->lang->line('update') . " " . $this->lang->line('brochure');
             $this->data['brochure'] = $this->Brochure_m->get($id, TRUE);

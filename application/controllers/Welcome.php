@@ -107,6 +107,21 @@ class Welcome extends Frontend_Controller
 		}
 	}
 
+	public function video()
+	{
+		$this->data['meta_title'] = ucwords($this->lang->line('videos'));
+		$this->data['page'] = 'more_publication';
+		$this->data['type'] = 'video';
+		$page = $this->input->get('page') ? $this->input->get('page') : 1;
+		$videos = $this->Video_m->get_with_paginate($page, 10, TRUE);
+		if ($videos['data']) {
+			$this->data['publications'] = $videos;
+			$this->load->view('_layout', $this->data);
+		} else {
+			redirect('/publication');
+		}
+	}
+
 	public function search()
 	{
 		$this->data['meta_title'] = ucwords($this->lang->line('search'));

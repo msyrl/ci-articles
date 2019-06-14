@@ -54,6 +54,7 @@ class Team_m extends MY_Model
             ->get($this->_table_name, $per_page, $offset)
             ->result();
 
+
         return array(
             'total_pages' => $total_pages,
             'current_page' => $page,
