@@ -17,7 +17,7 @@
                 <?= form_error('title', '<p class="uk-text-danger uk-text-small uk-margin-small-top">', '</p>'); ?>
             </div>
             <div>
-                <label class="uk-form-label" for="image"><?= ucwords($this->lang->line('image')); ?></label>
+                <label class="uk-form-label" for="image"><?= ucwords($this->lang->line('image')) . ' (.jpg/.jpeg/.png/.gif)'; ?></label>
                 <div uk-form-custom="target: true">
                     <input type="file" name="image">
                     <input class="uk-input uk-form-small" type="text" placeholder="<?= ucwords($this->lang->line('select') . " " . $this->lang->line('image')); ?>..." disabled>
@@ -40,9 +40,9 @@
         <?= form_error('body', '<p class="uk-text-danger uk-text-small uk-margin-small-top">', '</p>'); ?>
     </div>
     <div class="uk-margin">
-        <label class="uk-form-label" for="tags">Tags <small>(<?= ucfirst($this->lang->line('example')) . " : #Innovative #FinancingLab";  ?>)</small></label>
+        <label class="uk-form-label" for="tags">Tags <small><?= $this->lang->line('separate_with_space') . ' (' . ucfirst($this->lang->line('example')) . " : #Innovative #FinancingLab" . ')';  ?></small></label>
         <div class="uk-form-controls">
-            <input class="uk-input uk-form-small <?= form_error('tags') ? 'uk-form-danger' : '' ?>" id="tags" type="text" name="tags" value="<?= isset($blog) ? $blog->tags : set_value('tags'); ?>" placeholder="Tags (<?= ucfirst($this->lang->line('example')) . " : #Innovative #FinancingLab";  ?>)...">
+            <input class="uk-input uk-form-small <?= form_error('tags') ? 'uk-form-danger' : '' ?>" id="tags" type="text" name="tags" value="<?= isset($blog) ? $blog->tags : set_value('tags'); ?>" placeholder="Tags <?= $this->lang->line('separate_with_space') . ' (' . ucfirst($this->lang->line('example')) . " : #Innovative #FinancingLab" . ')';  ?>...">
         </div>
         <?= form_error('tags', '<p class="uk-text-danger uk-text-small uk-margin-small-top">', '</p>'); ?>
     </div>

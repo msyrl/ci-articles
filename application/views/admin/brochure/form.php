@@ -19,14 +19,14 @@
                 <?= form_error('title', '<p class="uk-text-danger uk-text-small uk-margin-small-top">', '</p>'); ?>
             </div>
             <div>
-                <label class="uk-form-label" for="image"><?= ucwords($this->lang->line('image')); ?></label>
+                <label class="uk-form-label" for="image"><?= ucwords($this->lang->line('image')) . ' (.jpg/.jpeg/.png/.gif)'; ?></label>
                 <div uk-form-custom="target: true">
                     <input type="file" name="image">
                     <input class="uk-input uk-form-small" type="text" placeholder="<?= ucwords($this->lang->line('select') . " " . $this->lang->line('image')); ?>..." disabled>
                 </div>
             </div>
             <div>
-                <label class="uk-form-label" for="attachment"><?= ucwords($this->lang->line('attachment')); ?></label>
+                <label class="uk-form-label" for="attachment"><?= ucwords($this->lang->line('attachment')) . ' .pdf'; ?></label>
                 <div uk-form-custom="target: true">
                     <input type="file" name="attachment">
                     <input class="uk-input uk-form-small" type="text" placeholder="<?= ucwords($this->lang->line('select') . " " . $this->lang->line('attachment')); ?>..." disabled>

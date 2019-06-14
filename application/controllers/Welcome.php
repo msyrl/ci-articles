@@ -53,7 +53,7 @@ class Welcome extends Frontend_Controller
 		} else {
 			$this->data['page'] = 'more_blog';
 			$page = $this->input->get('page') ? $this->input->get('page') : 1;
-			$blogs = $this->Blog_m->get_with_paginate($page, 10);
+			$blogs = $this->Blog_m->get_with_paginate($page, 10, TRUE);
 			if ($blogs['data']) {
 				$this->data['blogs'] = $blogs;
 				$this->load->view('_layout', $this->data);
@@ -83,7 +83,7 @@ class Welcome extends Frontend_Controller
 		$this->data['page'] = 'more_publication';
 		$this->data['type'] = 'book';
 		$page = $this->input->get('page') ? $this->input->get('page') : 1;
-		$books = $this->Book_m->get_with_paginate($page, 10);
+		$books = $this->Book_m->get_with_paginate($page, 10, TRUE);
 		if ($books['data']) {
 			$this->data['publications'] = $books;
 			$this->load->view('_layout', $this->data);
@@ -98,7 +98,7 @@ class Welcome extends Frontend_Controller
 		$this->data['page'] = 'more_publication';
 		$this->data['type'] = 'brochure';
 		$page = $this->input->get('page') ? $this->input->get('page') : 1;
-		$brochures = $this->Brochure_m->get_with_paginate($page, 10);
+		$brochures = $this->Brochure_m->get_with_paginate($page, 10, TRUE);
 		if ($brochures['data']) {
 			$this->data['publications'] = $brochures;
 			$this->load->view('_layout', $this->data);

@@ -14,7 +14,7 @@
     <?php endif; ?>
     <?php if (!empty($data->source)) : ?>
         <div class="uk-text-small uk-text-right">
-            <p class="uk-text-capitalize"><?= $this->lang->line('source') . " : " .  $data->source; ?></p>
+            <p><?= ucfirst($this->lang->line('source')) . " : " .  $data->source; ?></p>
         </div>
     <?php endif; ?>
     <div class="uk-card uk-text-left">

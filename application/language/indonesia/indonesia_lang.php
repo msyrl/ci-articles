@@ -80,6 +80,7 @@ $lang['roles'] = 'peran';
 $lang['save'] = 'simpan';
 $lang['search'] = 'cari';
 $lang['select'] = 'pilih';
+$lang['separate_with_space'] = 'pisahkan dengan spasi';
 $lang['slide'] = 'slide';
 $lang['success'] = 'sukses';
 $lang['source'] = 'sumber';
