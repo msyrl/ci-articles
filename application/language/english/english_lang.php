@@ -4,6 +4,7 @@
 $lang['about'] = 'about';
 $lang['action'] = 'action';
 $lang['admin'] = 'admin';
+$lang['attachment'] = 'attachment';
 // B
 $lang['blog'] = 'blog';
 $lang['blogs'] = 'blogs';
@@ -19,9 +20,11 @@ $lang['create'] = 'create';
 // D
 $lang['data_management'] = 'data management';
 $lang['delete'] = 'delete';
+$lang['delete_prompt'] = 'are you sure to remove this?';
 $lang['download'] = 'download';
 // E
 $lang['edit'] = 'edit';
+$lang['example'] = 'example';
 // F
 
 // G
@@ -47,6 +50,8 @@ $lang['more'] = 'more';
 $lang['name'] = 'name';
 $lang['next'] = 'next';
 $lang['new_blog'] = 'new blog';
+$lang['new_book'] = 'new book';
+$lang['new_brochure'] = 'new brochure';
 $lang['no'] = 'no';
 // O
 $lang['our_connection'] = 'our connection';
@@ -61,6 +66,8 @@ $lang['profile'] = 'profile';
 $lang['publication'] = 'publication';
 $lang['publications'] = 'publications';
 $lang['publish_at'] = 'publish at';
+$lang['publish_option'] = 'publish option';
+$lang['publish_prompt'] = 'are you sure to edit this publish option?';
 $lang['publish'] = 'publish';
 $lang['published'] = 'published';
 // Q

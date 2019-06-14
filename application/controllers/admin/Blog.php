@@ -69,7 +69,7 @@ class Blog extends Admin_Controller
                 }
                 $this->session->set_flashdata('form_status', array(
                     'status' => 'success',
-                    'message' => 'Successfully ' . $this->data['title'] . '!',
+                    'message' => ucfirst($this->lang->line('success')) . ' ' . $this->data['title'] . '!',
                 ));
                 redirect('admin/blog');
             } else {
@@ -87,7 +87,7 @@ class Blog extends Admin_Controller
         $this->Blog_m->save($data, $id);
         $this->session->set_flashdata('form_status', array(
             'status' => 'success',
-            'message' => 'Successfully change publish option!',
+            'message' => ucfirst($this->lang->line('success')) . ' ' .  $this->lang->line('edit') . ' ' . $this->lang->line('publish_option') . '!',
         ));
         redirect('admin/blog');
     }
@@ -101,7 +101,7 @@ class Blog extends Admin_Controller
         $this->Blog_m->delete($id);
         $this->session->set_flashdata('form_status', array(
             'status' => 'success',
-            'message' => 'Successfully delete blog!',
+            'message' => ucfirst($this->lang->line('success')) . ' ' . $this->lang->line('delete') . ' ' . $this->lang->line('blog') . '!',
         ));
         redirect('admin/blog');
     }

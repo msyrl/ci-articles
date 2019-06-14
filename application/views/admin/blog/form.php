@@ -40,9 +40,9 @@
         <?= form_error('body', '<p class="uk-text-danger uk-text-small uk-margin-small-top">', '</p>'); ?>
     </div>
     <div class="uk-margin">
-        <label class="uk-form-label" for="tags">Tags</label>
+        <label class="uk-form-label" for="tags">Tags <small>(<?= ucfirst($this->lang->line('example')) . " : #Innovative #FinancingLab";  ?>)</small></label>
         <div class="uk-form-controls">
-            <input class="uk-input uk-form-small <?= form_error('tags') ? 'uk-form-danger' : '' ?>" id="tags" type="text" name="tags" value="<?= isset($blog) ? $blog->tags : set_value('tags'); ?>" placeholder="Tags...">
+            <input class="uk-input uk-form-small <?= form_error('tags') ? 'uk-form-danger' : '' ?>" id="tags" type="text" name="tags" value="<?= isset($blog) ? $blog->tags : set_value('tags'); ?>" placeholder="Tags (<?= ucfirst($this->lang->line('example')) . " : #Innovative #FinancingLab";  ?>)...">
         </div>
         <?= form_error('tags', '<p class="uk-text-danger uk-text-small uk-margin-small-top">', '</p>'); ?>
     </div>

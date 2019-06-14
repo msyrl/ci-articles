@@ -34,11 +34,11 @@
                             <a href="#" class="uk-link-text"><span uk-icon="icon: more-vertical"></span></a>
                             <div uk-dropdown="mode: click">
                                 <ul class="uk-nav uk-dropdown-nav">
-                                    <li><a href="<?= base_url('admin/blog/change_publish/' . $blog->id); ?>" onclick="return confirm('Are you sure to change publish option?')"><span uk-icon="icon: info"></span> <?= ucwords($this->lang->line('edit') . " " . $this->lang->line('publish')); ?></a></li>
+                                    <li><a href="<?= base_url('admin/blog/change_publish/' . $blog->id); ?>" onclick="return confirm('<?= ucfirst($this->lang->line('publish_prompt')); ?>')"><span uk-icon="icon: info"></span> <?= ucwords($this->lang->line('edit') . " " . $this->lang->line('publish')); ?></a></li>
                                     <li class="uk-nav-divider"></li>
                                     <li><a href="<?= base_url('admin/blog/form/' . $blog->id) ?>"><span uk-icon="icon: pencil"></span> <?= ucwords($this->lang->line('edit')); ?></a></li>
                                     <li class="uk-nav-divider"></li>
-                                    <li><a href="<?= base_url('admin/blog/delete/' . $blog->id); ?>" onclick="return confirm('Are you sure to remove this blog?')"><span uk-icon="icon: trash"></span> <?= ucwords($this->lang->line('delete')); ?></a></li>
+                                    <li><a href="<?= base_url('admin/blog/delete/' . $blog->id); ?>" onclick="return confirm('<?= ucfirst($this->lang->line('delete_prompt')); ?>')"><span uk-icon="icon: trash"></span> <?= ucwords($this->lang->line('delete')); ?></a></li>
                                 </ul>
                             </div>
                         </div>

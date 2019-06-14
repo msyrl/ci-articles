@@ -4,6 +4,7 @@
 $lang['about'] = 'tentang';
 $lang['action'] = 'aksi';
 $lang['admin'] = 'admin';
+$lang['attachment'] = 'lampiran';
 // B
 $lang['blog'] = 'blog';
 $lang['blogs'] = 'blog';
@@ -19,9 +20,11 @@ $lang['create'] = 'buat';
 // D
 $lang['data_management'] = 'manajemen data';
 $lang['delete'] = 'hapus';
+$lang['delete_prompt'] = 'apakah anda yakin untuk hapus ini?';
 $lang['download'] = 'unduh';
 // E
 $lang['edit'] = 'ubah';
+$lang['example'] = 'contoh';
 // F
 
 // G
@@ -47,6 +50,8 @@ $lang['more'] = 'lebih banyak';
 $lang['name'] = 'nama';
 $lang['next'] = 'selanjutnya';
 $lang['new_blog'] = 'blog baru';
+$lang['new_book'] = 'buku baru';
+$lang['new_brochure'] = 'brosur baru';
 $lang['no'] = 'tidak';
 // O
 $lang['our_connection'] = 'koneksi kami';
@@ -61,6 +66,8 @@ $lang['profile'] = 'profil';
 $lang['publication'] = 'publikasi';
 $lang['publications'] = 'publikasi';
 $lang['publish_at'] = 'terbit pada';
+$lang['publish_option'] = 'opsi terbit';
+$lang['publish_prompt'] = 'apakah anda yakin untuk ubah opsi terbit ini?';
 $lang['publish'] = 'terbit';
 $lang['published'] = 'diterbitkan';
 // Q
@@ -81,7 +88,7 @@ $lang['team'] = 'jendela';
 $lang['title'] = 'judul';
 // U
 $lang['update'] = 'perbaharui';
-$lang['updated'] = 'terperbaharui';
+$lang['updated'] = 'diperbaharui';
 $lang['us'] = 'kami';
 $lang['user'] = 'pengguna';
 $lang['user_management'] = 'manajemen pengguna';

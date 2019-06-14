@@ -21,9 +21,9 @@ class Brochure extends Admin_Controller
         $post = TRUE;
         $this->data['page'] = 'admin/brochure/form';
         if ($id === NULL) {
-            $this->data['title'] = 'create new brochure';
+            $this->data['title'] = $this->lang->line('create') . " " . $this->lang->line('new_brochure');
         } else {
-            $this->data['title'] = 'update brochure';
+            $this->data['title'] = $this->lang->line('update') . " " . $this->lang->line('brochure');
             $this->data['brochure'] = $this->Brochure_m->get($id, TRUE);
         }
         $this->form_validation->set_rules($this->Brochure_m->validation_rules($id));
@@ -88,7 +88,7 @@ class Brochure extends Admin_Controller
                 }
                 $this->session->set_flashdata('form_status', array(
                     'status' => 'success',
-                    'message' => 'Successfully ' . $this->data['title'] . '!',
+                    'message' =>  ucfirst($this->lang->line('success')) . ' ' . $this->data['title'] . '!',
                 ));
                 redirect('admin/brochure');
             } else {
@@ -106,7 +106,7 @@ class Brochure extends Admin_Controller
         $this->Brochure_m->save($data, $id);
         $this->session->set_flashdata('form_status', array(
             'status' => 'success',
-            'message' => 'Successfully change publish option!',
+            'message' => ucfirst($this->lang->line('success')) . ' ' .  $this->lang->line('edit') . ' ' . $this->lang->line('publish_option') . '!',
         ));
         redirect('admin/brochure');
     }
@@ -123,7 +123,7 @@ class Brochure extends Admin_Controller
         $this->Brochure_m->delete($id);
         $this->session->set_flashdata('form_status', array(
             'status' => 'success',
-            'message' => 'Successfully delete brochure!',
+            'message' => ucfirst($this->lang->line('success')) . ' ' . $this->lang->line('delete') . ' ' . $this->lang->line('brochure') . '!',
         ));
         redirect('admin/brochure');
     }
