@@ -10,7 +10,7 @@
     <div class="uk-margin">
         <label class="uk-form-label" for="address">Address</label>
         <div class="uk-form-controls">
-            <textarea class="uk-textarea uk-form-small <?= form_error('address') ? 'uk-form-danger' : '' ?>" id="address" rows="5" name="address" placeholder="Address..." required><?= isset($general) ? $general->address : set_value('address'); ?></textarea>
+            <textarea class="uk-textarea uk-form-small <?= form_error('address') ? 'uk-form-danger' : '' ?>" id="address" rows="5" name="address" placeholder="Address..."><?= isset($general) ? $general->address : set_value('address'); ?></textarea>
         </div>
         <?= form_error('address', '<p class="uk-text-danger uk-text-small uk-margin-small-top">', '</p>'); ?>
     </div>

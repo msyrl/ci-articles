@@ -21,9 +21,9 @@ class Blog extends Admin_Controller
         $post = TRUE;
         $this->data['page'] = 'admin/blog/form';
         if ($id === NULL) {
-            $this->data['title'] = 'create new blog';
+            $this->data['title'] = $this->lang->line('create') . " " . $this->lang->line('new_blog');
         } else {
-            $this->data['title'] = 'update blog';
+            $this->data['title'] = $this->lang->line('update') . " " . $this->lang->line('blog');
             $this->data['blog'] = $this->Blog_m->get($id, TRUE);
         }
         $this->form_validation->set_rules($this->Blog_m->validation_rules($id));
