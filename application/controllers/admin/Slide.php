@@ -10,6 +10,7 @@ class Slide extends Admin_Controller
 
     public function index()
     {
+        $this->data['title'] = $this->lang->line('slides');
         $page = $this->input->get('page') ? $this->input->get('page') : 1;
         $this->data['slides'] = $this->Slide_m->get_with_paginate($page);
         $this->data['page'] = 'admin/slide/index';
@@ -21,9 +22,9 @@ class Slide extends Admin_Controller
         $post = TRUE;
         $this->data['page'] = 'admin/slide/form';
         if ($id === NULL) {
-            $this->data['title'] = 'create new slide';
+            $this->data['title'] = $this->lang->line('add') . ' ' . $this->lang->line('new_slide');
         } else {
-            $this->data['title'] = 'update slide';
+            $this->data['title'] = $this->lang->line('update') . ' ' . $this->lang->line('slide');
             $this->data['slide'] = $this->Slide_m->get($id, TRUE);
         }
         $this->form_validation->set_rules($this->Slide_m->validation_rules($id));
@@ -67,7 +68,7 @@ class Slide extends Admin_Controller
                 }
                 $this->session->set_flashdata('form_status', array(
                     'status' => 'success',
-                    'message' => 'Successfully ' . $this->data['title'] . '!',
+                    'message' => ucfirst($this->lang->line('success')) . ' ' . $this->data['title'] . '!',
                 ));
                 redirect('admin/slide');
             } else {
@@ -85,7 +86,7 @@ class Slide extends Admin_Controller
         $this->Slide_m->save($data, $id);
         $this->session->set_flashdata('form_status', array(
             'status' => 'success',
-            'message' => 'Successfully change publish option!',
+            'message' => ucfirst($this->lang->line('success')) . ' ' .  $this->lang->line('edit') . ' ' . $this->lang->line('publish_option') . '!',
         ));
         redirect('admin/slide');
     }
@@ -99,7 +100,7 @@ class Slide extends Admin_Controller
         $this->Slide_m->delete($id);
         $this->session->set_flashdata('form_status', array(
             'status' => 'success',
-            'message' => 'Successfully delete slide!',
+            'message' => ucfirst($this->lang->line('success')) . ' ' . $this->lang->line('delete') . ' ' . $this->lang->line('slide') . '!',
         ));
         redirect('admin/slide');
     }

@@ -69,7 +69,7 @@ class User_m extends MY_Model
 
         $data = $this->db
             ->select("u1.id as id, u1.name as name, u1.username as username, r.name as role, u2.name as updated_by, u1.is_active as is_active")
-            ->join("$this->_table_name u2", "u1.updated_by = u2.id")
+            ->join("$this->_table_name u2", "u1.updated_by = u2.id", 'left')
             ->join('roles r', 'u1.role_id = r.id', 'left')
             ->order_by('id', 'DESC')
             ->get("$this->_table_name u1", $per_page, $offset)

@@ -8,9 +8,9 @@
 <?php endif; ?>
 <form class="uk-form-stacked uk-padding-small" action="" method="post" autocomplete="off">
     <div class="uk-margin">
-        <label class="uk-form-label" for="address">Address</label>
+        <label class="uk-form-label" for="address"><?= ucwords($this->lang->line('address')); ?></label>
         <div class="uk-form-controls">
-            <textarea class="uk-textarea uk-form-small <?= form_error('address') ? 'uk-form-danger' : '' ?>" id="address" rows="5" name="address" placeholder="Address..."><?= isset($general) ? $general->address : set_value('address'); ?></textarea>
+            <textarea class="uk-textarea uk-form-small <?= form_error('address') ? 'uk-form-danger' : '' ?>" id="address" rows="5" name="address" placeholder="<?= ucwords($this->lang->line('address')); ?>..."><?= isset($general) ? $general->address : set_value('address'); ?></textarea>
         </div>
         <?= form_error('address', '<p class="uk-text-danger uk-text-small uk-margin-small-top">', '</p>'); ?>
     </div>
@@ -50,7 +50,7 @@
     <div class="uk-margin">
         <div class="uk-flex uk-flex-center">
             <div>
-                <button class="uk-button uk-button-primary" type="submit"><?= isset($general) ? 'Update' : 'Save'; ?></button>
+                <button class="uk-button uk-button-primary" type="submit"><?= isset($general) ? ucwords($this->lang->line('update')) : ucwords($this->lang->line('save')); ?></button>
             </div>
             <div class="uk-margin-small-left">
                 <button class="uk-button uk-button-default" type="reset">Reset</button>

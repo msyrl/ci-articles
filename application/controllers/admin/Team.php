@@ -10,6 +10,7 @@ class Team extends Admin_Controller
 
     public function index()
     {
+        $this->data['title'] = $this->lang->line('windows');
         $page = $this->input->get('page') ? $this->input->get('page') : 1;
         $this->data['teams'] = $this->Team_m->get_with_paginate($page);
         $this->data['page'] = 'admin/team/index';
@@ -21,9 +22,9 @@ class Team extends Admin_Controller
         $post = TRUE;
         $this->data['page'] = 'admin/team/form';
         if ($id === NULL) {
-            $this->data['title'] = 'create new team';
+            $this->data['title'] = $this->lang->line('add') . ' ' . $this->lang->line('new_window');
         } else {
-            $this->data['title'] = 'update team';
+            $this->data['title'] = $this->lang->line('update') . ' ' . $this->lang->line('window');
             $this->data['team'] = $this->Team_m->get($id, TRUE);
         }
         $this->form_validation->set_rules($this->Team_m->validation_rules($id));
@@ -84,7 +85,7 @@ class Team extends Admin_Controller
         $this->Team_m->delete($id);
         $this->session->set_flashdata('form_status', array(
             'status' => 'success',
-            'message' => 'Successfully delete team!',
+            'message' => ucfirst($this->lang->line('success')) . ' ' . $this->lang->line('delete') . ' ' . $this->lang->line('window') . '!',
         ));
         redirect('admin/team');
     }

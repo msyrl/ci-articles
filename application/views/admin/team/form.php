@@ -10,25 +10,25 @@
     <div class="uk-margin">
         <div uk-grid>
             <div class="uk-width-expand">
-                <label class="uk-form-label" for="title">Title</label>
+                <label class="uk-form-label" for="title"><?= ucwords($this->lang->line('title')); ?></label>
                 <div class="uk-form-controls">
-                    <input class="uk-input uk-form-small <?= form_error('title') ? 'uk-form-danger' : '' ?>" id="title" type="text" name="title" value="<?= isset($team) ? $team->title : set_value('title'); ?>" placeholder="Title..." required autofocus>
+                    <input class="uk-input uk-form-small <?= form_error('title') ? 'uk-form-danger' : '' ?>" id="title" type="text" name="title" value="<?= isset($team) ? $team->title : set_value('title'); ?>" placeholder="<?= ucwords($this->lang->line('title')); ?>..." required autofocus>
                 </div>
                 <?= form_error('title', '<p class="uk-text-danger uk-text-small uk-margin-small-top">', '</p>'); ?>
             </div>
             <div>
-                <label class="uk-form-label" for="image">Image</label>
-                <div class="uk-form-controls" uk-form-custom>
+                <label class="uk-form-label" for="image"><?= ucwords($this->lang->line('image')) . ' (.jpg/.jpeg/.png/.gif)'; ?></label>
+                <div uk-form-custom="target: true">
                     <input type="file" name="image">
-                    <button class="uk-button uk-button-default uk-button-small uk-text-capitalize" type="button" tabindex="-1">Choose File</button>
+                    <input class="uk-input uk-form-small" type="text" placeholder="<?= ucwords($this->lang->line('select') . " " . $this->lang->line('image')); ?>..." disabled>
                 </div>
             </div>
         </div>
     </div>
     <div class="uk-margin">
-        <label class="uk-form-label" for="body">Body</label>
+        <label class="uk-form-label" for="body"><?= ucwords($this->lang->line('body')); ?></label>
         <div class="uk-form-controls">
-            <textarea class="uk-textarea uk-form-small <?= form_error('body') ? 'uk-form-danger' : '' ?>" id="body" rows="10" name="body" placeholder="Description..."><?= isset($team) ? $team->body : set_value('body'); ?></textarea>
+            <textarea class="uk-textarea uk-form-small <?= form_error('body') ? 'uk-form-danger' : '' ?>" id="body" rows="10" name="body" placeholder="<?= ucwords($this->lang->line('body')); ?>..."><?= isset($team) ? $team->body : set_value('body'); ?></textarea>
         </div>
         <?= form_error('body', '<p class="uk-text-danger uk-text-small uk-margin-small-top">', '</p>'); ?>
     </div>
@@ -36,7 +36,7 @@
     <div class="uk-margin">
         <div class="uk-flex uk-flex-center">
             <div>
-                <button class="uk-button uk-button-primary" type="submit"><?= isset($team) ? 'Update' : 'Save'; ?></button>
+                <button class="uk-button uk-button-primary" type="submit"><?= isset($team) ?  ucwords($this->lang->line('update')) : ucwords($this->lang->line('save')); ?></button>
             </div>
             <?php if (!isset($team)) : ?>
                 <div class="uk-margin-small-left">

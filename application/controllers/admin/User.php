@@ -11,6 +11,7 @@ class User extends Admin_Controller
 
     public function index()
     {
+        $this->data['title'] = $this->lang->line('users');
         $page = $this->input->get('page') ? $this->input->get('page') : 1;
         $this->data['users'] = $this->User_m->get_with_paginate($page);
         $this->data['page'] = 'admin/user/index';
@@ -22,9 +23,9 @@ class User extends Admin_Controller
         $this->data['page'] = 'admin/user/form';
         $this->data['roles'] = $this->Role_m->get();
         if ($id === NULL) {
-            $this->data['title'] = 'create new user';
+            $this->data['title'] = $this->lang->line('add') . ' ' . $this->lang->line('new_user');
         } else {
-            $this->data['title'] = 'update user';
+            $this->data['title'] = $this->lang->line('update') . ' ' . $this->lang->line('user');
             $this->data['user'] = $this->User_m->get($id, TRUE);
         }
         $this->form_validation->set_rules($this->User_m->validation_rules($id));

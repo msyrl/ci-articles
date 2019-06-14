@@ -8,14 +8,14 @@
 <?php endif; ?>
 <form class="uk-form-stacked uk-padding-small" action="" method="post" autocomplete="off">
     <div class="uk-margin">
-        <label class="uk-form-label" for="name">Name</label>
+        <label class="uk-form-label" for="name"><?= ucwords($this->lang->line('name')); ?></label>
         <div class="uk-form-controls">
-            <input class="uk-input uk-form-small <?= form_error('name') ? 'uk-form-danger' : '' ?>" id="name" type="text" name="name" value="<?= isset($role) ? $role->name : set_value('name'); ?>" placeholder="Name..." required autofocus>
+            <input class="uk-input uk-form-small <?= form_error('name') ? 'uk-form-danger' : '' ?>" id="name" type="text" name="name" value="<?= isset($role) ? $role->name : set_value('name'); ?>" placeholder="<?= ucwords($this->lang->line('name')); ?>..." required autofocus>
         </div>
         <?= form_error('name', '<p class="uk-text-danger uk-text-small uk-margin-small-top">', '</p>'); ?>
     </div>
     <div class="uk-margin">
-        <label class="uk-form-label">Menu Access</label>
+        <label class="uk-form-label"><?= ucwords($this->lang->line('access_menu')); ?></label>
         <div class="uk-form-controls uk-grid-small uk-child-width-1-4@s" uk-grid>
             <?php foreach ($menus as $menu) : ?>
                 <?php $exist = false; ?>
@@ -29,7 +29,7 @@
                 <?php if ($menu->title === 'Profile') : ?>
                     <input type="hidden" name="menu[<?= $menu->id; ?>]" value="1">
                 <?php else : ?>
-                    <label for="menu-<?= strtolower($menu->title); ?>"><input class="uk-checkbox" type="checkbox" id="menu-<?= strtolower($menu->title); ?>" name="menu[<?= $menu->id; ?>]" value="1" <?= $exist ? 'checked' : '' ?>> <?= $menu->title; ?></label>
+                    <label for="menu-<?= strtolower($menu->title); ?>"><input class="uk-checkbox" type="checkbox" id="menu-<?= strtolower($menu->title); ?>" name="menu[<?= $menu->id; ?>]" value="1" <?= $exist ? 'checked' : '' ?>> <?= ucwords($this->lang->line(strtolower($menu->title))); ?></label>
                 <?php endif; ?>
             <?php endforeach; ?>
         </div>
@@ -38,7 +38,7 @@
     <div class="uk-margin">
         <div class="uk-flex uk-flex-center">
             <div>
-                <button class="uk-button uk-button-primary" type="submit"><?= isset($role) ? 'Update' : 'Save'; ?></button>
+                <button class="uk-button uk-button-primary" type="submit"><?= isset($role) ? ucwords($this->lang->line('update')) : ucwords($this->lang->line('save')); ?></button>
             </div>
             <?php if (!isset($role)) : ?>
                 <div class="uk-margin-small-left">

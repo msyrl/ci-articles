@@ -10,6 +10,7 @@ class Book extends Admin_Controller
 
     public function index()
     {
+        $this->data['title'] = $this->lang->line('books');
         $page = $this->input->get('page') ? $this->input->get('page') : 1;
         $this->data['books'] = $this->Book_m->get_with_paginate($page);
         $this->data['page'] = 'admin/book/index';

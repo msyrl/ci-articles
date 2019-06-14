@@ -10,6 +10,7 @@ class Blog extends Admin_Controller
 
     public function index()
     {
+        $this->data['title'] = $this->lang->line('blogs');
         $page = $this->input->get('page') ? $this->input->get('page') : 1;
         $this->data['blogs'] = $this->Blog_m->get_with_paginate($page);
         $this->data['page'] = 'admin/blog/index';

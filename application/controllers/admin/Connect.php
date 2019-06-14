@@ -10,6 +10,7 @@ class Connect extends Admin_Controller
 
     public function index()
     {
+        $this->data['title'] = $this->lang->line('connects');
         $page = $this->input->get('page') ? $this->input->get('page') : 1;
         $this->data['connects'] = $this->Connect_m->get_with_paginate($page);
         $this->data['page'] = 'admin/connect/index';
@@ -21,9 +22,9 @@ class Connect extends Admin_Controller
         $post = TRUE;
         $this->data['page'] = 'admin/connect/form';
         if ($id === NULL) {
-            $this->data['title'] = 'create new connect';
+            $this->data['title'] = $this->lang->line('add') . ' ' . $this->lang->line('new_connect');
         } else {
-            $this->data['title'] = 'update connect';
+            $this->data['title'] = $this->lang->line('update') . ' ' . $this->lang->line('connect');
             $this->data['connect'] = $this->Connect_m->get($id, TRUE);
         }
         $this->form_validation->set_rules($this->Connect_m->validation_rules($id));
@@ -65,7 +66,7 @@ class Connect extends Admin_Controller
                 }
                 $this->session->set_flashdata('form_status', array(
                     'status' => 'success',
-                    'message' => 'Successfully ' . $this->data['title'] . '!',
+                    'message' => ucfirst($this->lang->line('success')) . ' ' . $this->data['title'] . '!',
                 ));
                 redirect('admin/connect');
             } else {
@@ -83,7 +84,7 @@ class Connect extends Admin_Controller
         $this->Connect_m->save($data, $id);
         $this->session->set_flashdata('form_status', array(
             'status' => 'success',
-            'message' => 'Successfully change publish option!',
+            'message' => ucfirst($this->lang->line('success')) . ' ' .  $this->lang->line('edit') . ' ' . $this->lang->line('publish_option') . '!',
         ));
         redirect('admin/connect');
     }
@@ -97,7 +98,7 @@ class Connect extends Admin_Controller
         $this->Connect_m->delete($id);
         $this->session->set_flashdata('form_status', array(
             'status' => 'success',
-            'message' => 'Successfully delete connect!',
+            'message' => ucfirst($this->lang->line('success')) . ' ' . $this->lang->line('delete') . ' ' . $this->lang->line('connect') . '!',
         ));
         redirect('admin/connect');
     }

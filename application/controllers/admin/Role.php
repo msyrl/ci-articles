@@ -10,6 +10,7 @@ class Role extends Admin_Controller
 
     public function index()
     {
+        $this->data['title'] = $this->lang->line('roles');
         $page = $this->input->get('page') ? $this->input->get('page') : 1;
         $this->data['roles'] = $this->Role_m->get_with_paginate($page);
         $this->data['page'] = 'admin/role/index';
@@ -20,9 +21,9 @@ class Role extends Admin_Controller
     {
         $this->data['page'] = 'admin/role/form';
         if ($id === NULL) {
-            $this->data['title'] = 'create new role';
+            $this->data['title'] = $this->lang->line('add') . ' ' . $this->lang->line('new_role');
         } else {
-            $this->data['title'] = 'update role';
+            $this->data['title'] = $this->lang->line('update') . ' ' . $this->lang->line('role');
             $this->data['role'] = $this->Role_m->get($id, TRUE);
             $this->data['saved_menu_role'] = $this->Role_m->get_saved_menu_role($id);
         }
@@ -53,7 +54,7 @@ class Role extends Admin_Controller
 
             $this->session->set_flashdata('form_status', array(
                 'status' => 'success',
-                'message' => 'Successfully ' . $this->data['title'] . '!',
+                'message' => ucfirst($this->lang->line('success')) . ' ' . $this->data['title'] . '!',
             ));
             redirect('admin/role');
         }
@@ -64,7 +65,7 @@ class Role extends Admin_Controller
         $this->Role_m->delete($id);
         $this->session->set_flashdata('form_status', array(
             'status' => 'success',
-            'message' => 'Successfully delete role!',
+            'message' => ucfirst($this->lang->line('success')) . ' ' . $this->lang->line('delete') . ' ' . $this->lang->line('role') . '!',
         ));
         redirect('admin/role');
     }

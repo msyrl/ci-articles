@@ -12,7 +12,7 @@ class General extends Admin_Controller
     {
         $id = 1;
         $this->data['page'] = 'admin/general/index';
-        $this->data['title'] = 'update general';
+        $this->data['title'] = $this->lang->line('update') . ' ' . $this->lang->line('general');
         $this->data['general'] = $this->General_m->get($id, TRUE);
         $this->form_validation->set_rules($this->General_m->validation_rules());
         if ($this->form_validation->run() === FALSE) {
@@ -33,7 +33,7 @@ class General extends Admin_Controller
             }
             $this->session->set_flashdata('form_status', array(
                 'status' => 'success',
-                'message' => 'Successfully ' . $this->data['title'] . '!',
+                'message' => ucfirst($this->lang->line('success')) . ' ' . $this->data['title'] . '!',
             ));
             redirect('admin/general');
         }

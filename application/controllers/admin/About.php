@@ -12,7 +12,7 @@ class About extends Admin_Controller
     {
         $id = 1;
         $this->data['page'] = 'admin/about/index';
-        $this->data['title'] = 'update about';
+        $this->data['title'] = $this->lang->line('update') . ' ' . $this->lang->line('about');
         $this->data['about'] = $this->About_m->get($id, TRUE);
         $this->form_validation->set_rules($this->About_m->validation_rules());
         if ($this->form_validation->run() === FALSE) {
@@ -30,7 +30,7 @@ class About extends Admin_Controller
             }
             $this->session->set_flashdata('form_status', array(
                 'status' => 'success',
-                'message' => 'Successfully ' . $this->data['title'] . '!',
+                'message' => ucfirst($this->lang->line('success')) . ' ' . $this->data['title'] . '!',
             ));
             redirect('admin/about');
         }
