@@ -16,8 +16,10 @@
 <body>
     <section class="uk-grid-collapse uk-animation-fade" uk-grid>
         <div class="uk-width-expand@s" uk-height-viewport>
-            <div class="uk-background-cover uk-height-1-1 uk-panel uk-flex uk-flex-center uk-flex-middle" style="background-image: url(<?= base_url('assets/images/icon/logo.png'); ?>);">
-            </div>
+            <a href="<?= base_url('/'); ?>">
+                <div class="uk-background-cover uk-height-1-1 uk-panel uk-flex uk-flex-center uk-flex-middle" style="background-image: url(<?= base_url('assets/images/icon/logo.png'); ?>);">
+                </div>
+            </a>
         </div>
         <div class="uk-width-1-3@s">
             <div class="uk-flex uk-flex-column uk-flex-between uk-height-1-1">

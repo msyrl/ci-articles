@@ -80,6 +80,6 @@ class Auth extends Frontend_Controller
             'status' => 'success',
             'message' => ucfirst($this->lang->line('you_have_been_logout')) . ' !',
         ));
-        redirect('/');
+        redirect('login');
     }
 }
