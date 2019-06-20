@@ -1,0 +1,54 @@
+html,
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        .spacing-1-5 {
+            letter-spacing: 1.5px;
+        }
+
+        .spacing-5 {
+            letter-spacing: 5px;
+        }
+
+        .small-heading {
+            font-weight: 300
+        }
+
+        .custom-header {
+            max-width: 400px;
+            background-color: #fff;
+            color: #14aef0;
+            text-align: center;
+            padding-bottom: 10px;
+            border-radius: 10px;
+        }
+
+        .text-white {
+            color: #fff;
+        }
+
+        .text-gray {
+            color: #ddd;
+        }
+
+        .uk-button.button-back {
+            color: #ddd;
+        }
+
+        .uk-button.button-back:hover {
+            color: #fff;
+        }
+
+        @media(max-device-width: 480px) {
+
+            html,
+            body {
+                height: auto;
+            }
+
+            section:first-of-type {
+                height: 50vh;
+            }
+        }

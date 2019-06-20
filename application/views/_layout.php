@@ -131,7 +131,7 @@
                     </div>
                 </li>
                 <li>
-                    <a href="<?= base_url('window/impact-aim'); ?>">Impact Aim <i class="fas fa-chevron-right"></i></a>
+                    <a href="<?= base_url('impactaim'); ?>">Impact Aim <i class="fas fa-chevron-right"></i></a>
                 </li>
             </ul>
         </div>

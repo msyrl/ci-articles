@@ -162,4 +162,10 @@ class Welcome extends Frontend_Controller
 		}
 		$this->load->view('_layout', $this->data);
 	}
+
+	public function impactaim()
+	{
+		$this->data['meta_title'] = 'Impact Aim';
+		$this->load->view('impactaim', $this->data);
+	}
 }
