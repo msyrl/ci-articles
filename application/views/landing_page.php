@@ -81,23 +81,25 @@
   <h1 class="uk-heading-line uk-text-center">
     <span class="uk-text-capitalize"><?= $this->lang->line('blog'); ?></span>
   </h1>
-  <div class="uk-child-width-1-3@s" uk-grid>
+  <div class="uk-flex uk-flex-center" uk-grid>
     <?php if (!empty($blogs['data'])) : ?>
       <?php for ($i = 0; $i < 3; $i++) : ?>
-        <div>
-          <div class="uk-card uk-card-small uk-card-hover uk-card-default">
-            <div class="uk-background-cover uk-height-small" data-src="<?= $blogs['data'][$i]->image ? base_url('assets/images/blogs/') . $blogs['data'][$i]->image : ''; ?>" uk-img>
-            </div>
-            <div class="uk-card-body uk-height-small">
-              <p>
-                <?= $blogs['data'][$i]->title; ?>
-              </p>
-            </div>
-            <div class="uk-card-footer">
-              <a href="<?= base_url('blog/') . $blogs['data'][$i]->slug; ?>" class="uk-button uk-button-text"><?= $this->lang->line('read') . " " . $this->lang->line('more'); ?></a>
+        <?php if (!empty($blogs['data'][$i])) : ?>
+          <div class="uk-width-medium@s">
+            <div class="uk-card uk-card-small uk-card-hover uk-card-default">
+              <div class="uk-background-cover uk-height-small" data-src="<?= $blogs['data'][$i]->image ? base_url('assets/images/blogs/') . $blogs['data'][$i]->image : ''; ?>" uk-img>
+              </div>
+              <div class="uk-card-body uk-height-small">
+                <p>
+                  <?= $blogs['data'][$i]->title; ?>
+                </p>
+              </div>
+              <div class="uk-card-footer">
+                <a href="<?= base_url('blog/') . $blogs['data'][$i]->slug; ?>" class="uk-button uk-button-text"><?= $this->lang->line('read') . " " . $this->lang->line('more'); ?></a>
+              </div>
             </div>
           </div>
-        </div>
+        <?php endif; ?>
       <?php endfor; ?>
     <?php endif; ?>
   </div>
@@ -115,21 +117,23 @@
     <div uk-scrollspy="target: .uk-card; cls:uk-animation-slide-left; delay: 350; repeat: true">
       <?php if (!empty($books['data'])) : ?>
         <?php for ($i = 0; $i < 2; $i++) : ?>
-          <div class="uk-card uk-card-medium uk-card-hover uk-card-default uk-grid-collapse uk-margin" uk-grid>
-            <div class="uk-width-small uk-cover-container">
-              <img src="<?= $books['data'][$i]->image ? base_url('assets/images/books/') . $books['data'][$i]->image : ''; ?>" alt="<?= $books['data'][$i]->title; ?>" uk-cover />
-            </div>
-            <div class="uk-width-expand">
-              <div class="uk-card-body">
-                <p>
-                  <?= $books['data'][$i]->title; ?>
-                </p>
+          <?php if (!empty($books['data'][$i])) : ?>
+            <div class="uk-card uk-card-medium uk-card-hover uk-card-default uk-grid-collapse uk-margin" uk-grid>
+              <div class="uk-width-small uk-cover-container">
+                <img src="<?= $books['data'][$i]->image ? base_url('assets/images/books/') . $books['data'][$i]->image : ''; ?>" alt="<?= $books['data'][$i]->title; ?>" uk-cover />
               </div>
-              <div class="uk-card-footer">
-                <a href="<?= $books['data'][$i]->attachment ? base_url('assets/attachments/books/') . $books['data'][$i]->attachment : '#'; ?>" class="uk-button uk-button-text"><?= $this->lang->line('read') . " " . $this->lang->line('more'); ?></a>
+              <div class="uk-width-expand">
+                <div class="uk-card-body">
+                  <p>
+                    <?= $books['data'][$i]->title; ?>
+                  </p>
+                </div>
+                <div class="uk-card-footer">
+                  <a href="<?= $books['data'][$i]->attachment ? base_url('assets/attachments/books/') . $books['data'][$i]->attachment : '#'; ?>" class="uk-button uk-button-text"><?= $this->lang->line('read') . " " . $this->lang->line('more'); ?></a>
+                </div>
               </div>
             </div>
-          </div>
+          <?php endif; ?>
         <?php endfor; ?>
       <?php endif; ?>
     </div>
@@ -137,21 +141,23 @@
     <div uk-scrollspy="target: .uk-card; cls:uk-animation-fade; delay: 350; repeat: true">
       <?php if (!empty($brochures['data'])) : ?>
         <?php for ($i = 0; $i < 2; $i++) : ?>
-          <div class="uk-card uk-card-medium uk-card-hover uk-card-default uk-grid-collapse uk-margin" uk-grid>
-            <div class="uk-width-small uk-cover-container">
-              <img src="<?= $brochures['data'][$i]->image ? base_url('assets/images/brochures/') . $brochures['data'][$i]->image : ''; ?>" alt="<?= $brochures['data'][$i]->title; ?>" uk-cover />
-            </div>
-            <div class="uk-width-expand">
-              <div class="uk-card-body">
-                <p>
-                  <?= $brochures['data'][$i]->title; ?>
-                </p>
+          <?php if (!empty($brochures['data'][$i])) : ?>
+            <div class="uk-card uk-card-medium uk-card-hover uk-card-default uk-grid-collapse uk-margin" uk-grid>
+              <div class="uk-width-small uk-cover-container">
+                <img src="<?= $brochures['data'][$i]->image ? base_url('assets/images/brochures/') . $brochures['data'][$i]->image : ''; ?>" alt="<?= $brochures['data'][$i]->title; ?>" uk-cover />
               </div>
-              <div class="uk-card-footer">
-                <a href="<?= $brochures['data'][$i]->attachment ? base_url('assets/attachments/brochures/') . $brochures['data'][$i]->attachment : '#'; ?>" class="uk-button uk-button-text"><?= $this->lang->line('read') . " " . $this->lang->line('more'); ?></a>
+              <div class="uk-width-expand">
+                <div class="uk-card-body">
+                  <p>
+                    <?= $brochures['data'][$i]->title; ?>
+                  </p>
+                </div>
+                <div class="uk-card-footer">
+                  <a href="<?= $brochures['data'][$i]->attachment ? base_url('assets/attachments/brochures/') . $brochures['data'][$i]->attachment : '#'; ?>" class="uk-button uk-button-text"><?= $this->lang->line('read') . " " . $this->lang->line('more'); ?></a>
+                </div>
               </div>
             </div>
-          </div>
+          <?php endif; ?>
         <?php endfor; ?>
       <?php endif; ?>
     </div>

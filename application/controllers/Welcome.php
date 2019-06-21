@@ -6,14 +6,14 @@ class Welcome extends Frontend_Controller
 	public function __construct()
 	{
 		parent::__construct();
-		$this->data['teams'] = $this->Team_m->get_with_paginate(1, 12, TRUE);
-		$this->data['blogs'] = $this->Blog_m->get_with_paginate(1, 12, TRUE);
-		$this->data['books'] = $this->Book_m->get_with_paginate(1, 5, TRUE);
-		$this->data['brochures'] = $this->Brochure_m->get_with_paginate(1, 5, TRUE);
 	}
 
 	public function index()
 	{
+		$this->data['teams'] = $this->Team_m->get_with_paginate(1, 12, TRUE);
+		$this->data['blogs'] = $this->Blog_m->get_with_paginate(1, 12, TRUE);
+		$this->data['books'] = $this->Book_m->get_with_paginate(1, 5, TRUE);
+		$this->data['brochures'] = $this->Brochure_m->get_with_paginate(1, 5, TRUE);
 		$this->data['page'] = 'landing_page';
 		$this->data['slides'] = $this->Slide_m->get_with_paginate(1, 3, TRUE);
 		$this->data['about'] = $this->About_m->get(1, TRUE);
