@@ -10,6 +10,7 @@ class Welcome extends Frontend_Controller
 
 	public function index()
 	{
+		$this->data['meta_title'] = ucwords($this->lang->line('home'));
 		$this->data['teams'] = $this->Team_m->get_with_paginate(1, 12, TRUE);
 		$this->data['blogs'] = $this->Blog_m->get_with_paginate(1, 12, TRUE);
 		$this->data['books'] = $this->Book_m->get_with_paginate(1, 5, TRUE);
