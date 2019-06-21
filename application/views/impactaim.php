@@ -26,19 +26,14 @@
         </div>
     </section>
     <section class="uk-height-1-1 uk-background-cover uk-padding" style="background-image: url(<?= base_url('assets/impactaim/showcase_2.png'); ?>)">
-        <h1 class="uk-text-bold uk-text-left uk-margin-xlarge-bottom text-white" uk-scrollspy="cls: uk-animation-scale-up; repeat: true">Why ImpactAim<br>Indonesia?</h1>
-        <div class="uk-grid-large uk-child-width-1-3@m" uk-grid uk-scrollspy="cls: uk-animation-fade; target: > div; delay: 300; repeat: true">
+        <h1 class="uk-text-bold uk-text-truncate text-white" style="font-size: 3.5rem" uk-scrollspy="cls: uk-animation-scale-up; repeat: true">Why ImpactAim<br>Indonesia?</h1>
+        <div class="uk-grid-large uk-child-width-1-2@m" uk-grid uk-scrollspy="cls: uk-animation-fade; target: > div; delay: 300; repeat: true">
             <div>
-                <h2 class="uk-margin-small-left small-heading text-white spacing-1-5">ACCELERATION CURICULUM</h2>
-                <h2 class="text-white small-heading">ImpactAim will provide a designed curriculum to solidify market base and scale up impact</h2>
+                <h3 class="uk-margin-remove text-white small-heading">A joint initiative from UNDP Indonesia, 500 Startups and Bukalapak to support entrepreneurs to scale their impact, ImpactAim launched in Indonesia after a successful pilot in Armenia.</h3>
+                <h3 class="uk-margin-remove text-white small-heading">ImpactAim focus to empower SDG-aligned ventures, through guidance on impact measurement, management, reporting and business acceleration. Selected ventures will received tailored mentorship and impact curriculum, that enables them to leverage impact network better, to accelerate their growth. By joining forces with Silicon Valley based VC and top e-commerce unicorn in Indonesia, this program aim to improve’s life through business.</h3>
             </div>
-            <div>
-                <h2 class="uk-margin-small-left small-heading text-white spacing-1-5">MENTORSHIP</h2>
-                <h2 class="text-white small-heading">ImpactAim will provide individualized mentorship programs and organized bootcamps</h2>
-            </div>
-            <div>
-                <h2 class="uk-margin-small-left small-heading text-white spacing-1-5">FUNDING ACCESS</h2>
-                <h2 class="text-white small-heading">By joining ImpactAim participants get to access selected impact ventures for their startups</h2>
+            <div class="uk-flex uk-flex-center uk-flex-middle">
+                <div class="uk-width-medium uk-height-medium uk-background-contain" style="background-image: url(<?= base_url('assets/impactaim/logo_2_1.png'); ?>)"></div>
             </div>
         </div>
     </section>
