@@ -32,7 +32,7 @@
                                         <h4 class="uk-heading-bullet uk-text-capitalize"><?= $publication->title; ?></h4>
                                         <p><?= $this->lang->line('by') . " " . $publication->updated_by . ", " . $publication->created_at; ?></p>
                                         <div class="uk-margin">
-                                            <a href="<?= empty($publication->attachment) ? '#' : base_url('assets/attachments/books/') . $publication->attachment; ?>" class="uk-button uk-button-small uk-button-default"><span uk-icon="icon: download"></span> <?= ucfirst($this->lang->line('download')); ?></a>
+                                            <a href="<?= empty($publication->attachment) ? '#' : base_url('assets/attachments/') . $type . 's/' . $publication->attachment; ?>" class="uk-button uk-button-small uk-button-default"><span uk-icon="icon: download"></span> <?= ucfirst($this->lang->line('download')); ?></a>
                                         </div>
                                     </div>
                                 </div>
