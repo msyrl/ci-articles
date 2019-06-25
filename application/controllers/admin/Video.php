@@ -12,7 +12,7 @@ class Video extends Admin_Controller
     {
         $this->data['title'] = $this->lang->line('videos');
         $page = $this->input->get('page') ? $this->input->get('page') : 1;
-        $this->data['videos'] = $this->Video_m->get_with_paginate($page, 1, TRUE);
+        $this->data['videos'] = $this->Video_m->get_with_paginate($page);
         $this->data['page'] = 'admin/video/index';
         $this->load->view('admin/_layout', $this->data);
     }

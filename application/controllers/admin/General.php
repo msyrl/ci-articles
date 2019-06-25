@@ -20,7 +20,6 @@ class General extends Admin_Controller
         } else {
             $data = array(
                 'address' => htmlspecialchars($this->input->post('address', TRUE)),
-                'phone' => htmlspecialchars($this->input->post('phone', TRUE)),
                 'facebook' => htmlspecialchars($this->input->post('facebook', TRUE)),
                 'instagram' => htmlspecialchars($this->input->post('instagram', TRUE)),
                 'twitter' => htmlspecialchars($this->input->post('twitter', TRUE)),

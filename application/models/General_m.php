@@ -23,11 +23,6 @@ class General_m extends MY_Model
                 'rules' => 'trim|required',
             ),
             array(
-                'field' => 'phone',
-                'label' => 'Phone',
-                'rules' => 'trim|numeric|required',
-            ),
-            array(
                 'field' => 'facebook',
                 'label' => 'Facebook',
                 'rules' => 'trim|required',
