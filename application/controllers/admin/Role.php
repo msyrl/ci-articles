@@ -35,6 +35,13 @@ class Role extends Admin_Controller
             $data = array(
                 'name' => htmlspecialchars($this->input->post('name', TRUE))
             );
+
+            if ($id === NULL) {
+                $id = $this->Role_m->save($data);
+            } else {
+                $this->Role_m->save($data, $id);
+            }
+
             $menus = $this->input->post('menu');
             $menu_data = array();
             foreach ($menus as $key => $menu) :
@@ -43,12 +50,6 @@ class Role extends Admin_Controller
                     'menu_id' => $key
                 );
             endforeach;
-
-            if ($id === NULL) {
-                $this->Role_m->save($data);
-            } else {
-                $this->Role_m->save($data, $id);
-            }
 
             $this->Role_m->save_menu_role($menu_data, $id);
 

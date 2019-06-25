@@ -24,7 +24,7 @@ class Migration_create_menu_role extends CI_Migration
             ),
         ));
 
-        $this->dbforge->add_field('CONSTRAINT FOREIGN KEY (role_id) REFERENCES roles(id) ON DELETE RESTRICT ON UPDATE CASCADE');
+        $this->dbforge->add_field('CONSTRAINT FOREIGN KEY (role_id) REFERENCES roles(id) ON DELETE CASCADE ON UPDATE CASCADE');
         $this->dbforge->add_field('CONSTRAINT FOREIGN KEY (menu_id) REFERENCES menus(id) ON DELETE RESTRICT ON UPDATE CASCADE');
 
         $this->dbforge->add_key('id', TRUE);
