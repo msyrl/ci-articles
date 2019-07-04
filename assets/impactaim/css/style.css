@@ -1,11 +1,22 @@
-html,
-body {
+html, body, section:first-of-type {
     width: 100%;
     height: 100%;
 }
 
-section:not(:last-of-type), .custom-content {
+/* section:not(:last-of-type), .custom-content {
     min-height: 100vh;
+} */
+
+section {
+    position: relative;
+}
+
+section ._content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
 }
 
 .spacing-1-5 {
@@ -52,7 +63,7 @@ section:not(:last-of-type), .custom-content {
         height: auto;
     }
 
-    section:first-of-type, .custom-content{
+    /* section:first-of-type, .custom-content{
         height: 50vh;
-    }
+    } */
 }
