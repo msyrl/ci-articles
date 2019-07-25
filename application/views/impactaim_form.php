@@ -9,7 +9,7 @@
     <link rel="shortcut icon" href="<?= base_url('assets/images/icon/logo.png'); ?>" type="image/x-icon" />
     <style>
         body {
-            background-color: skyblue;
+            margin-top: 1.5rem;
         }
 
         .hbspt-form,
